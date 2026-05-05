@@ -37,16 +37,43 @@ npm run build
 
 Then open any `.html` file directly in your browser (no dev server needed).
 
-## Deployment — Cloudflare Pages
+## Deployment — GitHub Pages
 
-When you connect this repo to Cloudflare Pages, configure:
+This repo deploys to GitHub Pages automatically on every push to `main` via the workflow at `.github/workflows/deploy.yml`. The workflow installs npm dependencies, runs `npm run build` to compile Tailwind, and publishes the static site.
 
-- **Build command:** `npm run build`
-- **Build output directory:** `.` (the repo root)
-- **Root directory:** *(leave blank)*
-- **Node.js version:** 18 or 20
+### One-time setup (do this once after the first push)
 
-That's it. Pages will run `npm install && npm run build` on every push, then serve the static files.
+1. Go to **Settings → Pages** in this repo
+2. Under **Build and deployment → Source**, choose **GitHub Actions** (NOT "Deploy from a branch")
+3. Push any commit (or trigger the workflow manually under the Actions tab) — site will go live at `https://amgatnight.github.io/Website-updated/`
+
+### Custom domain (montrealhospitality.com)
+
+1. **In this repo:** Settings → Pages → **Custom domain** → enter `montrealhospitality.com` → Save. GitHub will create a `CNAME` file in the repo automatically.
+2. **At your DNS registrar** (where you bought the domain), add four `A` records pointing the apex to GitHub Pages:
+   - `185.199.108.153`
+   - `185.199.109.153`
+   - `185.199.110.153`
+   - `185.199.111.153`
+   And a `CNAME` record for the `www` subdomain pointing to `amgatnight.github.io`.
+3. Wait 5–60 minutes for DNS propagation. GitHub will issue a free Let's Encrypt SSL cert automatically (check **Enforce HTTPS** in the Pages settings once it's available).
+
+### Local development
+
+```sh
+npm install        # one-time
+npm run watch      # rebuilds styles.css whenever you edit input.css or HTML
+# or
+npm run build      # single build
+```
+
+Then open any `.html` file directly in your browser.
+
+### URL redirects
+
+The original v5 site had pages at older URLs (e.g., `Bordelle.html` capital-B, `private jet.html` with a space, `40-cruiser.html` without yacht prefix). For SEO continuity, those URLs are kept as small HTML files that `meta refresh` + JS-redirect to the new canonical path. They're noindexed so search engines won't double-list them, but existing inbound links keep working.
+
+The Cloudflare-style `_redirects` file is also preserved in the repo as documentation / for any future migration.
 
 ## Where the assets live
 
