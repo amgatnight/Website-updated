@@ -37,15 +37,31 @@ npm run build
 
 Then open any `.html` file directly in your browser (no dev server needed).
 
-## Deployment — GitHub Pages
+## Deployment — GitHub Pages (branch deploy)
 
-This repo deploys to GitHub Pages automatically on every push to `main` via the workflow at `.github/workflows/deploy.yml`. The workflow installs npm dependencies, runs `npm run build` to compile Tailwind, and publishes the static site.
+This repo deploys to GitHub Pages by serving the `main` branch directly. No build step runs on the server — the pre-built `styles.css` is committed to the repo, so what you push is what gets served.
 
 ### One-time setup (do this once after the first push)
 
 1. Go to **Settings → Pages** in this repo
-2. Under **Build and deployment → Source**, choose **GitHub Actions** (NOT "Deploy from a branch")
-3. Push any commit (or trigger the workflow manually under the Actions tab) — site will go live at `https://amgatnight.github.io/Website-updated/`
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. **Branch:** `main`, **Folder:** `/ (root)` → **Save**
+4. Wait ~30 seconds, then site goes live at `https://amgatnight.github.io/Website-updated/`
+
+### Editing workflow
+
+If you change HTML files via the github.com web editor, the changes go live within ~30 seconds. **Caveat:** if you add a Tailwind class that's not already in `styles.css`, it won\'t render until you rebuild. To rebuild:
+
+```sh
+git pull              # get latest
+npm install           # one-time
+npm run build         # rewrites styles.css with all classes used in current HTML
+git add styles.css
+git commit -m "Rebuild styles"
+git push
+```
+
+If you want fully automatic builds on every push, see the "Re-enabling GitHub Actions" section below.
 
 ### Custom domain (montrealhospitality.com)
 
@@ -107,3 +123,54 @@ The site supports English + French (Canadian). The language switcher persists ch
 ## Forms
 
 Both `contact.html` and `inquire.html` POST to `https://formspree.io/f/mykdvnra`. Submissions land in the email inbox configured on the Formspree dashboard. Free tier: 50 submissions/month.
+
+
+## Re-enabling GitHub Actions (when billing is resolved)
+
+This repo originally shipped with a `.github/workflows/deploy.yml` file that ran `npm run build` on every push and deployed automatically. It was removed because the GitHub account had a billing block preventing Actions runners from starting.
+
+To re-enable automatic builds:
+
+1. Resolve any billing issue at https://github.com/settings/billing
+2. Restore the workflow file (it\'s in git history at the second commit) or paste this into `.github/workflows/deploy.yml`:
+
+   ```yaml
+   name: Deploy to GitHub Pages
+   on:
+     push:
+       branches: [main]
+     workflow_dispatch:
+   permissions:
+     contents: read
+     pages: write
+     id-token: write
+   concurrency:
+     group: "pages"
+     cancel-in-progress: false
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - uses: actions/setup-node@v4
+           with:
+             node-version: \'20\'
+             cache: \'npm\'
+         - run: npm ci
+         - run: npm run build
+         - uses: actions/configure-pages@v5
+         - uses: actions/upload-pages-artifact@v3
+           with:
+             path: \'.\'
+     deploy:
+       needs: build
+       runs-on: ubuntu-latest
+       environment:
+         name: github-pages
+         url: ${{ steps.deployment.outputs.page_url }}
+       steps:
+         - id: deployment
+           uses: actions/deploy-pages@v4
+   ```
+
+3. In **Settings → Pages**, switch Source from "Deploy from a branch" back to "GitHub Actions".
