@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block any test/staging paths if you ever add them under /staging or /test/
+# Disallow: /staging/
+
+Sitemap: https://montrealhospitality.com/sitemap.xml

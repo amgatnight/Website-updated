@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Explore Montreal Hospitality&#x27;s full suite of luxury services: yachts, private jets, exotic fleet, sprinters, and private event venues across Montreal.">
+    <link rel="canonical" href="https://montrealhospitality.com/service">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Service | Montreal Hospitality">
+    <meta property="og:description" content="Explore Montreal Hospitality&#x27;s full suite of luxury services: yachts, private jets, exotic fleet, sprinters, and private event venues across Montreal.">
+    <meta property="og:url" content="https://montrealhospitality.com/service">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Service | Montreal Hospitality">
+    <meta name="twitter:description" content="Explore Montreal Hospitality&#x27;s full suite of luxury services: yachts, private jets, exotic fleet, sprinters, and private event venues across Montreal.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .hero-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            filter: blur(10px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.6s; }
+        .delay-3 { transition-delay: 1s; }
+        .delay-4 { transition-delay: 1.4s; }
+        .delay-5 { transition-delay: 1.8s; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .stagger-children.active > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(5) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(6) { transition-delay: 500ms; opacity: 1; transform: translateY(0); }
+
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        .card-lift {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #C5A059, #D6B88A, #C5A059);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .line-reveal {
+            width: 0;
+            height: 1px;
+            background: #C5A059;
+            margin: 0 auto;
+            transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .line-reveal.visible {
+            width: 60px;
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11,15,25,0.95) 0%, rgba(11,15,25,0.4) 50%, transparent 100%);
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            background: linear-gradient(to top, rgba(11,15,25,0.98) 0%, rgba(11,15,25,0.6) 100%);
+        }
+
+        .service-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .number-badge {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 6rem;
+            font-weight: 300;
+            color: rgba(197, 160, 89, 0.15);
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .lang-btn:hover {
+            color: #C5A059;
+        }
+        
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile Language Switcher */
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+    </style>
+<base target="_self">
+<base target="_blank">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium">
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <a href="index.html" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <div class="hidden lg:flex items-center gap-12">
+              <a href="index.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_home">Home</a>
+              <a href="venues.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_venues">Venues</a>
+              <a href="sports.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_sports">Sports</a>
+              <a href="service.html" class="link-hover text-mh-gold transition-colors" data-i18n="nav_services">Services</a>
+              <a href="event.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_events">Events</a>
+              <a href="index.html#careers" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_careers">Careers</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-8">
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+            
+            <a href="#" class="hover:text-mh-gold transition-colors hover:scale-110 transform duration-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all" data-i18n="nav_contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+           <a href="index.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_home">Home</a>
+           <a href="venues.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_venues">Venues</a>
+           <a href="sports.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_sports">Sports</a>
+           <a href="service.html" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_services">Services</a>
+           <a href="event.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_events">Events</a>
+           <a href="index.html#careers" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_careers">Careers</a>
+           
+           <!-- Mobile Language Switcher -->
+           <div class="mobile-lang-switcher">
+               <button class="lang-btn active text-lg" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+               <div class="lang-divider h-6"></div>
+               <button class="lang-btn text-lg" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+           </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-40 scale-105">
+                <source src="https://res.cloudinary.com/dg79ri9bl/video/upload/v1771544693/202602191734_1_stusxf.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/40 via-mh-navy/20 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
+            <div class="line-reveal hero-animate delay-1 mb-8"></div>
+            <p class="tao-subheading text-mh-gold mb-6 hero-animate delay-2 tracking-[0.3em] text-xs md:text-sm" data-i18n="hero_subtitle">
+                White Glove Excellence
+            </p>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl tao-heading text-white mb-2 leading-[0.95] overflow-hidden">
+                <span class="block hero-animate delay-3" data-i18n="hero_title_1">
+                    Luxury
+                </span>
+            </h1>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl tao-heading text-white mb-8 leading-[0.95] overflow-hidden">
+                <span class="block hero-animate delay-4 italic gradient-text" data-i18n="hero_title_2">
+                    Concierge
+                </span>
+            </h1>
+            <div class="hero-animate delay-5 mt-12">
+                <a href="#experience" class="btn-hover inline-block border border-white/40 text-white px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="hero_cta">
+                    Discover More
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce text-mh-gold/50 opacity-0 scroll-indicator">
+            <i class="fa-solid fa-chevron-down text-sm"></i>
+        </div>
+
+        <style>
+            .scroll-indicator {
+                animation: bounce 2s infinite, fadeIn 1s ease forwards;
+                animation-delay: 2.5s;
+            }
+            @keyframes fadeIn {
+                to { opacity: 1; }
+            }
+            @keyframes bounce {
+                0%, 100% { transform: translateX(-50%) translateY(0); }
+                50% { transform: translateX(-50%) translateY(-10px); }
+            }
+        </style>
+    </header>
+
+    <!-- Intro Statement -->
+    <section id="experience" class="py-32 bg-mh-navy text-center px-6">
+        <div class="max-w-4xl mx-auto reveal">
+            <p class="tao-heading text-3xl md:text-5xl text-white/90 leading-tight font-light" data-i18n="intro_text">
+                Beyond hospitality—curated experiences that transcend the ordinary. From sky to sea, road to residence, we orchestrate every detail of your journey.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Pillars -->
+    <section class="py-32 bg-mh-dark">
+        <div class="max-w-[95%] mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="pillars_subtitle">Core Pillars</span>
+                <h2 class="text-5xl md:text-7xl tao-heading text-white" data-i18n="pillars_title">Our Philosophy</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 stagger-children">
+                <!-- Pillar 1 -->
+                <div class="group relative p-12 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="number-badge">01</div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-8 group-hover:bg-mh-gold/20 transition-colors">
+                            <i class="fa-solid fa-gem text-mh-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl tao-heading text-white mb-4" data-i18n="pillar_1_title">Bespoke Curation</h3>
+                        <p class="text-gray-500 font-light leading-relaxed" data-i18n="pillar_1_desc">
+                            Every request is an opportunity to create something extraordinary. We tailor each experience to your exact specifications, no matter how unique.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="group relative p-12 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="number-badge">02</div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-8 group-hover:bg-mh-gold/20 transition-colors">
+                            <i class="fa-solid fa-clock text-mh-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl tao-heading text-white mb-4" data-i18n="pillar_2_title">Seamless Access</h3>
+                        <p class="text-gray-500 font-light leading-relaxed" data-i18n="pillar_2_desc">
+                            24/7 availability with instantaneous response. From last-minute reservations to emergency logistics, we're always one call away.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="group relative p-12 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="number-badge">03</div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-8 group-hover:bg-mh-gold/20 transition-colors">
+                            <i class="fa-solid fa-shield-halved text-mh-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl tao-heading text-white mb-4" data-i18n="pillar_3_title">Absolute Discretion</h3>
+                        <p class="text-gray-500 font-light leading-relaxed" data-i18n="pillar_3_desc">
+                            Privacy is paramount. Our operations are conducted with the highest level of confidentiality and security protocols.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Provide Section -->
+    <section class="py-32 bg-mh-navy">
+        <div class="max-w-[95%] mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="services_subtitle">Fleet & Residences</span>
+                <h2 class="text-5xl md:text-7xl tao-heading text-white mb-6" data-i18n="services_title">What We Provide</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg" data-i18n="services_desc">
+                    An exclusive portfolio of luxury transportation and private accommodations, available at your request.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+                <!-- Exotic Fleet -->
+                <a href="exotic-fleet.html" target="_self" class="block group h-[450px] relative card-lift reveal service-card">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771195296/unnamed_ggvp6h.png" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Exotic Fleet">
+                    <div class="service-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="service_exotic_label">Automotive</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="service_exotic_title">Exotic Fleet</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="service_exotic_desc">
+                            Curated collection of the world's most prestigious automobiles. From Lamborghini to Rolls-Royce, delivered to your doorstep.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="service_exotic_cta">View Collection</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Private Aviation -->
+                <a href="private-jet.html" target="_self" class="block group h-[450px] relative card-lift reveal service-card">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771788701/LJ45_exterior_pvuyrs.webp" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Private Aviation">
+                    <div class="service-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="service_aviation_label">Sky</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="service_aviation_title">Private Aviation</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="service_aviation_desc">
+                            Jet charter services with access to 10+ aircraft in the YUL sector. From light jets to ultra-long-range heavy jets, on your schedule.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="service_aviation_cta">Charter Now</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Yacht Charters -->
+                <a href="yachts.html" target="_self" class="block group h-[450px] relative card-lift reveal service-card">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771811751/49-1_toghli.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Yacht Charters">
+                    <div class="service-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="service_yacht_label">Sea</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="service_yacht_title">Yacht Charters</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="service_yacht_desc">
+                            Private luxury yacht charters along Montreal's breathtaking rivers. Crewed superyachts paired with bespoke concierge service for an effortless, elevated experience.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="service_yacht_cta">Explore Yachts</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Private Sprinters -->
+                <a href="private-sprinters.html" target="_self" class="service-card group h-[450px] relative card-lift reveal block">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771378035/IMG_2750_r9xfx9.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Private Sprinters">
+                    <div class="service-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="service_sprinter_label">Group Transport</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="service_sprinter_title">Private Sprinters</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="service_sprinter_desc">
+                            Executive Mercedes Sprinters configured for comfort and privacy. Perfect for group airport transfers, corporate shuttles, or mobile meetings.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="service_sprinter_cta">Reserve</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Limousine Services -->
+                <a href="limousine.html" target="_self" class="service-card group h-[450px] relative card-lift reveal block">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1772239946/IMG_5062_2_bcplaw.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Limousine Services">
+                    <div class="service-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="service_limo_label">Chauffeured</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="service_limo_title">Limousine Services</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="service_limo_desc">
+                            Professional chauffeur service with luxury sedans, stretch limousines, and executive SUVs. Discrete, punctual, and impeccably presented.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="service_limo_cta">Book Ride</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Residences -->
+                <a href="contact.html" target="_self" class="service-card group h-[450px] relative card-lift reveal block">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771383312/14-dec-2018-UNIT-2_jdrpoo.png" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Residences">
+                    <div class="service-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="service_residence_label">Stay</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="service_residence_title">Residences</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="service_residence_desc">
+                            Access to exclusive private estates, penthouses, and luxury villas worldwide. Fully staffed with housekeeping, chefs, and security upon request.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="service_residence_cta">View Properties</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Stats -->
+    <section class="py-32 bg-mh-dark border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center stagger-children">
+                <div class="reveal">
+                    <div class="text-5xl md:text-6xl tao-heading text-mh-gold mb-2">47+</div>
+                    <p class="text-gray-500 text-sm uppercase tracking-widest" data-i18n="stat_vehicles">Vehicles in Fleet</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-5xl md:text-6xl tao-heading text-mh-gold mb-2">5+</div>
+                    <p class="text-gray-500 text-sm uppercase tracking-widest" data-i18n="stat_aircraft">Aircraft Partners</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-5xl md:text-6xl tao-heading text-mh-gold mb-2">2+</div>
+                    <p class="text-gray-500 text-sm uppercase tracking-widest" data-i18n="stat_residences">Luxury Residences</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-5xl md:text-6xl tao-heading text-mh-gold mb-2">24/7</div>
+                    <p class="text-gray-500 text-sm uppercase tracking-widest" data-i18n="stat_concierge">Concierge Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-32 bg-mh-navy relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-mh-gold/5 rounded-full blur-3xl floating"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="process_subtitle">Process</span>
+                <h2 class="text-5xl md:text-7xl tao-heading text-white mb-6" data-i18n="process_title">How It Works</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 stagger-children">
+                <!-- Step 1 -->
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 rounded-full border border-mh-gold/30 flex items-center justify-center mx-auto mb-8 relative">
+                        <span class="text-2xl tao-heading text-mh-gold">01</span>
+                        <div class="hidden md:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-mh-gold/30 to-transparent"></div>
+                    </div>
+                    <h3 class="text-2xl tao-heading text-white mb-4" data-i18n="step_1_title">Request</h3>
+                    <p class="text-gray-500 font-light leading-relaxed" data-i18n="step_1_desc">
+                        Contact your dedicated concierge via phone, email, or secure app. Share your vision, dates, and any special requirements.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 rounded-full border border-mh-gold/30 flex items-center justify-center mx-auto mb-8 relative">
+                        <span class="text-2xl tao-heading text-mh-gold">02</span>
+                        <div class="hidden md:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-mh-gold/30 to-transparent"></div>
+                    </div>
+                    <h3 class="text-2xl tao-heading text-white mb-4" data-i18n="step_2_title">Curate</h3>
+                    <p class="text-gray-500 font-light leading-relaxed" data-i18n="step_2_desc">
+                        We source and secure your selection, handling all logistics, staffing, and special arrangements behind the scenes.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 rounded-full border border-mh-gold/30 flex items-center justify-center mx-auto mb-8">
+                        <span class="text-2xl tao-heading text-mh-gold">03</span>
+                    </div>
+                    <h3 class="text-2xl tao-heading text-white mb-4" data-i18n="step_3_title">Experience</h3>
+                    <p class="text-gray-500 font-light leading-relaxed" data-i18n="step_3_desc">
+                        Simply arrive and enjoy. Your asset will be prepared to specification, with our team ensuring every detail exceeds expectation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 bg-mh-dark relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #C5A059 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="testimonials_subtitle">Testimonials</span>
+                <h2 class="text-5xl md:text-6xl tao-heading text-white" data-i18n="testimonials_title">Client Experiences</h2>
+            </div>
+
+            <div class="relative reveal">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide active text-center">
+                    <div class="mb-8">
+                        <i class="fa-solid fa-quote-left text-mh-gold/30 text-4xl"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-serif text-white/90 leading-relaxed mb-8 font-light italic" data-i18n="testimonial_1_text">
+                        "The Gulfstream charter arranged on 4 hours notice saved our deal. Montreal Hospitality doesn't just meet expectations—they anticipate the impossible."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" 
+                             class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div class="text-left">
+                            <p class="text-white font-medium" data-i18n="testimonial_1_name">Richard Hammond</p>
+                            <p class="text-mh-gold text-xs uppercase tracking-widest" data-i18n="testimonial_1_role">CEO, Hammond Ventures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide text-center">
+                    <div class="mb-8">
+                        <i class="fa-solid fa-quote-left text-mh-gold/30 text-4xl"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-serif text-white/90 leading-relaxed mb-8 font-light italic" data-i18n="testimonial_2_text">
+                        "The downtown Montreal penthouse they secured for Formula 1 weekend was next level. Private chef, dedicated housekeeping, discreet security — every detail handled seamlessly without me lifting a finger."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" 
+                             class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div class="text-left">
+                            <p class="text-white font-medium" data-i18n="testimonial_2_name">Elena Rostova</p>
+                            <p class="text-mh-gold text-xs uppercase tracking-widest" data-i18n="testimonial_2_role">Art Collector</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide text-center">
+                    <div class="mb-8">
+                        <i class="fa-solid fa-quote-left text-mh-gold/30 text-4xl"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-serif text-white/90 leading-relaxed mb-8 font-light italic" data-i18n="testimonial_3_text">
+                        "Supercar. Helicopter. Yacht. All in Montreal. Flawless from start to finish. Luxury redefined."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" 
+                             class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div class="text-left">
+                            <p class="text-white font-medium" data-i18n="testimonial_3_name">James Chen</p>
+                            <p class="text-mh-gold text-xs uppercase tracking-widest" data-i18n="testimonial_3_role">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="flex justify-center gap-3 mt-12">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-mh-gold transition-all" data-index="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white/30 hover:bg-mh-gold/50 transition-all" data-index="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white/30 hover:bg-mh-gold/50 transition-all" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-mh-gold text-mh-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+            <h2 class="text-4xl md:text-5xl font-serif mb-6" data-i18n="cta_title">Ready to Elevate Your Journey?</h2>
+            <p class="text-mh-navy/80 mb-8 text-lg font-light" data-i18n="cta_desc">
+                Whether by land, sea, or air—your next extraordinary experience begins with a single call.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="tel:514-378-0154" class="btn-hover inline-flex items-center justify-center gap-3 bg-mh-navy text-mh-gold px-10 py-4 text-xs tracking-[0.25em] uppercase font-bold hover:bg-black transition-colors">
+                    <i class="fa-solid fa-phone"></i> <span data-i18n="cta_call">Call Concierge</span>
+                </a>
+                <a href="mailto:info@montrealhospitality.com" class="btn-hover inline-flex items-center justify-center gap-3 border-2 border-mh-navy text-mh-navy px-10 py-4 text-xs tracking-[0.25em] uppercase font-bold hover:bg-mh-navy hover:text-mh-gold transition-colors">
+                    <i class="fa-solid fa-envelope"></i> <span data-i18n="cta_email">Email Request</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light" data-i18n="footer_tagline">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_explore">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_venues">Venues</a></li>
+                        <li><a href="sports.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_sports">Sports</a></li>
+                        <li><a href="service.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_services">Service</a></li>
+                        <li><a href="event.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_events">Events</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_contact">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="mailto:info@montrealhospitality.com" class="hover:text-mh-gold transition-colors">info@montrealhospitality.com</a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_follow">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_privacy">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_terms">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load
+        window.scrollTo(0, 0);
+
+        // Loader and Hero Animation Trigger
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+
+                    const heroElements = document.querySelectorAll('.hero-animate');
+                    heroElements.forEach(el => {
+                        el.classList.add('visible');
+                    });
+
+                    const line = document.querySelector('.line-reveal');
+                    if (line) line.classList.add('visible');
+
+                }, 800);
+            }, 1200);
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const staggerContainers = document.querySelectorAll('.stagger-children');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+
+            staggerContainers.forEach((container) => {
+                const elementTop = container.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    container.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Testimonial Slider
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                dots[i].classList.remove('bg-mh-gold');
+                dots[i].classList.add('bg-white/30');
+            });
+
+            slides[index].classList.add('active');
+            dots[index].classList.remove('bg-white/30');
+            dots[index].classList.add('bg-mh-gold');
+            currentSlide = index;
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Auto-advance testimonials
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 6000);
+
+        // Translation System
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_venues: "Venues",
+                nav_sports: "Sports",
+                nav_services: "Services",
+                nav_events: "Events",
+                nav_careers: "Careers",
+                nav_contact: "Contact",
+                hero_subtitle: "White Glove Excellence",
+                hero_title_1: "Luxury",
+                hero_title_2: "Concierge",
+                hero_cta: "Discover More",
+                intro_text: "Beyond hospitality—curated experiences that transcend the ordinary. From sky to sea, road to residence, we orchestrate every detail of your journey.",
+                pillars_subtitle: "Core Pillars",
+                pillars_title: "Our Philosophy",
+                pillar_1_title: "Bespoke Curation",
+                pillar_1_desc: "Every request is an opportunity to create something extraordinary. We tailor each experience to your exact specifications, no matter how unique.",
+                pillar_2_title: "Seamless Access",
+                pillar_2_desc: "24/7 availability with instantaneous response. From last-minute reservations to emergency logistics, we're always one call away.",
+                pillar_3_title: "Absolute Discretion",
+                pillar_3_desc: "Privacy is paramount. Our operations are conducted with the highest level of confidentiality and security protocols.",
+                services_subtitle: "Fleet & Residences",
+                services_title: "What We Provide",
+                services_desc: "An exclusive portfolio of luxury transportation and private accommodations, available at your request.",
+                service_exotic_label: "Automotive",
+                service_exotic_title: "Exotic Fleet",
+                service_exotic_desc: "Curated collection of the world's most prestigious automobiles. From Lamborghini to Rolls-Royce, delivered to your doorstep.",
+                service_exotic_cta: "View Collection",
+                service_aviation_label: "Sky",
+                service_aviation_title: "Private Aviation",
+                service_aviation_desc: "Jet charter services with access to 10+ aircraft in the YUL sector. From light jets to ultra-long-range heavy jets, on your schedule.",
+                service_aviation_cta: "Charter Now",
+                service_yacht_label: "Sea",
+                service_yacht_title: "Yacht Charters",
+                service_yacht_desc: "Private luxury yacht charters along Montreal's breathtaking rivers. Crewed superyachts paired with bespoke concierge service for an effortless, elevated experience.",
+                service_yacht_cta: "Explore Yachts",
+                service_sprinter_label: "Group Transport",
+                service_sprinter_title: "Private Sprinters",
+                service_sprinter_desc: "Executive Mercedes Sprinters configured for comfort and privacy. Perfect for group airport transfers, corporate shuttles, or mobile meetings.",
+                service_sprinter_cta: "Reserve",
+                service_limo_label: "Chauffeured",
+                service_limo_title: "Limousine Services",
+                service_limo_desc: "Professional chauffeur service with luxury sedans, stretch limousines, and executive SUVs. Discrete, punctual, and impeccably presented.",
+                service_limo_cta: "Book Ride",
+                service_residence_label: "Stay",
+                service_residence_title: "Residences",
+                service_residence_desc: "Access to exclusive private estates, penthouses, and luxury villas worldwide. Fully staffed with housekeeping, chefs, and security upon request.",
+                service_residence_cta: "View Properties",
+                stat_vehicles: "Vehicles in Fleet",
+                stat_aircraft: "Aircraft Partners",
+                stat_residences: "Luxury Residences",
+                stat_concierge: "Concierge Available",
+                process_subtitle: "Process",
+                process_title: "How It Works",
+                step_1_title: "Request",
+                step_1_desc: "Contact your dedicated concierge via phone, email, or secure app. Share your vision, dates, and any special requirements.",
+                step_2_title: "Curate",
+                step_2_desc: "We source and secure your selection, handling all logistics, staffing, and special arrangements behind the scenes.",
+                step_3_title: "Experience",
+                step_3_desc: "Simply arrive and enjoy. Your asset will be prepared to specification, with our team ensuring every detail exceeds expectation.",
+                testimonials_subtitle: "Testimonials",
+                testimonials_title: "Client Experiences",
+                testimonial_1_text: "The Gulfstream charter arranged on 4 hours notice saved our deal. Montreal Hospitality doesn't just meet expectations—they anticipate the impossible.",
+                testimonial_1_name: "Richard Hammond",
+                testimonial_1_role: "CEO, Hammond Ventures",
+                testimonial_2_text: "The downtown Montreal penthouse they secured for Formula 1 weekend was next level. Private chef, dedicated housekeeping, discreet security — every detail handled seamlessly without me lifting a finger.",
+                testimonial_2_name: "Elena Rostova",
+                testimonial_2_role: "Art Collector",
+                testimonial_3_text: "Supercar. Helicopter. Yacht. All in Montreal. Flawless from start to finish. Luxury redefined.",
+                testimonial_3_name: "James Chen",
+                testimonial_3_role: "Tech Entrepreneur",
+                cta_title: "Ready to Elevate Your Journey?",
+                cta_desc: "Whether by land, sea, or air—your next extraordinary experience begins with a single call.",
+                cta_call: "Call Concierge",
+                cta_email: "Email Request",
+                footer_tagline: "Redefining the art of the night in Montreal.",
+                footer_explore: "Explore",
+                footer_contact: "Contact",
+                footer_follow: "Follow",
+                footer_privacy: "Privacy",
+                footer_terms: "Terms"
+            },
+            fr: {
+                nav_home: "Accueil",
+                nav_venues: "Lieux",
+                nav_sports: "Sports",
+                nav_services: "Services",
+                nav_events: "Événements",
+                nav_careers: "Carrières",
+                nav_contact: "Contact",
+                hero_subtitle: "Excellence en Service Concierge",
+                hero_title_1: "Conciergerie",
+                hero_title_2: "de Luxe",
+                hero_cta: "Découvrir Plus",
+                intro_text: "Au-delà de l'hospitalité—des expériences sur mesure qui transcendent l'ordinaire. Du ciel à la mer, de la route à la résidence, nous orchestrons chaque détail de votre voyage.",
+                pillars_subtitle: "Piliers Fondamentaux",
+                pillars_title: "Notre Philosophie",
+                pillar_1_title: "Curation Sur Mesure",
+                pillar_1_desc: "Chaque demande est une opportunité de créer quelque chose d'extraordinaire. Nous adaptons chaque expérience à vos spécifications exactes, aussi uniques soient-elles.",
+                pillar_2_title: "Accès Sans Couture",
+                pillar_2_desc: "Disponibilité 24/7 avec réponse instantanée. Des réservations de dernière minute à la logistique d'urgence, nous sommes toujours à un appel de distance.",
+                pillar_3_title: "Discrétion Absolue",
+                pillar_3_desc: "La vie privée est primordiale. Nos opérations sont menées avec le plus haut niveau de confidentialité et de protocoles de sécurité.",
+                services_subtitle: "Flotte & Résidences",
+                services_title: "Ce Que Nous Offrons",
+                services_desc: "Un portefeuille exclusif de transport de luxe et d'hébergements privés, disponibles sur demande.",
+                service_exotic_label: "Automobile",
+                service_exotic_title: "Flotte Exotique",
+                service_exotic_desc: "Collection sélectionnée des automobiles les plus prestigieuses au monde. De Lamborghini à Rolls-Royce, livrées à votre porte.",
+                service_exotic_cta: "Voir la Collection",
+                service_aviation_label: "Ciel",
+                service_aviation_title: "Aviation Privée",
+                service_aviation_desc: "Services de jet privé avec accès à 10+ aéronefs dans le secteur YUL. Des jets légers aux jets lourds ultra-longue portée, selon votre horaire.",
+                service_aviation_cta: "Affréter Maintenant",
+                service_yacht_label: "Mer",
+                service_yacht_title: "Location de Yachts",
+                service_yacht_desc: "Locations de yachts de luxe privés le long des rivières spectaculaires de Montréal. Superyachts avec équipage accompagnés d'un service concierge sur mesure pour une expérience sans effort et raffinée.",
+                service_yacht_cta: "Explorer les Yachts",
+                service_sprinter_label: "Transport de Groupe",
+                service_sprinter_title: "Sprinters Privés",
+                service_sprinter_desc: "Mercedes Sprinters exécutifs configurés pour le confort et l'intimité. Parfaits pour les transferts aéroport de groupe, les navettes corporatives ou les réunions mobiles.",
+                service_sprinter_cta: "Réserver",
+                service_limo_label: "Avec Chauffeur",
+                service_limo_title: "Services de Limousine",
+                service_limo_desc: "Service de chauffeur professionnel avec berlines de luxe, limousines stretch et VUS exécutifs. Discret, ponctuel et impeccablement présenté.",
+                service_limo_cta: "Réserver une Course",
+                service_residence_label: "Séjour",
+                service_residence_title: "Résidences",
+                service_residence_desc: "Accès à des domaines privés exclusifs, des penthouses et des villas de luxe dans le monde entier. Entièrement dotés en personnel de maison, chefs et sécurité sur demande.",
+                service_residence_cta: "Voir les Propriétés",
+                stat_vehicles: "Véhicules en Flotte",
+                stat_aircraft: "Partenaires Aériens",
+                stat_residences: "Résidences de Luxe",
+                stat_concierge: "Concierge Disponible",
+                process_subtitle: "Processus",
+                process_title: "Comment Ça Marche",
+                step_1_title: "Demander",
+                step_1_desc: "Contactez votre concierge dédié par téléphone, email ou application sécurisée. Partagez votre vision, dates et besoins spéciaux.",
+                step_2_title: "Créer",
+                step_2_desc: "Nous sourçons et sécurisons votre sélection, gérant toute la logistique, le personnel et arrangements spéciaux en coulisses.",
+                step_3_title: "Vivre",
+                step_3_desc: "Arrivez et profitez simplement. Votre bien sera préparé selon vos spécifications, notre équipe veillant à ce que chaque détail dépasse vos attentes.",
+                testimonials_subtitle: "Témoignages",
+                testimonials_title: "Expériences Clients",
+                testimonial_1_text: "L'affrètement du Gulfstream organisé en 4 heures a sauvé notre affaire. Montreal Hospitality ne se contente pas de répondre aux attentes—ils anticipent l'impossible.",
+                testimonial_1_name: "Richard Hammond",
+                testimonial_1_role: "PDG, Hammond Ventures",
+                testimonial_2_text: "Le penthouse au centre-ville de Montréal qu'ils ont sécurisé pour le week-end de la Formule 1 était de niveau supérieur. Chef privé, personnel de maison dédié, sécurité discrète—chaque détail géré sans effort sans que je lève le petit doigt.",
+                testimonial_2_name: "Elena Rostova",
+                testimonial_2_role: "Collectionneuse d'Art",
+                testimonial_3_text: "Supercar. Hélicoptère. Yacht. Tout à Montréal. Impeccable du début à la fin. Le luxe redéfini.",
+                testimonial_3_name: "James Chen",
+                testimonial_3_role: "Entrepreneur Tech",
+                cta_title: "Prêt à Élever Votre Voyage?",
+                cta_desc: "Que ce soit par terre, mer ou air—votre prochaine expérience extraordinaire commence par un simple appel.",
+                cta_call: "Appeler le Concierge",
+                cta_email: "Envoyer une Demande",
+                footer_tagline: "Redéfinir l'art de la nuit à Montréal.",
+                footer_explore: "Explorer",
+                footer_contact: "Contact",
+                footer_follow: "Suivre",
+                footer_privacy: "Confidentialité",
+                footer_terms: "Conditions"
+            }
+        };
+
+        const translator = {
+            currentLang: 'en',
+            
+            init() {
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                
+                if (savedLang && translations[savedLang]) {
+                    this.currentLang = savedLang;
+                } else if (translations[browserLang]) {
+                    this.currentLang = browserLang;
+                }
+                
+                this.updateUI();
+                this.translatePage();
+            },
+            
+            setLanguage(lang) {
+                if (translations[lang]) {
+                    this.currentLang = lang;
+                    localStorage.setItem('preferred_language', lang);
+                    this.updateUI();
+                    this.translatePage();
+                    document.documentElement.lang = lang;
+                }
+            },
+            
+            updateUI() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    if (btn.dataset.lang === this.currentLang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            },
+            
+            translatePage() {
+                const texts = translations[this.currentLang];
+                
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.dataset.i18n;
+                    if (texts[key]) {
+                        element.textContent = texts[key];
+                    }
+                });
+            }
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Time Groupe — exclusive Montreal venue available through Montreal Hospitality for private events and curated experiences.">
+    <link rel="canonical" href="https://montrealhospitality.com/time-groupe">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Time Groupe | Montreal Hospitality">
+    <meta property="og:description" content="Time Groupe — exclusive Montreal venue available through Montreal Hospitality for private events and curated experiences.">
+    <meta property="og:url" content="https://montrealhospitality.com/time-groupe">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Time Groupe | Montreal Hospitality">
+    <meta name="twitter:description" content="Time Groupe — exclusive Montreal venue available through Montreal Hospitality for private events and curated experiences.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Groupe | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Nav */
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        /* Image Hover Effects */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Smooth underline animation */
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* Button hover animations */
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gallery Grid */
+        .gallery-item {
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        /* Form Styles */
+        .form-input {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 18px;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #C5A059;
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #C5A059;
+        }
+
+        /* Custom Select */
+        .custom-select {
+            position: relative;
+        }
+        .custom-select select {
+            appearance: none;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .custom-select select:focus {
+            outline: none;
+            border-color: #C5A059;
+        }
+        .custom-select::after {
+            content: '\f107';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #C5A059;
+            pointer-events: none;
+        }
+        .custom-select select option {
+            background: #0B0F19;
+            color: white;
+        }
+
+        /* Checkbox Styling */
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+        }
+        .checkbox-item input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .checkbox-item input[type="checkbox"]:checked {
+            background: #C5A059;
+            border-color: #C5A059;
+        }
+        .checkbox-item input[type="checkbox"]:checked::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #0B0F19;
+            font-size: 12px;
+        }
+        .checkbox-item label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+            line-height: 1.4;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .radio-item input[type="radio"] {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .radio-item input[type="radio"]:checked {
+            border-color: #C5A059;
+        }
+        .radio-item input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #C5A059;
+            border-radius: 50%;
+        }
+        .radio-item label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .success-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Error Message */
+        .error-message {
+            display: none;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: #ef4444;
+        }
+        .error-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        .submitting {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Validation error styles */
+        .validation-error {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        /* Shake animation */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+
+        /* Conditional Fields Animation */
+        .conditional-field {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+            opacity: 0;
+        }
+        .conditional-field.active {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 24px;
+        }
+    
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .lang-btn:hover { color: #C5A059; }
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+    </style>
+<base target="_self">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="closeLightbox()">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+        <button class="absolute left-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(-1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium bg-mh-navy/90 backdrop-blur-md border-b border-white/10">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" target="_self" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-12">
+              <a href="index.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Home</a>
+              <a href="venues.html" target="_self" class="link-hover text-mh-gold transition-colors">Venues</a>
+              <a href="sports.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Sports</a>
+              <a href="service.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Services</a>
+              <a href="event.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Events</a>
+              <a href="index.html#careers" target="_self" class="link-hover hover:text-mh-gold transition-colors">Careers</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="hidden lg:flex items-center gap-8">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+
+            <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="hover:text-mh-gold transition-colors hover:scale-110 transform duration-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+           <a href="index.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Home</a>
+           <a href="venues.html" target="_self" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Venues</a>
+           <a href="sports.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Sports</a>
+           <a href="service.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Services</a>
+           <a href="event.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Events</a>
+           <a href="index.html#careers" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Careers</a>
+    
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active text-lg" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+            <div class="lang-divider h-6"></div>
+            <button class="lang-btn text-lg" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+        </div>
+</div>
+
+    <!-- Hero Section -->
+    <header class="relative h-[70vh] w-full overflow-hidden flex items-center justify-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190527/482128549_1011117471073272_8446155792814615398_n_u7lwxd.jpg" 
+                 class="w-full h-full object-cover" 
+                 alt="Time Groupe"
+                 style="object-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/70 via-mh-navy/50 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+            <span class="tao-subheading text-mh-gold text-[11px] block mb-4 reveal">Downtown</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl tao-heading text-white mb-6 leading-[0.95] reveal">
+                Time Groupe
+            </h1>
+            <p class="text-gray-300 max-w-2xl mx-auto font-light text-lg reveal">
+                Where timeless elegance meets contemporary nightlife in perfect harmony
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-mh-dark">
+
+        <!-- Venue Info -->
+        <section class="py-16 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12 text-center reveal">
+                    <div>
+                        <i class="fa-solid fa-clock text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2">Timeless Design</h3>
+                        <p class="text-gray-400 text-sm">Classic Aesthetic</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-gem text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2">Luxury Experience</h3>
+                        <p class="text-gray-400 text-sm">Premium Service</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-champagne-glasses text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2">Champagne Bar</h3>
+                        <p class="text-gray-400 text-sm">Fine Selection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery & Form Split Section -->
+        <section class="py-20">
+            <div class="max-w-[95%] mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+
+                    <!-- Left Side: Gallery -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Gallery</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8">Experience Time Groupe</h2>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(0)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190677/2__1___1_y7wzvi.png" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Time Groupe Main">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(1)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190732/3__1___1_syyrae.png" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Time Groupe Interior">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(2)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190810/CUREStudio54-073_xkrbc9.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Time Groupe Bar">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(3)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190886/3-7_bhzw2b.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Time Groupe Lounge">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(4)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190586/481986511_1011103321074687_4153660612256618797_n_wh248l.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Time Groupe VIP">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(5)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190527/482128549_1011117471073272_8446155792814615398_n_u7lwxd.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Time Groupe Night">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-500 text-sm mt-6 italic">Click images to expand</p>
+                    </div>
+
+                    <!-- Right Side: Venue Reservation Form -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Private Events</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8">Venue Reservation</h2>
+
+                        <div class="bg-mh-gray/30 border border-white/10 p-8 lg:p-10">
+                            <form id="guestListForm" action="https://formspree.io/f/mykdvnra" method="POST" novalidate>
+
+                                <!-- Event Type -->
+                                <div class="mb-8">
+                                    <label class="form-label">Event Type *</label>
+                                    <div class="custom-select">
+                                        <select id="eventType" name="eventType" required data-required="true" onchange="toggleEventFields()">
+                                            <option value="">Select your event type</option>
+                                            <option value="wedding">Wedding Reception</option>
+                                            <option value="prom">Prom / Graduation</option>
+                                            <option value="corporate">Corporate Event</option>
+                                            <option value="birthday">Birthday Celebration</option>
+                                            <option value="anniversary">Anniversary Party</option>
+                                            <option value="bridal">Bridal / Baby Shower</option>
+                                            <option value="engagement">Engagement Party</option>
+                                            <option value="bachelor">Bachelor / Bachelorette</option>
+                                            <option value="holiday">Holiday Party</option>
+                                            <option value="fundraiser">Fundraiser / Gala</option>
+                                            <option value="product">Product Launch</option>
+                                            <option value="private">Private Dinner</option>
+                                            <option value="other">Other Special Event</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Information -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your full name" required data-required="true">
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="mb-6">
+                                        <label class="form-label" for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required data-required="true">
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="form-label" for="phone">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(514) 000-0000" required data-required="true">
+                                    </div>
+                                </div>
+
+                                <!-- Event Details -->
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="mb-6">
+                                        <label class="form-label" for="eventDate">Preferred Date *</label>
+                                        <input type="date" id="eventDate" name="eventDate" class="form-input" required data-required="true">
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="form-label" for="guestCount">Number of Guests *</label>
+                                        <div class="custom-select">
+                                            <select id="guestCount" name="guestCount" required data-required="true">
+                                                <option value="">Select guest count</option>
+                                                <option value="20-50">20-50 guests</option>
+                                                <option value="50-100">50-100 guests</option>
+                                                <option value="100-200">100-200 guests</option>
+                                                <option value="200-300">200-300 guests</option>
+                                                <option value="300+">300+ guests</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event Time -->
+                                <div class="mb-6">
+                                    <label class="form-label">Event Time Preference</label>
+                                    <div class="radio-group">
+                                        <div class="radio-item">
+                                            <input type="radio" id="afternoon" name="eventTime" value="afternoon">
+                                            <label for="afternoon">Afternoon</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="evening" name="eventTime" value="evening" checked>
+                                            <label for="evening">Evening</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="night" name="eventTime" value="night">
+                                            <label for="night">Late Night</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Services Required -->
+                                <div class="mb-6">
+                                    <label class="form-label">Services Required</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="catering" name="services" value="catering">
+                                            <label for="catering">Catering & Dining Services</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="bar" name="services" value="bar">
+                                            <label for="bar">Open Bar / Beverage Service</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="dj" name="services" value="dj">
+                                            <label for="dj">DJ & Sound System</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="decor" name="services" value="decor">
+                                            <label for="decor">Decor & Floral Arrangements</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="photography" name="services" value="photography">
+                                            <label for="photography">Photography / Videography</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="security" name="services" value="security">
+                                            <label for="security">Private Security</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Budget Range -->
+                                <div class="mb-6">
+                                    <label class="form-label">Estimated Budget Range</label>
+                                    <div class="custom-select">
+                                        <select id="budget" name="budget">
+                                            <option value="">Select budget range</option>
+                                            <option value="5000-10000">$5,000 - $10,000</option>
+                                            <option value="10000-25000">$10,000 - $25,000</option>
+                                            <option value="25000-50000">$25,000 - $50,000</option>
+                                            <option value="50000+">$50,000+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Special Requests -->
+                                <div class="mb-8">
+                                    <label class="form-label" for="specialRequests">Special Requests & Details</label>
+                                    <textarea id="specialRequests" name="specialRequests" rows="4" class="form-input resize-none" placeholder="Tell us about your vision, theme, dietary restrictions, VIP requirements, or any special arrangements needed..."></textarea>
+                                </div>
+
+                                <!-- Wedding-specific fields (conditional) -->
+                                <div id="weddingFields" class="conditional-field">
+                                    <div class="mb-6">
+                                        <label class="form-label">Ceremony Required?</label>
+                                        <div class="radio-group">
+                                            <div class="radio-item">
+                                                <input type="radio" id="ceremonyYes" name="ceremony" value="yes">
+                                                <label for="ceremonyYes">Yes</label>
+                                            </div>
+                                            <div class="radio-item">
+                                                <input type="radio" id="ceremonyNo" name="ceremony" value="no">
+                                                <label for="ceremonyNo">No, Reception Only</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="form-label" for="weddingParty">Wedding Party Size</label>
+                                        <input type="number" id="weddingParty" name="weddingParty" class="form-input" placeholder="Number of bridesmaids/groomsmen">
+                                    </div>
+                                </div>
+
+                                <!-- Corporate-specific fields (conditional) -->
+                                <div id="corporateFields" class="conditional-field">
+                                    <div class="mb-6">
+                                        <label class="form-label" for="companyName">Company Name</label>
+                                        <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Company / Organization">
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="form-label">Event Setup Style</label>
+                                        <div class="custom-select">
+                                            <select id="setupStyle" name="setupStyle">
+                                                <option value="">Select setup style</option>
+                                                <option value="theater">Theater Style</option>
+                                                <option value="banquet">Banquet / Rounds</option>
+                                                <option value="cocktail">Cocktail / Standing</option>
+                                                <option value="boardroom">Boardroom</option>
+                                                <option value="u-shape">U-Shape</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="form-label">AV Equipment Needed</label>
+                                        <div class="checkbox-group">
+                                            <div class="checkbox-item">
+                                                <input type="checkbox" id="projector" name="avEquipment" value="projector">
+                                                <label for="projector">Projector & Screen</label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <input type="checkbox" id="microphones" name="avEquipment" value="microphones">
+                                                <label for="microphones">Microphones & Sound</label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <input type="checkbox" id="lighting" name="avEquipment" value="lighting">
+                                                <label for="lighting">Stage Lighting</label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <input type="checkbox" id="livestream" name="avEquipment" value="livestream">
+                                                <label for="livestream">Live Streaming Setup</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Honeypot field to prevent spam -->
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <!-- Submit Button -->
+                                <button type="button" onclick="submitForm()" id="submitBtn" class="btn-hover w-full bg-mh-gold text-mh-navy py-4 text-xs tracking-[0.25em] uppercase font-semibold hover:bg-white transition-all duration-300">
+                                    Submit Reservation Request
+                                </button>
+
+                                <p class="text-gray-500 text-xs mt-4 text-center">
+                                    Our events team will respond within 24 hours to discuss your reservation
+                                </p>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div id="successMessage" class="success-message">
+                                <i class="fa-solid fa-check-circle text-mh-gold text-4xl mb-4"></i>
+                                <h3 class="text-white font-serif text-2xl mb-2">Request Received!</h3>
+                                <p class="text-gray-400 text-sm mb-4">We've received your venue reservation inquiry and our events team will contact you within 24 hours to discuss your special occasion at Time Groupe.</p>
+                                <div class="bg-mh-navy/50 p-4 inline-block mb-4">
+                                    <p class="text-mh-gold text-xs uppercase tracking-wider mb-1">Your Reference Number</p>
+                                    <p class="text-white text-xl font-serif" id="inquiryReferenceId">MH-CTC-2025-XX123XX123X1</p>
+                                </div>
+                                <div class="space-y-1 text-gray-400 text-xs">
+                                    <p><i class="fa-solid fa-envelope text-mh-gold mr-2"></i> Confirmation sent to <span id="confirmEmail"></span></p>
+                                </div>
+                            </div>
+
+                            <!-- Error Message -->
+                            <div id="errorMessage" class="error-message">
+                                <i class="fa-solid fa-exclamation-circle text-2xl mb-2"></i>
+                                <p class="font-light text-sm">Something went wrong. Please try again or contact us directly at 514-378-0154.</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="mt-8 flex items-center gap-4 text-sm text-gray-400">
+                            <i class="fa-solid fa-phone text-mh-gold"></i>
+                            <span>For immediate assistance: <a href="tel:5143780154" class="text-white hover:text-mh-gold transition-colors">514-378-0154</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-mh-navy">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Highlights</span>
+                    <h2 class="text-3xl md:text-4xl tao-heading text-white">What to Expect</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-hourglass-half text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Timeless Design</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Art deco inspired interiors blending vintage glamour with modern luxury.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-wine-bottle text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Champagne Lounge</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Extensive collection of premium champagnes and sparkling wines.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-music text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Era-Spanning Beats</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Classic hits and contemporary sounds seamlessly mixed by resident DJs.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-crown text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Exclusive Membership</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Private member events and priority reservations for discerning guests.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="py-20 bg-mh-dark">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Location</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-6">Find Us</h2>
+                        <div class="space-y-4 text-gray-400">
+                            <p class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot text-mh-gold mt-1"></i>
+                                <span>997 Rue Saint-Jacques door 1a<br>Montreal, QC H3C 1K1</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-clock text-mh-gold"></i>
+                                <span>Mon-Sun: 9AM - 6PM<br>Sun-Tue: Closed</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-shirt text-mh-gold"></i>
+                                <span>Dress Code: Elegant / Smart Formal</span>
+                            </p>
+                        </div>
+
+                        <div class="mt-8 flex gap-4">
+                            <a href="#" class="btn-hover inline-flex items-center gap-2 border border-mh-gold text-mh-gold px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all">
+                                <i class="fa-solid fa-map"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reveal aspect-video border border-white/10 overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.845123456789!2d-73.5745!3d45.4975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a41d3f6e7d7%3A0x8c9c7b8a6e5f4d3c!2s997%20Rue%20Saint-Jacques%20door%201a%2C%20Montreal%2C%20QC%20H3C%201K1!5e0!3m2!1sen!2sca!4v1234567890"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Venues -->
+        <section class="py-12 border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-6 text-center reveal">
+                <a href="venues.html" target="_self" class="inline-flex items-center gap-3 text-mh-gold hover:text-white transition-colors text-sm tracking-[0.2em] uppercase">
+                    <i class="fa-solid fa-arrow-left"></i> Back to All Venues
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Venues</a></li>
+                        <li><a href="sports.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Sports</a></li>
+                        <li><a href="service.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Service</a></li>
+                        <li><a href="index.html#careers" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="mailto:info@montrealhospitality.com" class="hover:text-mh-gold transition-colors">info@montrealhospitality.com</a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Gallery Images Array
+        const galleryImages = [
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190677/2__1___1_y7wzvi.png",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190732/3__1___1_syyrae.png",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190810/CUREStudio54-073_xkrbc9.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190886/3-7_bhzw2b.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190586/481986511_1011103321074687_4153660612256618797_n_wh248l.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771190527/482128549_1011117471073272_8446155792814615398_n_u7lwxd.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[index];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            }
+        });
+
+        // Generate reference number in format MH-CTC-2025-XX123XX123X1
+        function generateReferenceNumber() {
+            const prefix = 'MH-CTC-2025-';
+            
+            // Generate random alphanumeric string: XX123XX123X1
+            let randomPart = '';
+            
+            // Pattern: XX123XX123X1 (2 letters, 3 numbers, 2 letters, 3 numbers, 1 letter, 1 number)
+            const pattern = [
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 1 },
+                { type: 'number', count: 1 }
+            ];
+            
+            pattern.forEach(segment => {
+                for (let i = 0; i < segment.count; i++) {
+                    if (segment.type === 'letter') {
+                        // Random letter A-Z
+                        randomPart += String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                    } else {
+                        // Random number 0-9
+                        randomPart += Math.floor(Math.random() * 10).toString();
+                    }
+                }
+            });
+            
+            return prefix + randomPart;
+        }
+
+        // Validate form fields
+        function validateForm() {
+            const form = document.getElementById('guestListForm');
+            const requiredFields = form.querySelectorAll('[data-required="true"]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'rgba(255,255,255,0.2)';
+                }
+            });
+
+            return isValid;
+        }
+
+        // Submit form function
+        async function submitForm() {
+            const form = document.getElementById('guestListForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Validate form first
+            if (!validateForm()) {
+                // Shake animation for visual feedback
+                form.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    form.style.animation = '';
+                }, 500);
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.classList.add('submitting');
+            
+            try {
+                // Generate reference number first
+                const refNumber = generateReferenceNumber();
+                
+                // Collect all form data
+                const formData = new FormData(form);
+                
+                // Add reference number to form data
+                formData.append('inquiryReference', refNumber);
+                formData.append('ticketNumber', refNumber);
+                formData.append('referenceId', refNumber);
+                formData.append('venue', 'Time Groupe');
+                
+                // Submit to Formspree
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success - show success message
+                    document.getElementById('inquiryReferenceId').textContent = refNumber;
+                    document.getElementById('confirmEmail').textContent = formData.get('email');
+                    
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                document.getElementById('errorMessage').classList.add('active');
+                submitBtn.innerHTML = 'Submit Reservation Request';
+                submitBtn.classList.remove('submitting');
+            }
+        }
+
+        // Conditional Fields Toggle
+        function toggleEventFields() {
+            const eventType = document.getElementById('eventType').value;
+            const weddingFields = document.getElementById('weddingFields');
+            const corporateFields = document.getElementById('corporateFields');
+
+            // Hide all conditional fields first
+            weddingFields.classList.remove('active');
+            corporateFields.classList.remove('active');
+
+            // Show relevant fields based on selection
+            if (eventType === 'wedding') {
+                weddingFields.classList.add('active');
+            } else if (eventType === 'corporate') {
+                corporateFields.classList.add('active');
+            }
+        }
+
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load
+        window.scrollTo(0, 0);
+
+        // Loader and Hero Animation Trigger
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+
+                    // Trigger reveal animations
+                    const revealElements = document.querySelectorAll('.reveal');
+                    revealElements.forEach(el => {
+                        el.classList.add('active');
+                    });
+
+                }, 800);
+            }, 1200);
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+
+    <script>
+        function hideLoader(force = false) {
+            const loader = document.getElementById('loader');
+            if (!loader) return;
+            if (loader.dataset.hidden === 'true' && !force) return;
+            loader.dataset.hidden = 'true';
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+            }, 250);
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => setTimeout(() => hideLoader(), 300), { once: true });
+        } else {
+            setTimeout(() => hideLoader(), 300);
+        }
+        window.addEventListener('load', () => hideLoader(), { once: true });
+        window.addEventListener('pageshow', () => hideLoader());
+        setTimeout(() => hideLoader(true), 2200);
+    </script>
+
+    <script>
+        const translator = {
+            currentLang: 'en',
+            originalsCaptured: false,
+            translations: {"Home": "Accueil", "Venues": "Lieux", "Sports": "Sports", "Services": "Services", "Service": "Service", "Events": "Événements", "Careers": "Carrières", "Contact": "Contact", "Yachts": "Yachts", "Gallery": "Galerie", "View Gallery": "Voir la galerie", "Click to Expand": "Cliquez pour agrandir", "Vehicle Details": "Détails du véhicule", "Horsepower": "Chevaux", "0-100 sec": "0-100 s", "Engine": "Moteur", "Biturbo": "Biturbo", "Passenger Capacity": "Capacité passagers", "Luggage Space": "Espace bagages", "Reserve Now": "Réserver", "Back to Fleet": "Retour à la flotte", "Highlights": "Points forts", "Exceptional Features": "Caractéristiques exceptionnelles", "Fully Insured": "Entièrement assuré", "Comprehensive coverage for complete peace of mind during your rental period.": "Couverture complète pour une tranquillité d’esprit totale pendant votre location.", "24/7 Support": "Assistance 24/7", "Round-the-clock assistance from our dedicated fleet management team.": "Assistance en tout temps par notre équipe dédiée à la gestion de flotte.", "Premium Service": "Service premium", "Meticulously maintained vehicles delivered to your location.": "Des véhicules soigneusement entretenus, livrés à votre emplacement.", "Reservation": "Réservation", "Reserve This Vehicle": "Réserver ce véhicule", "Complete the form below and our fleet manager will confirm your reservation within 2 hours.": "Remplissez le formulaire ci-dessous et notre gestionnaire de flotte confirmera votre réservation dans les 2 heures.", "First Name": "Prénom", "Last Name": "Nom", "Email": "Courriel", "Email Address": "Adresse courriel", "Phone": "Téléphone", "Phone Number": "Numéro de téléphone", "Pickup Date": "Date de prise en charge", "Return Date": "Date de retour", "Add Professional Chauffeur Service (+$150/day)": "Ajouter un service de chauffeur professionnel (+150 $/jour)", "Add Professional Chauffeur Service": "Ajouter un service de chauffeur professionnel", "Special Requests": "Demandes spéciales", "Submit Reservation": "Soumettre la réservation", "Request Received!": "Demande reçue !", "Your Reference Number": "Votre numéro de référence", "Confirmation sent to": "Confirmation envoyée à", "Something went wrong. Please try again or contact us directly at 514-378-0154.": "Une erreur s’est produite. Veuillez réessayer ou nous contacter directement au 514-378-0154.", "24/7 Fleet Manager": "Gestionnaire de flotte 24/7", "Response within 24h": "Réponse sous 24 h", "Response within 2h": "Réponse sous 2 h", "WhatsApp": "WhatsApp", "Instant Booking": "Réservation instantanée", "Redefining the art of the night in Montreal.": "Redéfinir l’art de la nuit à Montréal.", "Explore": "Explorer", "Follow": "Suivre", "Privacy": "Confidentialité", "Terms": "Conditions", "Reserve Your Vehicle": "Réservez votre véhicule", "Choose a vehicle": "Choisissez un véhicule", "Select Vehicle": "Choisir un véhicule", "We've received your reservation and our fleet manager will confirm within 2 hours.": "Nous avons reçu votre réservation et notre gestionnaire de flotte confirmera dans les 2 heures.", "Instant Quotes": "Soumissions instantanées", "Concierge": "Conciergerie", "Response within 24-48 hours": "Réponse sous 24 à 48 heures", "Return Home": "Retour à l’accueil", "Submit Another": "Soumettre une autre demande", "Plan an Event": "Planifier un événement", "Start Inquiry": "Commencer la demande", "Our Venues": "Nos lieux", "Contact Team": "Contacter l’équipe", "Get In Touch": "Entrer en contact", "Let's": "Prenons", "Connect": "contact", "Send a Message": "Envoyer un message", "Get in Touch": "Entrer en contact", "Whether you're planning an event, seeking partnership opportunities, or simply want to learn more about our venues, we'd love to hear from you.": "Que vous planifiiez un événement, recherchiez des opportunités de partenariat ou souhaitiez simplement en savoir plus sur nos lieux, nous serions ravis de vous entendre.", "Select Inquiry Type": "Sélectionnez le type de demande", "Private Event": "Événement privé", "Venue Information": "Information sur le lieu", "Corporate Partnership": "Partenariat corporatif", "Press & Media": "Presse et médias", "Other": "Autre", "Your Message": "Votre message", "Send Message": "Envoyer le message", "Thank you for your message!": "Merci pour votre message !", "We'll be in touch shortly.": "Nous vous contacterons sous peu.", "Your Inquiry Reference": "Votre référence de demande", "Copy Reference": "Copier la référence", "Please save this reference for your records": "Veuillez conserver cette référence pour vos dossiers", "Something went wrong. Please try again or email us directly.": "Une erreur s’est produite. Veuillez réessayer ou nous écrire directement par courriel.", "Headquarters": "Siège social", "Mon - Fri: 9:00 AM - 6:00 PM": "Lun - Ven : 9 h 00 - 18 h 00", "Follow Us": "Suivez-nous", "Visit Us": "Venez nous voir", "Located in the heart of downtown Montreal, steps from the Bell Centre and major hotels.": "Situé au cœur du centre-ville de Montréal, à quelques pas du Centre Bell et des grands hôtels.", "FAQ": "FAQ", "Common Questions": "Questions fréquentes", "How far in advance should I book a private event?": "Combien de temps à l’avance dois-je réserver un événement privé ?", "We recommend booking private events at least 3-6 months in advance, especially for peak seasons (December, May-October). For full venue buyouts, 6-12 months notice is ideal to ensure availability.": "Nous recommandons de réserver les événements privés au moins 3 à 6 mois à l’avance, surtout pendant les saisons achalandées (décembre, mai à octobre). Pour une privatisation complète du lieu, un délai de 6 à 12 mois est idéal pour assurer la disponibilité.", "What is the capacity for private events?": "Quelle est la capacité pour les événements privés ?", "Capacities vary by venue: Yoko Luna accommodates up to 500 guests for receptions, Hang Bar up to 200, and Bord'Elle up to 300. We also offer intimate private dining rooms for 20-80 guests.": "Les capacités varient selon le lieu : Yoko Luna peut accueillir jusqu’à 500 invités pour des réceptions, Hang Bar jusqu’à 200, et Bord'Elle jusqu’à 300. Nous proposons également des salons privés plus intimes pour 20 à 80 invités.", "Do you offer catering for off-site events?": "Offrez-vous un service de traiteur pour des événements hors site ?", "Yes, our catering team can provide off-site services for select events. Please contact our events team with your specific requirements for a custom quote.": "Oui, notre équipe traiteur peut offrir des services hors site pour certains événements. Veuillez contacter notre équipe événements avec vos besoins précis pour une soumission sur mesure.", "Is there parking available near your venues?": "Y a-t-il du stationnement près de vos lieux ?", "Yes, there are several public parking garages within walking distance of all our venues. We also offer valet services for private events upon request.": "Oui, plusieurs stationnements publics se trouvent à distance de marche de tous nos lieux. Nous offrons aussi un service de voiturier pour les événements privés sur demande.", "Ready to Plan Your Event?": "Prêt à planifier votre événement ?", "Our events team is available to discuss your vision and create an unforgettable experience.": "Notre équipe événements est disponible pour discuter de votre vision et créer une expérience inoubliable.", "Call Now": "Appeler maintenant", "Event Inquiries": "Demandes d’événement", "Plan Your Perfect Event": "Planifiez votre événement parfait", "Tell us about your event and our team will create a customized proposal tailored to your vision.": "Parlez-nous de votre événement et notre équipe préparera une proposition sur mesure adaptée à votre vision.", "Event Type": "Type d’événement", "Event Details": "Détails de l’événement", "Contact Info": "Coordonnées", "Step 1": "Étape 1", "What Type of Event Are You Planning?": "Quel type d’événement planifiez-vous ?", "Select the category that best describes your event": "Sélectionnez la catégorie qui décrit le mieux votre événement", "Social Events": "Événements sociaux", "Birthdays, Anniversaries, Celebrations": "Anniversaires, fêtes et célébrations", "Corporate": "Corporatif", "Meetings, Conferences, Product Launches": "Réunions, conférences, lancements de produits", "Wedding": "Mariage", "Ceremonies, Receptions, Rehearsals": "Cérémonies, réceptions, répétitions", "Milestones": "Moments marquants", "Graduations, Retirements, Reunions": "Graduations, retraites, retrouvailles", "Bachelor Party": "Enterrement de vie de célibataire", "Last Night of Freedom Celebrations": "Célébrations de la dernière nuit de liberté", "Holiday": "Fêtes", "Seasonal Parties, Year-End Events": "Fêtes saisonnières, événements de fin d’année", "Private Dining": "Repas privé", "Intimate Dinners, Wine Tastings": "Dîners intimes, dégustations de vins", "Continue to Details": "Continuer vers les détails", "Step 2": "Étape 2", "Tell Us About Your Event": "Parlez-nous de votre événement", "Help us understand your vision and requirements": "Aidez-nous à comprendre votre vision et vos besoins", "Event Name *": "Nom de l’événement *", "Please enter an event name": "Veuillez entrer un nom d’événement", "Preferred Date *": "Date préférée *", "Please select a date": "Veuillez sélectionner une date", "Date Flexibility": "Flexibilité de date", "Fixed Date": "Date fixe", "± 1 Week Flexible": "± 1 semaine de flexibilité", "Very Flexible": "Très flexible", "Expected Guest Count *": "Nombre d’invités prévu *", "Select range": "Sélectionnez une plage", "1-25 guests": "1 à 25 invités", "25-50 guests": "25 à 50 invités", "50-100 guests": "50 à 100 invités", "100-200 guests": "100 à 200 invités", "200-300 guests": "200 à 300 invités", "300+ guests": "300+ invités", "Please select guest count": "Veuillez sélectionner le nombre d’invités", "Estimated Budget *": "Budget estimé *", "Select budget": "Sélectionnez un budget", "Please select budget range": "Veuillez sélectionner une plage budgétaire", "Preferred Venue *": "Lieu préféré *", "Select venue": "Sélectionnez un lieu", "Multiple Venues": "Plusieurs lieux", "Undecided - Need Recommendations": "Indécis - besoin de recommandations", "Please select a venue": "Veuillez sélectionner un lieu", "Services Required": "Services requis", "Venue Space Only": "Espace de lieu seulement", "Catering & Dining": "Traiteur et restauration", "Bar & Beverage Service": "Service de bar et boissons", "Audio/Visual Equipment": "Équipement audiovisuel", "Decor & Floral Design": "Décor et design floral", "DJ / Entertainment": "DJ / divertissement", "Photography / Videography": "Photographie / vidéographie", "Security Services": "Services de sécurité", "Transportation / Valet": "Transport / voiturier", "Guest Accommodations": "Hébergement des invités", "Luxury Car Rental": "Location de voiture de luxe", "Private Jet": "Jet privé", "Private Chauffeur": "Chauffeur privé", "Private Yacht": "Yacht privé", "Luxury Sprinter": "Sprinter de luxe", "Luxury Residence": "Résidence de luxe", "Party Bus": "Party bus", "Limo Service": "Service de limousine", "Tell Us About Your Event *": "Parlez-nous de votre événement *", "Please describe your event": "Veuillez décrire votre événement", "Back": "Retour", "Continue to Contact Info": "Continuer vers les coordonnées", "Step 3": "Étape 3", "Your Contact Information": "Vos coordonnées", "How should we reach you with your customized proposal?": "Comment devons-nous vous joindre avec votre proposition personnalisée ?", "First Name *": "Prénom *", "Please enter your first name": "Veuillez entrer votre prénom", "Last Name *": "Nom *", "Please enter your last name": "Veuillez entrer votre nom", "Email Address *": "Adresse courriel *", "Please enter a valid email": "Veuillez entrer une adresse courriel valide", "Phone Number *": "Numéro de téléphone *", "Please enter your phone number": "Veuillez entrer votre numéro de téléphone", "Your Role in This Event": "Votre rôle dans cet événement", "Select your role": "Sélectionnez votre rôle", "Host/Hostess": "Hôte/Hôtesse", "Event Planner": "Planificateur d’événement", "Executive Assistant": "Adjoint(e) de direction", "Family Member": "Membre de la famille", "Friend": "Ami(e)", "Bride": "Mariée", "Groom/Partner": "Marié(e)/partenaire", "Corporate Representative": "Représentant corporatif", "Preferred Contact Method *": "Méthode de contact préférée *", "Text Message": "Message texte", "Best Time to Reach You": "Meilleur moment pour vous joindre", "Morning (9AM - 12PM)": "Matin (9 h - 12 h)", "Afternoon (12PM - 5PM)": "Après-midi (12 h - 17 h)", "Evening (5PM - 8PM)": "Soir (17 h - 20 h)", "How Did You Hear About Us?": "Comment avez-vous entendu parler de nous ?", "Select option": "Sélectionnez une option", "Google Search": "Recherche Google", "Social Media": "Réseaux sociaux", "Friend/Family Referral": "Référence d’un ami/de la famille", "Visited Venue Before": "Lieu déjà visité", "Attended Event Here": "A assisté à un événement ici", "Event Planner Recommendation": "Recommandation d’un planificateur", "Wedding Show": "Salon du mariage", "Magazine/Article": "Magazine/Article", "Sign me up for exclusive event planning tips, venue updates, and special offers from Montreal Hospitality.": "Inscrivez-moi pour recevoir des conseils exclusifs de planification, des nouvelles de nos lieux et des offres spéciales de Montreal Hospitality.", "Submit Inquiry": "Soumettre la demande", "Inquiry Submitted!": "Demande soumise !", "Thank you for your interest in hosting your event with us. Our events team has received your inquiry and will begin preparing your customized proposal.": "Merci de votre intérêt pour organiser votre événement avec nous. Notre équipe a bien reçu votre demande et commencera à préparer votre proposition personnalisée.", "Confirmation email sent to": "Courriel de confirmation envoyé à", "Creating unforgettable experiences in Montreal's most prestigious venues.": "Créer des expériences inoubliables dans les lieux les plus prestigieux de Montréal.", "Downtown": "Centre-ville", "Where timeless elegance meets contemporary nightlife in perfect harmony": "Là où l’élégance intemporelle rencontre la vie nocturne contemporaine en parfaite harmonie", "Timeless Design": "Design intemporel", "Classic Aesthetic": "Esthétique classique", "Luxury Experience": "Expérience de luxe", "Champagne Bar": "Bar à champagne", "Fine Selection": "Sélection raffinée", "Experience Time Groupe": "Découvrir Time Groupe", "Private Events": "Événements privés", "Venue Reservation": "Réservation du lieu", "Event Type *": "Type d’événement *", "Select your event type": "Sélectionnez votre type d’événement", "Wedding Reception": "Réception de mariage", "Prom / Graduation": "Bal / remise des diplômes", "Corporate Event": "Événement corporatif", "Birthday Celebration": "Fête d’anniversaire", "Anniversary Party": "Fête d’anniversaire de mariage", "Bridal / Baby Shower": "Douche nuptiale / baby shower", "Engagement Party": "Fête de fiançailles", "Bachelor / Bachelorette": "Enterrement de vie de garçon / jeune fille", "Holiday Party": "Party des fêtes", "Fundraiser / Gala": "Collecte de fonds / gala", "Product Launch": "Lancement de produit", "Private Dinner": "Dîner privé", "Other Special Event": "Autre événement spécial", "Full Name *": "Nom complet *", "Number of Guests *": "Nombre d’invités *", "Select guest count": "Sélectionnez le nombre d’invités", "20-50 guests": "20 à 50 invités", "Event Time Preference": "Préférence d’horaire", "Afternoon": "Après-midi", "Evening": "Soir", "Late Night": "Fin de soirée", "Catering & Dining Services": "Services de traiteur et restauration", "Open Bar / Beverage Service": "Bar ouvert / service de boissons", "DJ & Sound System": "DJ et système sonore", "Decor & Floral Arrangements": "Décor et arrangements floraux", "Private Security": "Sécurité privée", "Estimated Budget Range": "Fourchette budgétaire estimée", "Select budget range": "Sélectionnez une fourchette budgétaire", "Special Requests & Details": "Demandes spéciales et détails", "Ceremony Required?": "Cérémonie requise ?", "Yes": "Oui", "No, Reception Only": "Non, réception seulement", "Wedding Party Size": "Taille du cortège", "Company Name": "Nom de l’entreprise", "Event Setup Style": "Style d’aménagement", "Select setup style": "Sélectionnez un style d’aménagement", "Theater Style": "Style théâtre", "Banquet / Rounds": "Banquet / tables rondes", "Cocktail / Standing": "Cocktail / debout", "Boardroom": "Salle de conseil", "U-Shape": "En U", "AV Equipment Needed": "Équipement AV requis", "Projector & Screen": "Projecteur et écran", "Microphones & Sound": "Microphones et son", "Stage Lighting": "Éclairage de scène", "Live Streaming Setup": "Installation de diffusion en direct", "Submit Reservation Request": "Soumettre la demande de réservation", "Our events team will respond within 24 hours to discuss your reservation": "Notre équipe répondra dans les 24 heures pour discuter de votre réservation", "We've received your venue reservation inquiry and our events team will contact you within 24 hours to discuss your special occasion at Time Groupe.": "Nous avons reçu votre demande de réservation du lieu et notre équipe vous contactera dans les 24 heures pour discuter de votre occasion spéciale chez Time Groupe.", "For immediate assistance:": "Pour une assistance immédiate :", "What to Expect": "À quoi vous attendre", "Art deco inspired interiors blending vintage glamour with modern luxury.": "Des intérieurs inspirés de l’Art déco qui marient le glamour vintage au luxe moderne.", "Champagne Lounge": "Salon champagne", "Extensive collection of premium champagnes and sparkling wines.": "Grande collection de champagnes haut de gamme et de vins mousseux.", "Era-Spanning Beats": "Ambiance musicale intergénérationnelle", "Classic hits and contemporary sounds seamlessly mixed by resident DJs.": "Des classiques et des sons contemporains harmonieusement mixés par nos DJs résidents.", "Exclusive Membership": "Adhésion exclusive", "Private member events and priority reservations for discerning guests.": "Événements privés pour membres et réservations prioritaires pour une clientèle sélective.", "Location": "Emplacement", "Find Us": "Nous trouver", "Montreal, QC H3C 1K1": "Montréal, QC H3C 1K1", "Mon-Sun: 9AM - 6PM": "Lun-Dim : 9 h - 18 h", "Sun-Tue: Closed": "Dim-Mar : Fermé", "Dress Code: Elegant / Smart Formal": "Code vestimentaire : élégant / chic formel", "Get Directions": "Obtenir l’itinéraire", "Back to All Venues": "Retour à tous les lieux", "Luxury Motor Yacht": "Yacht à moteur de luxe", "Motor Yacht": "Yacht à moteur", "A floating palace featuring six staterooms, beach club, helipad, and world-class amenities. The ultimate expression of maritime luxury.": "Un palais flottant comprenant six cabines, un beach club, un héliport et des commodités de classe mondiale. L’expression ultime du luxe maritime.", "Specifications": "Spécifications", "Charter Now": "Réserver maintenant", "Length": "Longueur", "Feet": "Pieds", "Guests": "Invités", "Cabins": "Cabines", "Crew": "Équipage", "Year": "Année", "Visual Tour": "Visite visuelle", "Details": "Détails", "Length Overall": "Longueur hors tout", "Draft": "Tirant d’eau", "Max Speed": "Vitesse maximale", "Knots": "Nœuds", "Guest Capacity": "Capacité d’invités", "Year Built": "Année de construction", "Features": "Caractéristiques", "Charter Includes": "La location comprend", "Professional captain and crew": "Capitaine et équipage professionnels", "Premium beverages and catering": "Boissons haut de gamme et service traiteur", "Water toys and equipment": "Jouets nautiques et équipement", "Fuel for local cruising": "Carburant pour navigation locale", "Port fees and taxes": "Frais de port et taxes", "Charter This Yacht": "Réserver ce yacht", "Complete the form below and our charter team will confirm availability within 24 hours.": "Remplissez le formulaire ci-dessous et notre équipe charter confirmera la disponibilité dans les 24 heures.", "Charter Date": "Date de location", "Duration (Days)": "Durée (jours)", "Number of Guests": "Nombre d’invités", "Embarkation Port": "Port d’embarquement", "Request Charter": "Demander la location", "View Other Yachts": "Voir les autres yachts", "Max 12": "Max 12", "Max 10": "Max 10", "Max 8": "Max 8", "Montreal": "Montréal", "Dietary requirements, celebration details, preferred itinerary...": "Exigences alimentaires, détails de la célébration, itinéraire préféré...", "The perfect balance of performance and luxury. Ideal for intimate gatherings and coastal exploration.": "L’équilibre parfait entre performance et luxe. Idéal pour des rassemblements intimes et l’exploration côtière.", "Overview": "Aperçu", "Compact Elegance": "Élégance compacte", "The 40' Cruiser Yacht delivers an exceptional yachting experience in a more intimate package. Perfect for day trips, sunset cruises, and weekend getaways along the coast.": "Le yacht 40' Cruiser offre une expérience nautique exceptionnelle dans un format plus intime. Parfait pour des sorties d’une journée, des croisières au coucher du soleil et des escapades de fin de semaine le long de la côte.", "Despite her compact size, she doesn't compromise on luxury. Featuring premium finishes, state-of-the-art navigation systems, and comfortable accommodations for overnight stays.": "Malgré sa taille compacte, il ne fait aucun compromis sur le luxe. Il offre des finitions haut de gamme, des systèmes de navigation à la fine pointe et un hébergement confortable pour la nuit.", "2 Cabins": "2 cabines", "Master + Guest": "Maître + invité", "2 Bathrooms": "2 salles de bain", "En-suite": "Attenantes", "Galley": "Cuisine", "Full Kitchen": "Cuisine complète", "Sun Deck": "Pont soleil", "Spacious": "Spacieux", "Book This Yacht": "Réserver ce yacht", "Starting from": "À partir de", "/ day": "/ jour", "Amenities": "Commodités", "Onboard Features": "Caractéristiques à bord", "Every detail crafted for your comfort and enjoyment": "Chaque détail pensé pour votre confort et votre plaisir", "Salon Lounge": "Salon intérieur", "Climate-controlled interior salon with premium leather seating, entertainment system, and panoramic windows.": "Salon intérieur climatisé avec sièges en cuir haut de gamme, système de divertissement et fenêtres panoramiques.", "Swim Platform": "Plateforme de baignade", "Extended hydraulic swim platform for easy water access, perfect for swimming and water sports activities.": "Plateforme de baignade hydraulique allongée pour un accès facile à l’eau, idéale pour la baignade et les activités nautiques.", "Sound System": "Système audio", "Premium JL Audio system throughout with Bluetooth connectivity, subwoofer, and zone controls.": "Système JL Audio haut de gamme à bord avec connexion Bluetooth, caisson de basses et contrôle par zones.", "Wet Bar": "Bar extérieur", "Outdoor wet bar with grill, refrigerator, ice maker, and serving area for alfresco dining and entertaining.": "Bar extérieur avec grill, réfrigérateur, machine à glaçons et espace de service pour repas et réceptions en plein air.", "Entertainment": "Divertissement", "Smart TV with streaming services, satellite TV, and outdoor speakers for the ultimate entertainment experience.": "Téléviseur intelligent avec services de diffusion, télévision satellite et haut-parleurs extérieurs pour une expérience de divertissement ultime.", "Navigation": "Navigation", "State-of-the-art Garmin navigation suite with GPS, radar, autopilot, and fishfinder for safe cruising.": "Suite de navigation Garmin à la fine pointe avec GPS, radar, pilote automatique et détecteur de poissons pour une navigation en toute sécurité.", "Explore every angle of this magnificent vessel": "Découvrez chaque angle de ce magnifique navire", "Technical Specifications": "Spécifications techniques", "Builder": "Constructeur", "Cruising Speed": "Vitesse de croisière", "Fuel Capacity": "Capacité de carburant", "Water Capacity": "Capacité d’eau", "Complete the form below and our charter team will confirm your booking within 24 hours.": "Remplissez le formulaire ci-dessous et notre équipe charter confirmera votre réservation dans les 24 heures.", "Duration": "Durée", "Select Duration": "Sélectionnez la durée", "4 Hours - $1,800": "4 heures - 1 800 $", "8 Hours - $3,500": "8 heures - 3 500 $", "24 Hours - $6,500": "24 heures - 6 500 $", "Weekend (2 days) - $12,000": "Week-end (2 jours) - 12 000 $", "What's Included": "Ce qui est inclus", "Fuel for cruising": "Carburant pour la croisière", "Water, soft drinks, and ice": "Eau, boissons non alcoolisées et glace", "Water toys (paddleboards, snorkeling gear)": "Jouets nautiques (planches à pagaie, équipement de plongée libre)", "Fleet": "Flotte", "You May Also Like": "Vous pourriez aussi aimer", "From $4,200/day": "À partir de 4 200 $/jour", "From $4,800/day": "À partir de 4 800 $/jour", "From $3,800/day": "À partir de 3 800 $/jour", "24/7 Charter Desk": "Bureau charter 24/7", "Any specific requirements...": "Exigences particulières...", "john@example.com": "john@exemple.com", "your@email.com": "votre@courriel.com", "Enter your full name": "Entrez votre nom complet", "(514) 000-0000": "(514) 000-0000", "Describe your vision, theme, special requirements, dietary restrictions, or any other details that will help us create the perfect event for you...": "Décrivez votre vision, le thème, les exigences particulières, les restrictions alimentaires ou tout autre détail qui nous aidera à créer l’événement parfait pour vous...", "e.g., Johnson Wedding, Annual Gala 2024": "ex. : Mariage Johnson, Gala annuel 2024", "Tell us about your vision, theme, dietary restrictions, VIP requirements, or any special arrangements needed...": "Parlez-nous de votre vision, du thème, des restrictions alimentaires, des exigences VIP ou de toute disposition spéciale nécessaire...", "Number of bridesmaids/groomsmen": "Nombre de demoiselles/d’hommes d’honneur", "Company / Organization": "Entreprise / organisation", "John": "Jean", "Doe": "Dupont", "+1 (514) 555-0199": "+1 (514) 555-0199", "Max 10 guests": "Max 10 invités", "Catering preferences, route requests, celebration details, water toys...": "Préférences de restauration, demandes d’itinéraire, détails de la célébration, jouets nautiques...", "Select number of guests": "Sélectionnez le nombre d’invités", "Exotic Fleet": "Flotte exotique", "Experience the pinnacle of automotive luxury. From Italian supercars to British elegance, our curated collection awaits.": "Découvrez le summum du luxe automobile. Des supercars italiennes à l’élégance britannique, notre collection soigneusement sélectionnée vous attend.", "Explore Fleet": "Découvrir la flotte", "Our Collection": "Notre collection", "10 Vehicles Available": "10 véhicules disponibles", "Scroll through our exclusive collection of luxury and exotic vehicles. Each car is meticulously maintained and ready for your next journey.": "Parcourez notre collection exclusive de véhicules de luxe et exotiques. Chaque voiture est méticuleusement entretenue et prête pour votre prochaine expérience.", "Featured Vehicle": "Véhicule vedette", "Select": "Sélectionner", "Luxury Transport": "Transport de luxe", "Private Sprinter": "Sprinter privé", "Executive transport for groups up to 14": "Transport exécutif pour des groupes jusqu’à 14 personnes", "Inquire": "S’informer", "limousines": "limousines", "Ultimate celebration on wheels": "La célébration ultime sur roues", "Chauffeur Service": "Service de chauffeur", "Professional drivers at your service": "Des chauffeurs professionnels à votre service", "SUV": "VUS", "Luxury": "Luxe", "VIP": "VIP", "Sedan": "Berline", "Beyond Cars": "Au-delà des voitures", "Time Groupe | Montreal Hospitality": "Time Groupe | Montreal Hospitality", "997 Rue Saint-Jacques door 1a": "997 Rue Saint-Jacques porte 1a", "info@montrealhospitality.com": "info@montrealhospitality.com"},
+            placeholderTranslations: {"Enter your full name": "Entrez votre nom complet", "your@email.com": "votre@courriel.com", "(514) 000-0000": "(514) 000-0000", "Any specific requirements...": "Exigences particulières...", "e.g., Johnson Wedding, Annual Gala 2024": "ex. : Mariage Johnson, Gala annuel 2024", "Describe your vision, theme, special requirements, dietary restrictions, or any other details that will help us create the perfect event for you...": "Décrivez votre vision, le thème, les exigences particulières, les restrictions alimentaires ou tout autre détail qui nous aidera à créer l’événement parfait pour vous...", "John": "Jean", "Doe": "Dupont", "john@example.com": "john@exemple.com", "+1 (514) 555-0199": "+1 (514) 555-0199", "Tell us about your vision, theme, dietary restrictions, VIP requirements, or any special arrangements needed...": "Parlez-nous de votre vision, du thème, des restrictions alimentaires, des exigences VIP ou de toute disposition spéciale nécessaire...", "Number of bridesmaids/groomsmen": "Nombre de demoiselles/d’hommes d’honneur", "Company / Organization": "Entreprise / organisation", "Dietary requirements, celebration details, preferred itinerary...": "Exigences alimentaires, détails de la célébration, itinéraire préféré...", "Max 12": "Max 12", "Max 10": "Max 10", "Max 8": "Max 8", "Montreal": "Montréal", "Max 10 guests": "Max 10 invités", "Catering preferences, route requests, celebration details, water toys...": "Préférences de restauration, demandes d’itinéraire, détails de la célébration, jouets nautiques..."},
+            titleFr: null,
+            captureOriginals() {
+                if (this.originalsCaptured) return;
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    node.__originalText = node.nodeValue;
+                }
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    el.dataset.originalPlaceholder = el.getAttribute('placeholder') || '';
+                });
+                document.querySelectorAll('option').forEach(el => {
+                    el.dataset.originalOption = el.textContent;
+                });
+                document.titleOriginal = document.title;
+                this.originalsCaptured = true;
+            },
+            init() {
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                if (savedLang === 'fr' || savedLang === 'en') {
+                    this.currentLang = savedLang;
+                } else if (browserLang === 'fr') {
+                    this.currentLang = 'fr';
+                }
+                this.captureOriginals();
+                this.updateUI();
+                this.translatePage();
+            },
+            setLanguage(lang) {
+                if (!['en', 'fr'].includes(lang)) return;
+                this.currentLang = lang;
+                localStorage.setItem('preferred_language', lang);
+                this.updateUI();
+                this.translatePage();
+            },
+            updateUI() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
+                });
+            },
+            replaceTextNode(node) {
+                const original = node.__originalText || node.nodeValue;
+                if (this.currentLang === 'en') {
+                    node.nodeValue = original;
+                    return;
+                }
+                const trimmed = original.trim();
+                const translated = this.translations[trimmed];
+                if (!translated) {
+                    node.nodeValue = original;
+                    return;
+                }
+                const leading = original.match(/^\s*/)[0];
+                const trailing = original.match(/\s*$/)[0];
+                node.nodeValue = leading + translated + trailing;
+            },
+            translatePage() {
+                this.captureOriginals();
+                document.documentElement.lang = this.currentLang;
+                document.title = this.currentLang === 'fr' ? (this.titleFr || document.titleOriginal) : document.titleOriginal;
+
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) this.replaceTextNode(walker.currentNode);
+
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    const original = el.dataset.originalPlaceholder || el.getAttribute('placeholder') || '';
+                    if (this.currentLang === 'fr') {
+                        el.setAttribute('placeholder', this.placeholderTranslations[original] || original);
+                    } else {
+                        el.setAttribute('placeholder', original);
+                    }
+                });
+
+                document.querySelectorAll('option').forEach(el => {
+                    const original = el.dataset.originalOption || el.textContent;
+                    if (this.currentLang === 'fr') {
+                        const translated = this.translations[original.trim()];
+                        el.textContent = translated || original;
+                    } else {
+                        el.textContent = original;
+                    }
+                });
+            }
+        };
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Charter a luxury yacht in Montreal with Montreal Hospitality. Cruisers, prestige yachts, and Azimut models for private events on the St. Lawrence.">
+    <link rel="canonical" href="https://montrealhospitality.com/yachts">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Yachts | Service | Montreal Hospitality">
+    <meta property="og:description" content="Charter a luxury yacht in Montreal with Montreal Hospitality. Cruisers, prestige yachts, and Azimut models for private events on the St. Lawrence.">
+    <meta property="og:url" content="https://montrealhospitality.com/yachts">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yachts | Service | Montreal Hospitality">
+    <meta name="twitter:description" content="Charter a luxury yacht in Montreal with Montreal Hospitality. Cruisers, prestige yachts, and Azimut models for private events on the St. Lawrence.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yachts | Service | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Nav */
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        /* Image Hover Effects */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Smooth underline animation */
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* Button hover animations */
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        /* Card hover lift */
+        .card-lift {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger children animations */
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .stagger-children.active > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+
+        /* Yacht card overlay */
+        .yacht-overlay {
+            background: linear-gradient(to top, rgba(11, 15, 25, 0.95) 0%, rgba(11, 15, 25, 0.6) 50%, transparent 100%);
+        }
+
+        /* Specs box */
+        .spec-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .spec-box:hover {
+            border-color: #C5A059;
+            background: rgba(197, 160, 89, 0.05);
+        }
+
+        /* Price tag */
+        .price-tag {
+            background: linear-gradient(135deg, #C5A059 0%, #D6B88A 100%);
+        }
+
+        /* Form styles */
+        .form-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 0;
+            width: 100%;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #C5A059;
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Wave animation */
+        @keyframes wave {
+            0% { transform: translateX(0) translateZ(0) scaleY(1); }
+            50% { transform: translateX(-25%) translateZ(0) scaleY(0.55); }
+            100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+        }
+        .wave-bg {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 88.7"><path d="M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z" fill="%23C5A059" opacity="0.1"/></svg>');
+            background-size: 800px 100px;
+            animation: wave 10s linear infinite;
+        }
+
+        /* Clickable card cursor */
+        a.yacht-card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        a.yacht-card-link:hover .yacht-click-hint {
+            opacity: 1;
+        }
+        .yacht-click-hint {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .lang-btn:hover { color: #C5A059; }
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+    </style>
+<base target="_self">
+<base target="_self">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium bg-mh-navy/90 backdrop-blur-md border-b border-white/10">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" target="_self" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-12">
+              <a href="index.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Home</a>
+              <a href="venues.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Venues</a>
+              <a href="sports.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Sports</a>
+              <a href="service.html" target="_self" class="link-hover text-mh-gold transition-colors">Services</a>
+              <a href="event.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Events</a>
+              <a href="index.html#careers" target="_self" class="link-hover hover:text-mh-gold transition-colors">Careers</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="hidden lg:flex items-center gap-8">
+            
+
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+
+<a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+           <a href="index.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Home</a>
+           <a href="venues.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Venues</a>
+           <a href="sports.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Sports</a>
+           <a href="service.html" target="_self" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Services</a>
+           <a href="event.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Events</a>
+           <a href="index.html#careers" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Careers</a>
+
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active text-lg" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+            <div class="lang-divider h-6"></div>
+            <button class="lang-btn text-lg" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+        </div>
+
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-[70vh] w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771811751/49-1_toghli.jpg" 
+                 alt="Luxury Yacht" 
+                 class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/60 via-mh-navy/40 to-mh-navy"></div>
+            <!-- Wave overlay at bottom -->
+            <div class="absolute bottom-0 left-0 w-full h-24 wave-bg opacity-30"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+            <p class="tao-subheading text-mh-gold mb-6 tracking-[0.3em] text-xs md:text-sm reveal">
+                Concierge Service
+            </p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl tao-heading text-white mb-6 leading-[0.95] reveal">
+                Luxury Yachts
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg mb-10 reveal">
+                Navigate the world's most exclusive waters. From sleek motor yachts to majestic superyachts, experience maritime excellence.
+            </p>
+            <div class="reveal">
+                <a href="#fleet" class="btn-hover inline-flex items-center gap-3 bg-mh-gold text-mh-navy px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white transition-all duration-300">
+                    View Fleet <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fleet Categories -->
+    <section id="fleet" class="py-24 bg-mh-dark">
+        <div class="max-w-[95%] mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Our Collection</span>
+                <h2 class="text-4xl md:text-6xl tao-heading text-white">Charter Fleet</h2>
+            </div>
+
+            <!-- Featured Yacht: 55' Azimut — entire card is a link -->
+            <a href="yacht-55-azimut.html" target="_self" class="yacht-card-link group relative mb-12 h-[70vh] overflow-hidden reveal card-lift block">
+                <div class="img-zoom-container w-full h-full relative">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771468932/DJI_0870_bicu4t.jpg" 
+                         class="img-zoom w-full h-full object-cover" 
+                         alt="60m Luxury Motor Yacht">
+                </div>
+                <div class="absolute inset-0 yacht-overlay z-10"></div>
+
+                <!-- Hover hint -->
+                <div class="yacht-click-hint absolute top-6 right-6 z-30 bg-mh-gold/90 text-mh-navy px-4 py-2 text-xs tracking-widest uppercase flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Yacht
+                </div>
+
+                <div class="absolute bottom-0 left-0 p-10 md:p-16 w-full z-20">
+                    <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.2em] uppercase block mb-3">Luxury Motor Yacht</span>
+                    <h3 class="text-5xl md:text-7xl tao-heading text-white mb-4">55' Azimut</h3>
+                    <p class="text-white/70 max-w-xl font-light mb-8 text-lg">
+                        A floating palace featuring six staterooms, beach club, helipad, and world-class amenities. The ultimate expression of maritime luxury.
+                    </p>
+
+                    <!-- Specs -->
+                    <div class="flex flex-wrap gap-6 mb-8">
+                        <div class="spec-box px-6 py-3">
+                            <span class="text-mh-gold text-xs block mb-1">Length</span>
+                            <span class="text-white font-serif">55 Feet</span>
+                        </div>
+                        <div class="spec-box px-6 py-3">
+                            <span class="text-mh-gold text-xs block mb-1">Guests</span>
+                            <span class="text-white font-serif">12 Guests</span>
+                        </div>
+                        <div class="spec-box px-6 py-3">
+                            <span class="text-mh-gold text-xs block mb-1">Crew</span>
+                            <span class="text-white font-serif">2 Crew</span>
+                        </div>
+                        <div class="spec-box px-6 py-3">
+                            <span class="text-mh-gold text-xs block mb-1">Cruising Speed</span>
+                            <span class="text-white font-serif">32 Knots</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <span class="btn-hover inline-flex items-center gap-3 bg-mh-gold text-mh-navy px-8 py-3 text-xs tracking-[0.25em] uppercase">
+                            Charter Now <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Yacht Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+
+                <!-- Motor Yacht 50' -->
+                <a href="yacht-50-azimut.html" target="_self" class="yacht-card-link group relative h-[500px] overflow-hidden reveal card-lift block">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771468939/DJI_0913_eab45g.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="50' Motor Yacht">
+                    </div>
+                    <div class="absolute inset-0 yacht-overlay z-10"></div>
+
+                    <!-- Hover hint -->
+                    <div class="yacht-click-hint absolute top-4 right-4 z-30 bg-mh-gold/90 text-mh-navy px-3 py-1.5 text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-20">
+                        <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.2em] uppercase block mb-2">Motor Yacht</span>
+                        <h3 class="text-3xl font-serif text-white mb-3">50' Azimut</h3>
+                        <div class="flex gap-4 mb-4 text-sm text-gray-300">
+                            <span><i class="fa-solid fa-ruler-horizontal text-mh-gold mr-1"></i> 50'</span>
+                            <span><i class="fa-solid fa-users text-mh-gold mr-1"></i> 10 Guests</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase">
+                            Charter <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Motor Yacht 49' -->
+                <a href="yacht-49-azimut.html" target="_self" class="yacht-card-link group relative h-[500px] overflow-hidden reveal card-lift block">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771468953/49-2_otsoq1.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="49' Motor Yacht">
+                    </div>
+                    <div class="absolute inset-0 yacht-overlay z-10"></div>
+
+                    <div class="yacht-click-hint absolute top-4 right-4 z-30 bg-mh-gold/90 text-mh-navy px-3 py-1.5 text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-20">
+                        <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.2em] uppercase block mb-2">Motor Yacht</span>
+                        <h3 class="text-3xl font-serif text-white mb-3">49' Azimut</h3>
+                        <div class="flex gap-4 mb-4 text-sm text-gray-300">
+                            <span><i class="fa-solid fa-ruler-horizontal text-mh-gold mr-1"></i> 49'</span>
+                            <span><i class="fa-solid fa-users text-mh-gold mr-1"></i> 8 Guests</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase">
+                            Charter <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Motor Yacht 44' Sea Ray -->
+                <a href="yacht-44-sea-ray.html" target="_self" class="yacht-card-link group relative h-[500px] overflow-hidden reveal card-lift block">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771468960/53-2_h3a88d.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="44' Motor Yacht">
+                    </div>
+                    <div class="absolute inset-0 yacht-overlay z-10"></div>
+
+                    <div class="yacht-click-hint absolute top-4 right-4 z-30 bg-mh-gold/90 text-mh-navy px-3 py-1.5 text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-20">
+                        <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.2em] uppercase block mb-2">Motor Yacht</span>
+                        <h3 class="text-3xl font-serif text-white mb-3">44' Sea Ray Yacht JM</h3>
+                        <div class="flex gap-4 mb-4 text-sm text-gray-300">
+                            <span><i class="fa-solid fa-ruler-horizontal text-mh-gold mr-1"></i> 44'</span>
+                            <span><i class="fa-solid fa-users text-mh-gold mr-1"></i> 8 Guests</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase">
+                            Charter <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 42' Prestige -->
+                <a href="yacht-42-prestige.html" target="_self" class="yacht-card-link group relative h-[500px] overflow-hidden reveal card-lift block">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771468990/2F76322A-30F4-45D4-BF7A-62894233BCCB_1_105_c_nz8mu4.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="42' Catamaran">
+                    </div>
+                    <div class="absolute inset-0 yacht-overlay z-10"></div>
+
+                    <div class="yacht-click-hint absolute top-4 right-4 z-30 bg-mh-gold/90 text-mh-navy px-3 py-1.5 text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-20">
+                        <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.2em] uppercase block mb-2">Motor Yacht</span>
+                        <h3 class="text-3xl font-serif text-white mb-3">42' Prestige</h3>
+                        <div class="flex gap-4 mb-4 text-sm text-gray-300">
+                            <span><i class="fa-solid fa-ruler-horizontal text-mh-gold mr-1"></i> 42'</span>
+                            <span><i class="fa-solid fa-users text-mh-gold mr-1"></i> 8 Guests</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase">
+                            Charter <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 42' Regal -->
+                <a href="yacht-42-regal.html" target="_self" class="yacht-card-link group relative h-[500px] overflow-hidden reveal card-lift block">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771469004/DJI_0005_dbiofy.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="49' Motor Yacht">
+                    </div>
+                    <div class="absolute inset-0 yacht-overlay z-10"></div>
+
+                    <div class="yacht-click-hint absolute top-4 right-4 z-30 bg-mh-gold/90 text-mh-navy px-3 py-1.5 text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-20">
+                        <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.2em] uppercase block mb-2">Motor Yacht</span>
+                        <h3 class="text-3xl font-serif text-white mb-3">42' Regal</h3>
+                        <div class="flex gap-4 mb-4 text-sm text-gray-300">
+                            <span><i class="fa-solid fa-ruler-horizontal text-mh-gold mr-1"></i> 49'</span>
+                            <span><i class="fa-solid fa-users text-mh-gold mr-1"></i> 6 Guests</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase">
+                            Charter <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 40' Cruiser -->
+                <a href="yacht-40-cruiser.html" target="_self" class="yacht-card-link group relative h-[500px] overflow-hidden reveal card-lift block">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771469010/20210726_183150_rl1fos.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="50' Motor Yacht">
+                    </div>
+                    <div class="absolute inset-0 yacht-overlay z-10"></div>
+
+                    <div class="yacht-click-hint absolute top-4 right-4 z-30 bg-mh-gold/90 text-mh-navy px-3 py-1.5 text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-20">
+                        <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.2em] uppercase block mb-2">Motor Yacht</span>
+                        <h3 class="text-3xl font-serif text-white mb-3">40' Cruiser Yacht</h3>
+                        <div class="flex gap-4 mb-4 text-sm text-gray-300">
+                            <span><i class="fa-solid fa-ruler-horizontal text-mh-gold mr-1"></i> 50'</span>
+                            <span><i class="fa-solid fa-users text-mh-gold mr-1"></i> 10 Guests</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase">
+                            Charter <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="py-24 bg-mh-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+            <div class="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Onboard Experience</span>
+                    <h2 class="text-4xl md:text-5xl tao-heading text-white mb-8">World-Class Amenities</h2>
+                    <p class="text-gray-400 font-light text-lg mb-8">
+                        Every vessel in our fleet is equipped with the finest amenities and staffed by professional crews dedicated to providing exceptional service.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-mh-gold/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-water text-mh-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-serif text-lg mb-1">Water Toys & Tenders</h4>
+                                <p class="text-gray-500 text-sm">Jet skis, seabobs, paddleboards, and custom tenders</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-mh-gold/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-utensils text-mh-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-serif text-lg mb-1">Gourmet Dining</h4>
+                                <p class="text-gray-500 text-sm">Michelin-trained chefs and personalized menus</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-mh-gold/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-spa text-mh-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-serif text-lg mb-1">Wellness & Spa</h4>
+                                <p class="text-gray-500 text-sm">Onboard spas, massage rooms, and fitness centers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-mh-gold/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-helicopter text-mh-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-serif text-lg mb-1">Helipad Access</h4>
+                                <p class="text-gray-500 text-sm">Direct helicopter transfers on select vessels</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-mh-gold/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-wifi text-mh-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-serif text-lg mb-1">Connectivity</h4>
+                                <p class="text-gray-500 text-sm">Starlink satellite internet and global communications</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-6 bg-mh-dark rounded-sm border border-white/10">
+                        <div class="text-center">
+                            <span class="text-3xl font-serif text-mh-gold">24/7</span>
+                            <span class="text-gray-400 text-sm block">Concierge</span>
+                        </div>
+                        <div class="h-12 w-px bg-white/10"></div>
+                        <p class="text-gray-400 text-sm">Dedicated yacht manager for every charter</p>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771811666/53-11_rx3pcp.jpg" 
+                         class="w-full h-[600px] object-cover rounded-sm" 
+                         alt="Yacht Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="py-24 bg-mh-navy border-t border-white/10">
+        <div class="max-w-[95%] mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Special Offers</span>
+                <h2 class="text-4xl md:text-5xl tao-heading text-white mb-6">Last Minute Charters</h2>
+                <p class="text-gray-400 font-light text-lg max-w-2xl mx-auto">
+                    Exclusive rates on select dates. Experience luxury for less.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+                <!-- Offer 1 -->
+                <div class="bg-mh-dark p-8 border border-white/10 hover:border-mh-gold/50 transition-all reveal card-lift">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="text-mh-gold text-xs tracking-widest uppercase">Next Week</span>
+                            <h4 class="text-white font-serif text-2xl mt-1">44' Sea Ray Yacht JM</h4>
+                        </div>
+                        <span class="bg-mh-gold/10 text-mh-gold px-3 py-1 text-xs font-bold">-30%</span>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-location-dot text-mh-gold mr-2"></i> Monaco to St. Tropez</p>
+                        <p class="text-gray-400 text-sm"><i class="fa-solid fa-calendar text-mh-gold mr-2"></i> 7 Days / 6 Nights</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-white/10">
+                        <div></div>
+                        <a href="inquire.html" class="btn-hover bg-mh-gold text-mh-navy px-6 py-2 text-xs tracking-widest uppercase hover:bg-white transition-all">
+                            Book
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="bg-mh-dark p-8 border border-white/10 hover:border-mh-gold/50 transition-all reveal card-lift">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="text-mh-gold text-xs tracking-widest uppercase">Feb 20-27</span>
+                            <h4 class="text-white font-serif text-2xl mt-1">49' Azimut</h4>
+                        </div>
+                        <span class="bg-mh-gold/10 text-mh-gold px-3 py-1 text-xs font-bold">-25%</span>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-location-dot text-mh-gold mr-2"></i> St. Barts Circuit</p>
+                        <p class="text-gray-400 text-sm"><i class="fa-solid fa-calendar text-mh-gold mr-2"></i> 7 Days / 6 Nights</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-white/10">
+                        <div></div>
+                        <a href="inquire.html" class="btn-hover bg-mh-gold text-mh-navy px-6 py-2 text-xs tracking-widest uppercase hover:bg-white transition-all">
+                            Book
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="bg-mh-dark p-8 border border-white/10 hover:border-mh-gold/50 transition-all reveal card-lift">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="text-mh-gold text-xs tracking-widest uppercase">March 5-12</span>
+                            <h4 class="text-white font-serif text-2xl mt-1">42' Prestige</h4>
+                        </div>
+                        <span class="bg-mh-gold/10 text-mh-gold px-3 py-1 text-xs font-bold">-40%</span>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-location-dot text-mh-gold mr-2"></i> Bahamas Exumas</p>
+                        <p class="text-gray-400 text-sm"><i class="fa-solid fa-calendar text-mh-gold mr-2"></i> 7 Days / 6 Nights</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-white/10">
+                        <div></div>
+                        <a href="inquire.html" class="btn-hover bg-mh-gold text-mh-navy px-6 py-2 text-xs tracking-widest uppercase hover:bg-white transition-all">
+                            Book
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section id="inquiry" class="py-24 bg-mh-dark relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+            <div class="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Reservation</span>
+                <h2 class="text-4xl md:text-5xl tao-heading text-white mb-6">Charter Your Yacht</h2>
+                <p class="text-gray-400 font-light text-lg">
+                    Complete the form below and our charter team will curate your perfect maritime experience.
+                </p>
+            </div>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="form-success" class="hidden text-center py-16 reveal">
+                <div class="w-20 h-20 rounded-full bg-mh-gold/10 border border-mh-gold/40 flex items-center justify-center mx-auto mb-8">
+                    <i class="fa-solid fa-check text-mh-gold text-3xl"></i>
+                </div>
+                <h3 class="text-3xl tao-heading text-white mb-4">Charter Request Received</h3>
+                <p class="text-gray-400 font-light mb-8">Our yacht charter team will contact you within 24 hours.</p>
+                <div class="inline-block border border-mh-gold/30 bg-mh-gold/5 px-10 py-6">
+                    <span class="tao-subheading text-mh-gold text-[10px] block mb-2 tracking-[0.25em]">Your Reference Number</span>
+                    <span id="ref-number" class="text-3xl font-serif text-white tracking-widest"></span>
+                </div>
+                <p class="text-gray-600 text-xs mt-6 tracking-widest uppercase">Please keep this number for your records</p>
+            </div>
+
+            <form id="charter-form" class="space-y-8 reveal" onsubmit="submitCharter(event)">
+                <input type="hidden" name="reference_number" id="hidden-ref">
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">First Name</label>
+                        <input type="text" name="first_name" class="form-input" placeholder="John" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Last Name</label>
+                        <input type="text" name="last_name" class="form-input" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Email</label>
+                        <input type="email" name="email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Phone</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="514-378-0154" required>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Embarkation Port</label>
+                        <input type="text" name="embarkation_port" class="form-input" placeholder="Monaco" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Destination</label>
+                        <input type="text" name="destination" class="form-input" placeholder="St. Tropez" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Select Yacht</label>
+                    <select name="yacht" class="form-input bg-transparent" required>
+                        <option value="" class="bg-mh-dark">Choose a vessel</option>
+                        <option value="55' Azimut Luxury Motor Yacht" class="bg-mh-dark">55' Azimut Luxury Motor Yacht</option>
+                        <option value="50' Azimut Motor Yacht" class="bg-mh-dark">50' Azimut Motor Yacht</option>
+                        <option value="49' Azimut Motor Yacht" class="bg-mh-dark">49' Azimut Motor Yacht</option>
+                        <option value="44' Sea Ray Yacht JM" class="bg-mh-dark">44' Sea Ray Yacht JM Motor Yacht</option>
+                        <option value="42' Regal Motor Yacht" class="bg-mh-dark">42' Regal Motor Yacht</option>
+                        <option value="42' Prestige Catamaran" class="bg-mh-dark">42' Prestige Catamaran</option>
+                        <option value="40' Cruiser Yacht" class="bg-mh-dark">40' Cruiser Yacht Explorer</option>
+                    </select>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Charter Start Date</label>
+                        <input type="date" name="start_date" class="form-input" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Duration (Days)</label>
+                        <input type="number" name="duration_days" min="3" max="30" class="form-input" placeholder="7" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Number of Guests</label>
+                    <input type="number" name="guests" min="1" max="12" class="form-input" placeholder="Number of guests" required>
+                </div>
+
+                <div>
+                    <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Special Requests</label>
+                    <textarea name="special_requests" class="form-input resize-none" rows="4" placeholder="Dietary requirements, water toy preferences, celebration details, or specific itinerary requests..."></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" id="submit-btn" class="btn-hover inline-flex items-center gap-3 bg-mh-gold text-mh-navy px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white transition-all duration-300">
+                        Request Charter <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+
+                <!-- Error message -->
+                <p id="form-error" class="hidden text-center text-red-400 text-sm tracking-wider">Something went wrong. Please try again or contact us directly.</p>
+            </form>
+
+            <script>
+                function generateRef() {
+                    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+                    let ref = 'MH-';
+                    for (let i = 0; i < 8; i++) {
+                        ref += chars.charAt(Math.floor(Math.random() * chars.length));
+                    }
+                    return ref;
+                }
+
+                async function submitCharter(e) {
+                    e.preventDefault();
+
+                    const btn = document.getElementById('submit-btn');
+                    const form = document.getElementById('charter-form');
+                    const errorMsg = document.getElementById('form-error');
+
+                    // Generate reference number
+                    const ref = generateRef();
+                    document.getElementById('hidden-ref').value = ref;
+
+                    // Update button state
+                    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+                    btn.disabled = true;
+                    errorMsg.classList.add('hidden');
+
+                    try {
+                        const formData = new FormData(form);
+                        const response = await fetch('https://formspree.io/f/mykdvnra', {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+
+                        if (response.ok) {
+                            // Show success screen
+                            document.getElementById('ref-number').textContent = ref;
+                            form.classList.add('hidden');
+                            const success = document.getElementById('form-success');
+                            success.classList.remove('hidden');
+                            success.classList.add('active');
+                            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        } else {
+                            throw new Error('Formspree error');
+                        }
+                    } catch (err) {
+                        errorMsg.classList.remove('hidden');
+                        btn.innerHTML = 'Request Charter <i class="fa-solid fa-paper-plane"></i>';
+                        btn.disabled = false;
+                    }
+                }
+            </script>
+        </div>
+    </section>
+
+    <!-- Contact Bar -->
+    <section class="py-12 bg-mh-navy border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 text-center stagger-children">
+                <div class="reveal">
+                    <i class="fa-solid fa-phone text-mh-gold text-2xl mb-4"></i>
+                    <h4 class="text-white font-serif text-lg mb-2">Phone</h4>
+                    <p class="text-gray-400">514-378-0154</p>
+                    <p class="text-gray-500 text-sm">24/7 Charter Desk</p>
+                </div>
+                <div class="reveal">
+                    <i class="fa-solid fa-envelope text-mh-gold text-2xl mb-4"></i>
+                    <h4 class="text-white font-serif text-lg mb-2">Email</h4>
+                    <p class="text-gray-400">info@montrealhospitality.com</p>
+                    <p class="text-gray-500 text-sm">Response within 24h</p>
+                </div>
+                <div class="reveal">
+                    <i class="fa-brands fa-whatsapp text-mh-gold text-2xl mb-4"></i>
+                    <h4 class="text-white font-serif text-lg mb-2">WhatsApp</h4>
+                    <p class="text-gray-400">514-378-0154</p>
+                    <p class="text-gray-500 text-sm">Instant Quotes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Venues</a></li>
+                        <li><a href="sports.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Sports</a></li>
+                        <li><a href="service.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Concierge</a></li>
+                        <li><a href="index.html#careers" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="mailto:info@montrealhospitality.com" class="hover:text-mh-gold transition-colors">info@montrealhospitality.com</a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.scrollTo(0, 0);
+
+        // Loader handling with hard fallbacks
+        let loaderHidden = false;
+
+        function hideLoader(force = false) {
+            if (loaderHidden && !force) return;
+            loaderHidden = true;
+            const loader = document.getElementById('loader');
+            if (!loader) return;
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+                document.querySelectorAll('.stagger-children').forEach(c => c.classList.add('active'));
+            }, 250);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => hideLoader(), 300);
+            }, { once: true });
+        } else {
+            setTimeout(() => hideLoader(), 300);
+        }
+
+        window.addEventListener('load', () => hideLoader(), { once: true });
+        window.addEventListener('pageshow', () => hideLoader());
+        setTimeout(() => hideLoader(true), 2200);
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        }
+    </script>
+
+    <script>
+        const translator = {
+            currentLang: 'en',
+            originalsCaptured: false,
+            translations: {"title_en": "Yachts | Service | Montreal Hospitality", "title_fr": "Yachts | Service | Montreal Hospitality", "en": {"Accueil": "Home", "Lieux": "Venues", "Sports": "Sports", "Services": "Services", "Événements": "Events", "Carrières": "Careers", "Contact": "Contact", "Service": "Service", "Galerie": "Gallery", "Réservation": "Reservation", "Réservations": "Reservations", "Formulaire de demande": "Inquiry Form", "Prénom": "First Name", "Nom": "Last Name", "Courriel": "Email", "Téléphone": "Phone", "Demandes spéciales": "Special Requests", "Soumettre la réservation": "Submit Reservation", "Soumettre la demande": "Submit Request", "Demander un charter": "Request Charter", "Demande reçue !": "Request Received!", "Votre numéro de référence": "Your Reference Number", "Confirmation envoyée à": "Confirmation sent to", "Une erreur est survenue. Veuillez réessayer ou nous contacter directement au 514-378-0154.": "Something went wrong. Please try again or contact us directly at 514-378-0154.", "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.": "Something went wrong. Please try again or contact us directly.", "Redéfinir l’art de la nuit à Montréal.": "Redefining the art of the night in Montreal.", "Explorer": "Explore", "Suivre": "Follow", "Confidentialité": "Privacy", "Conditions": "Terms", "Barre de contact": "Contact Bar", "WhatsApp": "WhatsApp", "Devis instantanés": "Instant Quotes", "Réservation instantanée": "Instant Booking", "Réponse sous 24 h": "Response within 24h", "Réponse sous 2 heures": "Response within 2 hours", "Réponse sous 1 h": "Response within 1h", "Réponse sous 30 min": "Response within 30 min", "Véhicule vedette": "Featured Vehicle", "Notre collection": "Our Collection", "En vedette": "Featured", "Voir": "View", "Demander": "Inquire", "Réserver maintenant": "Reserve Now", "Sélectionner": "Select", "Réserver": "Book", "Réserver ce véhicule": "Reserve This Vehicle", "Demande": "Inquiry", "Jet vedette : Bombardier Challenger 604": "Featured Jet: Bombardier Challenger 604", "Affréter": "Charter", "Affréter maintenant": "Charter Now", "Voir la flotte": "View Fleet", "Section flotte": "Fleet Section", "Catégories de flotte": "Fleet Categories", "Voiture vedette (premier véhicule mis en avant)": "Featured Car (First Vehicle Highlighted)", "Indice au survol": "Hover hint", "Explorer la flotte": "Explore Fleet", "Plein air": "Open Air", "Message de succès": "Success Message", "Message d’erreur": "Error Message", "Pied de page": "Footer", "Réservez votre véhicule": "Reserve Your Vehicle", "Choisissez un véhicule": "Choose a vehicle", "Sélectionnez un véhicule": "Select Vehicle", "Date de prise en charge": "Pickup Date", "Date de retour": "Return Date", "Services additionnels": "Additional Services", "Réponse sous 1 heure": "Response within 1 hour", "Menu mobile": "Mobile Menu", "Liens bureau": "Desktop Links", "Logo": "Logo", "Navigation": "Navigation", "Section héro": "Hero Section", "Actions de droite": "Right Actions", "Bouton du menu mobile": "Mobile Menu Button", "Écran de chargement": "Loader", "Jet vedette": "Featured Jet", "24/7": "24/7", "Équipage": "Crew", "Caractéristiques": "Features", "Passagers": "Passengers", "Autonomie": "Range", "Destination": "Destination", "Date de départ": "Departure Date", "Date de retour (optionnelle)": "Return Date (Optional)", "Sélectionnez un appareil": "Select Aircraft", "Choisissez un appareil": "Choose an aircraft", "Affrétez votre vol": "Charter Your Flight", "Affrétez votre yacht": "Charter Your Yacht", "Notre équipe confirmera votre réservation dans les 24 heures": "Our team will confirm your reservation within 24 hours", "Service de conciergerie": "Concierge Service", "Yachts de luxe": "Luxury Yachts", "Naviguez sur les eaux les plus exclusives au monde. Des yachts à moteur élégants aux superyachts majestueux, vivez l’excellence maritime.": "Navigate the world's most exclusive waters. From sleek motor yachts to majestic superyachts, experience maritime excellence.", "Flotte de charter": "Charter Fleet", "Yacht vedette : Azimut 55'": "Featured Yacht: 55' Azimut — entire card is a link", "Voir le yacht": "View Yacht", "Yacht à moteur de luxe": "Luxury Motor Yacht", "Un palais flottant avec six cabines, beach club, héliport et prestations haut de gamme. L’expression ultime du luxe maritime.": "A floating palace featuring six staterooms, beach club, helipad, and world-class amenities. The ultimate expression of maritime luxury.", "Longueur": "Length", "55 pieds": "55 Feet", "Invités": "Guests", "12 invités": "12 Guests", "2 membres d’équipage": "2 Crew", "Vitesse de croisière": "Cruising Speed", "32 nœuds": "32 Knots", "Yacht à moteur 50'": "Motor Yacht 50'", "Yacht à moteur": "Motor Yacht", "Azimut 50'": "50' Azimut", "50'": "50'", "10 invités": "10 Guests", "Yacht à moteur 49'": "Motor Yacht 49'", "Azimut 49'": "49' Azimut", "49'": "49'", "Yacht à moteur 44' Sea Ray": "Motor Yacht 44' Sea Ray", "Sea Ray Yacht JM 44'": "44' Sea Ray Yacht JM", "44'": "44'", "Prestige 42'": "42' Prestige", "42'": "42'", "Regal 42'": "42' Regal", "6 invités": "6 Guests", "Cruiser 40'": "40' Cruiser", "Yacht Cruiser 40'": "40' Cruiser Yacht", "Expérience à bord": "Onboard Experience", "Prestations haut de gamme": "World-Class Amenities", "Chaque navire de notre flotte est équipé des meilleures commodités et d’un équipage professionnel dédié à un service exceptionnel.": "Every vessel in our fleet is equipped with the finest amenities and staffed by professional crews dedicated to providing exceptional service.", "Jouets nautiques et tenders": "Water Toys & Tenders", "Jet-skis, seabobs, planches à pagaie et tenders sur mesure": "Jet skis, seabobs, paddleboards, and custom tenders", "Gastronomie raffinée": "Gourmet Dining", "Chefs formés Michelin et menus personnalisés": "Michelin-trained chefs and personalized menus", "Bien-être et spa": "Wellness & Spa", "Spas à bord, salles de massage et espaces fitness": "Onboard spas, massage rooms, and fitness centers", "Accès héliport": "Helipad Access", "Transferts directs en hélicoptère sur certains navires": "Direct helicopter transfers on select vessels", "Connectivité": "Connectivity", "Internet satellite Starlink et communications mondiales": "Starlink satellite internet and global communications", "Gestionnaire dédié pour chaque charter": "Dedicated yacht manager for every charter", "Charters de dernière minute": "Last Minute Charters", "Tarifs exclusifs à certaines dates. Profitez du luxe pour moins cher.": "Exclusive rates on select dates. Experience luxury for less.", "La semaine prochaine": "Next Week", "Monaco à Saint-Tropez": "Monaco to St. Tropez", "7 jours / 6 nuits": "7 Days / 6 Nights", "20-27 fév.": "Feb 20-27", "Circuit Saint-Barth": "St. Barts Circuit", "5-12 mars": "March 5-12", "Exumas, Bahamas": "Bahamas Exumas", "Remplissez le formulaire ci-dessous et notre équipe charter préparera votre expérience maritime idéale.": "Complete the form below and our charter team will curate your perfect maritime experience.", "Demande de charter reçue": "Charter Request Received", "Notre équipe charter yacht vous contactera dans les 24 heures.": "Our yacht charter team will contact you within 24 hours.", "Veuillez conserver ce numéro pour vos dossiers": "Please keep this number for your records", "Port d’embarquement": "Embarkation Port", "Choisissez un navire": "Choose a vessel", "Date de début du charter": "Charter Start Date", "Durée (jours)": "Duration (Days)", "Nombre d’invités": "Number of Guests", "Bureau charter 24/7": "24/7 Charter Desk"}, "fr": {"Home": "Accueil", "Venues": "Lieux", "Sports": "Sports", "Services": "Services", "Events": "Événements", "Careers": "Carrières", "Contact": "Contact", "Service": "Service", "Gallery": "Galerie", "Reservation": "Réservation", "Reservations": "Réservations", "Inquiry Form": "Formulaire de demande", "First Name": "Prénom", "Last Name": "Nom", "Email": "Courriel", "Phone": "Téléphone", "Special Requests": "Demandes spéciales", "Submit Reservation": "Soumettre la réservation", "Submit Request": "Soumettre la demande", "Request Charter": "Demander un charter", "Request Received!": "Demande reçue !", "Your Reference Number": "Votre numéro de référence", "Confirmation sent to": "Confirmation envoyée à", "Something went wrong. Please try again or contact us directly at 514-378-0154.": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement au 514-378-0154.", "Something went wrong. Please try again or contact us directly.": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.", "Redefining the art of the night in Montreal.": "Redéfinir l’art de la nuit à Montréal.", "Explore": "Explorer", "Follow": "Suivre", "Privacy": "Confidentialité", "Terms": "Conditions", "Contact Bar": "Barre de contact", "WhatsApp": "WhatsApp", "Instant Quotes": "Devis instantanés", "Instant Booking": "Réservation instantanée", "Response within 24h": "Réponse sous 24 h", "Response within 2 hours": "Réponse sous 2 heures", "Response within 1h": "Réponse sous 1 h", "Response within 30 min": "Réponse sous 30 min", "Featured Vehicle": "Véhicule vedette", "Our Collection": "Notre collection", "Featured": "En vedette", "View": "Voir", "Inquire": "Demander", "Reserve Now": "Réserver maintenant", "Select": "Sélectionner", "Book": "Réserver", "Reserve This Vehicle": "Réserver ce véhicule", "Inquiry": "Demande", "Featured Jet: Bombardier Challenger 604": "Jet vedette : Bombardier Challenger 604", "Charter": "Affréter", "Charter Now": "Affréter maintenant", "View Fleet": "Voir la flotte", "Fleet Section": "Section flotte", "Fleet Categories": "Catégories de flotte", "Featured Car (First Vehicle Highlighted)": "Voiture vedette (premier véhicule mis en avant)", "Hover hint": "Indice au survol", "Explore Fleet": "Explorer la flotte", "Open Air": "Plein air", "Success Message": "Message de succès", "Error Message": "Message d’erreur", "Footer": "Pied de page", "Reserve Your Vehicle": "Réservez votre véhicule", "Choose a vehicle": "Choisissez un véhicule", "Select Vehicle": "Sélectionnez un véhicule", "Pickup Date": "Date de prise en charge", "Return Date": "Date de retour", "Additional Services": "Services additionnels", "Response within 1 hour": "Réponse sous 1 heure", "Mobile Menu": "Menu mobile", "Desktop Links": "Liens bureau", "Logo": "Logo", "Navigation": "Navigation", "Hero Section": "Section héro", "Right Actions": "Actions de droite", "Mobile Menu Button": "Bouton du menu mobile", "Loader": "Écran de chargement", "Featured Jet": "Jet vedette", "24/7": "24/7", "Crew": "Équipage", "Features": "Caractéristiques", "Passengers": "Passagers", "Range": "Autonomie", "Destination": "Destination", "Departure Date": "Date de départ", "Return Date (Optional)": "Date de retour (optionnelle)", "Select Aircraft": "Sélectionnez un appareil", "Choose an aircraft": "Choisissez un appareil", "Charter Your Flight": "Affrétez votre vol", "Charter Your Yacht": "Affrétez votre yacht", "Our team will confirm your reservation within 24 hours": "Notre équipe confirmera votre réservation dans les 24 heures", "Concierge Service": "Service de conciergerie", "Luxury Yachts": "Yachts de luxe", "Navigate the world's most exclusive waters. From sleek motor yachts to majestic superyachts, experience maritime excellence.": "Naviguez sur les eaux les plus exclusives au monde. Des yachts à moteur élégants aux superyachts majestueux, vivez l’excellence maritime.", "Charter Fleet": "Flotte de charter", "Featured Yacht: 55' Azimut — entire card is a link": "Yacht vedette : Azimut 55'", "View Yacht": "Voir le yacht", "Luxury Motor Yacht": "Yacht à moteur de luxe", "A floating palace featuring six staterooms, beach club, helipad, and world-class amenities. The ultimate expression of maritime luxury.": "Un palais flottant avec six cabines, beach club, héliport et prestations haut de gamme. L’expression ultime du luxe maritime.", "Length": "Longueur", "55 Feet": "55 pieds", "Guests": "Invités", "12 Guests": "12 invités", "2 Crew": "2 membres d’équipage", "Cruising Speed": "Vitesse de croisière", "32 Knots": "32 nœuds", "Motor Yacht 50'": "Yacht à moteur 50'", "Motor Yacht": "Yacht à moteur", "50' Azimut": "Azimut 50'", "50'": "50'", "10 Guests": "10 invités", "Motor Yacht 49'": "Yacht à moteur 49'", "49' Azimut": "Azimut 49'", "49'": "49'", "Motor Yacht 44' Sea Ray": "Yacht à moteur 44' Sea Ray", "44' Sea Ray Yacht JM": "Sea Ray Yacht JM 44'", "44'": "44'", "42' Prestige": "Prestige 42'", "42'": "42'", "42' Regal": "Regal 42'", "6 Guests": "6 invités", "40' Cruiser": "Cruiser 40'", "40' Cruiser Yacht": "Yacht Cruiser 40'", "Onboard Experience": "Expérience à bord", "World-Class Amenities": "Prestations haut de gamme", "Every vessel in our fleet is equipped with the finest amenities and staffed by professional crews dedicated to providing exceptional service.": "Chaque navire de notre flotte est équipé des meilleures commodités et d’un équipage professionnel dédié à un service exceptionnel.", "Water Toys & Tenders": "Jouets nautiques et tenders", "Jet skis, seabobs, paddleboards, and custom tenders": "Jet-skis, seabobs, planches à pagaie et tenders sur mesure", "Gourmet Dining": "Gastronomie raffinée", "Michelin-trained chefs and personalized menus": "Chefs formés Michelin et menus personnalisés", "Wellness & Spa": "Bien-être et spa", "Onboard spas, massage rooms, and fitness centers": "Spas à bord, salles de massage et espaces fitness", "Helipad Access": "Accès héliport", "Direct helicopter transfers on select vessels": "Transferts directs en hélicoptère sur certains navires", "Connectivity": "Connectivité", "Starlink satellite internet and global communications": "Internet satellite Starlink et communications mondiales", "Dedicated yacht manager for every charter": "Gestionnaire dédié pour chaque charter", "Last Minute Charters": "Charters de dernière minute", "Exclusive rates on select dates. Experience luxury for less.": "Tarifs exclusifs à certaines dates. Profitez du luxe pour moins cher.", "Next Week": "La semaine prochaine", "Monaco to St. Tropez": "Monaco à Saint-Tropez", "7 Days / 6 Nights": "7 jours / 6 nuits", "Feb 20-27": "20-27 fév.", "St. Barts Circuit": "Circuit Saint-Barth", "March 5-12": "5-12 mars", "Bahamas Exumas": "Exumas, Bahamas", "Complete the form below and our charter team will curate your perfect maritime experience.": "Remplissez le formulaire ci-dessous et notre équipe charter préparera votre expérience maritime idéale.", "Charter Request Received": "Demande de charter reçue", "Our yacht charter team will contact you within 24 hours.": "Notre équipe charter yacht vous contactera dans les 24 heures.", "Please keep this number for your records": "Veuillez conserver ce numéro pour vos dossiers", "Embarkation Port": "Port d’embarquement", "Choose a vessel": "Choisissez un navire", "Charter Start Date": "Date de début du charter", "Duration (Days)": "Durée (jours)", "Number of Guests": "Nombre d’invités", "24/7 Charter Desk": "Bureau charter 24/7"}},
+            placeholderTranslations: {"en": {"votre@courriel.com": "your@email.com", "Entrez votre nom complet": "Enter your full name", "(514) 000-0000": "(514) 000-0000", "Prénom": "First name", "Nom": "Last name", "+1 (514) 000-0000": "+1 (514) 000-0000", "Monaco": "Monaco", "Saint-Tropez": "St. Tropez", "Préférences, occasion, restauration, jouets nautiques, etc.": "Any preferences, occasion, catering, water toys, etc."}, "fr": {"your@email.com": "votre@courriel.com", "Enter your full name": "Entrez votre nom complet", "(514) 000-0000": "(514) 000-0000", "First name": "Prénom", "Last name": "Nom", "+1 (514) 000-0000": "+1 (514) 000-0000", "Monaco": "Monaco", "St. Tropez": "Saint-Tropez", "Any preferences, occasion, catering, water toys, etc.": "Préférences, occasion, restauration, jouets nautiques, etc."}},
+            captureOriginals() {
+                if (this.originalsCaptured) return;
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    node.__originalText = node.nodeValue;
+                }
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    el.dataset.originalPlaceholder = el.getAttribute('placeholder') || '';
+                });
+                document.querySelectorAll('option').forEach(el => {
+                    el.dataset.originalOption = el.textContent;
+                });
+                document.titleOriginal = document.title;
+                this.originalsCaptured = true;
+            },
+            init() {
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                if (savedLang === 'fr' || savedLang === 'en') {
+                    this.currentLang = savedLang;
+                } else if (browserLang === 'fr') {
+                    this.currentLang = 'fr';
+                }
+                this.captureOriginals();
+                this.updateUI();
+                this.translatePage();
+            },
+            setLanguage(lang) {
+                if (!['en', 'fr'].includes(lang)) return;
+                this.currentLang = lang;
+                localStorage.setItem('preferred_language', lang);
+                this.updateUI();
+                this.translatePage();
+            },
+            updateUI() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
+                });
+            },
+            replaceTextNode(node, map) {
+                const original = node.__originalText || node.nodeValue;
+                const trimmed = original.trim();
+                const translated = map[trimmed];
+                if (!translated) {
+                    node.nodeValue = original;
+                    return;
+                }
+                const leading = original.match(/^\s*/)[0];
+                const trailing = original.match(/\s*$/)[0];
+                node.nodeValue = leading + translated + trailing;
+            },
+            translatePage() {
+                this.captureOriginals();
+                const map = this.currentLang === 'fr' ? this.translations.fr : this.translations.en;
+                const placeholderMap = this.currentLang === 'fr' ? this.placeholderTranslations.fr : this.placeholderTranslations.en;
+                document.documentElement.lang = this.currentLang;
+                document.title = this.currentLang === 'fr' ? (this.translations.title_fr || document.titleOriginal) : (this.translations.title_en || document.titleOriginal);
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) {
+                    this.replaceTextNode(walker.currentNode, map);
+                }
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    const original = el.dataset.originalPlaceholder || el.getAttribute('placeholder') || '';
+                    el.setAttribute('placeholder', placeholderMap[original] || original);
+                });
+                document.querySelectorAll('option').forEach(el => {
+                    const original = el.dataset.originalOption || el.textContent;
+                    const trimmed = original.trim();
+                    el.textContent = map[trimmed] || original;
+                });
+            }
+        };
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+    </script>
+
+</body>
+</html>

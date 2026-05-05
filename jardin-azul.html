@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Jardin Azul — exclusive Montreal venue available through Montreal Hospitality for private events and curated experiences.">
+    <link rel="canonical" href="https://montrealhospitality.com/jardin-azul">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Jardin Azul | Montreal Hospitality">
+    <meta property="og:description" content="Jardin Azul — exclusive Montreal venue available through Montreal Hospitality for private events and curated experiences.">
+    <meta property="og:url" content="https://montrealhospitality.com/jardin-azul">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jardin Azul | Montreal Hospitality">
+    <meta name="twitter:description" content="Jardin Azul — exclusive Montreal venue available through Montreal Hospitality for private events and curated experiences.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardin Azul | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Nav */
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        /* Image Hover Effects */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Smooth underline animation */
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* Button hover animations */
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gallery Grid */
+        .gallery-item {
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        /* Form Styles */
+        .form-input {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 18px;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #C5A059;
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #C5A059;
+        }
+
+        /* Custom Select */
+        .custom-select {
+            position: relative;
+        }
+        .custom-select select {
+            appearance: none;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .custom-select select:focus {
+            outline: none;
+            border-color: #C5A059;
+        }
+        .custom-select::after {
+            content: '\f107';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #C5A059;
+            pointer-events: none;
+        }
+        .custom-select select option {
+            background: #0B0F19;
+            color: white;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .radio-item input[type="radio"] {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .radio-item input[type="radio"]:checked {
+            border-color: #C5A059;
+        }
+        .radio-item input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #C5A059;
+            border-radius: 50%;
+        }
+        .radio-item label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .success-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Error Message */
+        .error-message {
+            display: none;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: #ef4444;
+        }
+        .error-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        .submitting {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Validation error styles */
+        .form-input:invalid:not(:placeholder-shown) {
+            border-color: #ef4444;
+        }
+        .validation-error {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+        .form-input:invalid:not(:placeholder-shown) + .validation-error {
+            display: block;
+        }
+
+        /* Shake animation */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+    
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .lang-btn:hover { color: #C5A059; }
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+    </style>
+<base target="_self">
+<base target="_self">
+<base target="_self">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="closeLightbox()">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+        <button class="absolute left-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(-1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium bg-mh-navy/90 backdrop-blur-md border-b border-white/10">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" target="_self" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-12">
+            <a href="index.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Home</a>
+            <a href="venues.html" target="_self" class="link-hover text-mh-gold transition-colors">Venues</a>
+            <a href="sports.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Sports</a>
+            <a href="service.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Services</a>
+            <a href="event.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Events</a>
+            <a href="index.html#careers" target="_self" class="link-hover hover:text-mh-gold transition-colors">Careers</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="hidden lg:flex items-center gap-8">
+            
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+<a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="hover:text-mh-gold transition-colors hover:scale-110 transform duration-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+        <a href="index.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Home</a>
+        <a href="venues.html" target="_self" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Venues</a>
+        <a href="sports.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Sports</a>
+        <a href="service.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Services</a>
+        <a href="event.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Events</a>
+        <a href="index.html#careers" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Careers</a>
+
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active text-lg" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+            <div class="lang-divider h-6"></div>
+            <button class="lang-btn text-lg" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-[70vh] w-full overflow-hidden flex items-center justify-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770156232/469422844_122151683468330294_8633735043064570245_n_ommhfi.jpg" 
+                 class="w-full h-full object-cover" 
+                 alt="Jardin Azul"
+                 style="object-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/70 via-mh-navy/50 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+            <span class="tao-subheading text-mh-gold text-[11px] block mb-4 reveal">Rooftop</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl tao-heading text-white mb-6 leading-[0.95] reveal">
+                Jardin Azul
+            </h1>
+            <p class="text-gray-300 max-w-2xl mx-auto font-light text-lg reveal">
+                An elevated oasis where nature meets nightlife under the stars
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-mh-dark">
+        
+        <!-- Venue Info -->
+        <section class="py-16 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12 text-center reveal">
+                    <div>
+                        <i class="fa-solid fa-leaf text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2">Garden Setting</h3>
+                        <p class="text-gray-400 text-sm">Lush Greenery</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cloud-sun text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2">Open Air</h3>
+                        <p class="text-gray-400 text-sm">Skyline Views</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-martini-glass-citrus text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2">Botanical Cocktails</h3>
+                        <p class="text-gray-400 text-sm">Garden-to-Glass</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery & Form Split Section -->
+        <section class="py-20">
+            <div class="max-w-[95%] mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                    
+                    <!-- Left Side: Gallery -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Gallery</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8">Experience Jardin Azul</h2>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(0)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770156232/469422844_122151683468330294_8633735043064570245_n_ommhfi.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Jardin Azul Main">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(1)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187572/469456410_122151682958330294_7572922634551604095_n_cl57fz.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Jardin Azul Terrace">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(2)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187669/IMG_3241_v0rdnn.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Jardin Azul Drinks">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(3)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187683/469522752_122151682964330294_2600241657169397067_n_ouhe9a.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Jardin Azul Night">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(4)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187709/IMG_3238_mpwxfo.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Jardin Azul Lounge">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(5)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187737/IMG_3239_xcitxv.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Jardin Azul Atmosphere">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-500 text-sm mt-6 italic">Click images to expand</p>
+                    </div>
+
+                    <!-- Right Side: Guest List / Tickets Form -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Reservations</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8">Guest List & Tickets</h2>
+                        
+                        <div class="bg-mh-gray/30 border border-white/10 p-8 lg:p-10">
+                            <form id="guestListForm" action="https://formspree.io/f/mykdvnra" method="POST" novalidate>
+                                
+                                <!-- Request Type -->
+                                <div class="mb-8">
+                                    <label class="form-label">Request Type</label>
+                                    <div class="radio-group">
+                                        <div class="radio-item">
+                                            <input type="radio" id="guestlist" name="requestType" value="guestlist" checked>
+                                            <label for="guestlist">Guest List</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="tickets" name="requestType" value="tickets">
+                                            <label for="tickets">Tickets</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="bottle" name="requestType" value="bottle">
+                                            <label for="bottle">Bottle Service</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Name -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your full name" data-required="true">
+                                    <span class="validation-error">Please enter your full name</span>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" data-required="true">
+                                    <span class="validation-error">Please enter a valid email</span>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="(514) 000-0000" data-required="true">
+                                    <span class="validation-error">Please enter your phone number</span>
+                                </div>
+
+                                <!-- Date -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="date">Preferred Date *</label>
+                                    <input type="date" id="date" name="date" class="form-input" data-required="true">
+                                    <span class="validation-error">Please select a date</span>
+                                </div>
+
+                                <!-- Guests -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="guests">Number of Guests *</label>
+                                    <div class="custom-select">
+                                        <select id="guests" name="guests" data-required="true">
+                                            <option value="">Select number of guests</option>
+                                            <option value="1">1 Guest</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5 Guests</option>
+                                            <option value="6">6+ Guests</option>
+                                            <option value="10">10+ Guests (Large Party)</option>
+                                        </select>
+                                    </div>
+                                    <span class="validation-error">Please select number of guests</span>
+                                </div>
+
+                                <!-- Special Requests -->
+                                <div class="mb-8">
+                                    <label class="form-label" for="requests">Special Requests</label>
+                                    <textarea id="requests" name="requests" rows="3" class="form-input resize-none" placeholder="Birthday celebration, special occasion, preferred seating..."></textarea>
+                                </div>
+
+                                <!-- Honeypot field to prevent spam -->
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <!-- Submit Button -->
+                                <button type="button" onclick="submitForm()" id="submitBtn" class="btn-hover w-full bg-mh-gold text-mh-navy py-4 text-xs tracking-[0.25em] uppercase font-semibold hover:bg-white transition-all duration-300">
+                                    Submit Request
+                                </button>
+
+                                <p class="text-gray-500 text-xs mt-4 text-center">
+                                    Our team will confirm your reservation within 24 hours
+                                </p>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div id="successMessage" class="success-message">
+                                <i class="fa-solid fa-check-circle text-mh-gold text-4xl mb-4"></i>
+                                <h3 class="text-white font-serif text-2xl mb-2">Request Received!</h3>
+                                <p class="text-gray-400 text-sm mb-4">We've received your request and will contact you shortly to confirm your reservation at Jardin Azul.</p>
+                                <div class="bg-mh-navy/50 p-4 inline-block mb-4">
+                                    <p class="text-mh-gold text-xs uppercase tracking-wider mb-1">Your Reference Number</p>
+                                    <p class="text-white text-xl font-serif" id="inquiryReferenceId">MH-CTC-2025-XX123XX123X1</p>
+                                </div>
+                                <div class="space-y-1 text-gray-400 text-xs">
+                                    <p><i class="fa-solid fa-envelope text-mh-gold mr-2"></i> Confirmation sent to <span id="confirmEmail">your@email.com</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Error Message -->
+                            <div id="errorMessage" class="error-message">
+                                <i class="fa-solid fa-exclamation-circle text-2xl mb-2"></i>
+                                <p class="font-light text-sm">Something went wrong. Please try again or contact us directly at 514-378-0154.</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="mt-8 flex items-center gap-4 text-sm text-gray-400">
+                            <i class="fa-solid fa-phone text-mh-gold"></i>
+                            <span>For immediate assistance: <a href="tel:514-378-0154" class="text-white hover:text-mh-gold transition-colors">514-378-0154</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-mh-navy">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Highlights</span>
+                    <h2 class="text-3xl md:text-4xl tao-heading text-white">What to Expect</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-seedling text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Botanical Garden</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Lush tropical plants and flowers creating an urban jungle atmosphere.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-sun text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Sunset Views</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Panoramic city skyline views perfect for golden hour cocktails.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-wine-glass text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Garden Cocktails</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Fresh botanical-infused drinks crafted with herbs from our garden.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-moon text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3">Starry Nights</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">String lights and ambient lighting transform the space after dark.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="py-20 bg-mh-dark">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Location</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-6">Find Us</h2>
+                        <div class="space-y-4 text-gray-400">
+                            <p class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot text-mh-gold mt-1"></i>
+                                <span> 997 Rue Saint-Jacques<br>Montreal, QC H3C 1G6</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-clock text-mh-gold"></i>
+                                <span>Wed-Sun: 5PM - 1AM<br>Mon-Tue: Closed</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-shirt text-mh-gold"></i>
+                                <span>Dress Code: Smart Casual / Resort</span>
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 flex gap-4">
+                            <a href="#" class="btn-hover inline-flex items-center gap-2 border border-mh-gold text-mh-gold px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all">
+                                <i class="fa-solid fa-map"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal aspect-video border border-white/10 overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.845123456789!2d-73.5745!3d45.4975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a41d3f6e7d7%3A0x8c9c7b8a6e5f4d3c!2s997%20Rue%20Saint-Jacques%2C%20Montr%C3%A9al%2C%20QC%20H3C%201G6!5e0!3m2!1sen!2sca!4v1234567890"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Venues -->
+        <section class="py-12 border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-6 text-center reveal">
+                <a href="venues.html" target="_self" class="inline-flex items-center gap-3 text-mh-gold hover:text-white transition-colors text-sm tracking-[0.2em] uppercase">
+                    <i class="fa-solid fa-arrow-left"></i> Back to All Venues
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Venues</a></li>
+                        <li><a href="sports.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Sports</a></li>
+                        
+                        <li><a href="service.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Service</a></li>
+                        <li><a href="index.html#careers" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="mailto:info@montrealhospitality.com" class="hover:text-mh-gold transition-colors">info@montrealhospitality.com</a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery Images Array
+        const galleryImages = [
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1770156232/469422844_122151683468330294_8633735043064570245_n_ommhfi.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187572/469456410_122151682958330294_7572922634551604095_n_cl57fz.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187669/IMG_3241_v0rdnn.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187683/469522752_122151682964330294_2600241657169397067_n_ouhe9a.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187709/IMG_3238_mpwxfo.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187737/IMG_3239_xcitxv.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[index];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            }
+        });
+
+        // Generate reference number in format MH-CTC-2025-XX123XX123X1
+        function generateReferenceNumber() {
+            const prefix = 'MH-CTC-2025-';
+            
+            // Generate random alphanumeric string: XX123XX123X1
+            let randomPart = '';
+            
+            // Pattern: XX123XX123X1 (2 letters, 3 numbers, 2 letters, 3 numbers, 1 letter, 1 number)
+            const pattern = [
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 1 },
+                { type: 'number', count: 1 }
+            ];
+            
+            pattern.forEach(segment => {
+                for (let i = 0; i < segment.count; i++) {
+                    if (segment.type === 'letter') {
+                        // Random letter A-Z
+                        randomPart += String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                    } else {
+                        // Random number 0-9
+                        randomPart += Math.floor(Math.random() * 10).toString();
+                    }
+                }
+            });
+            
+            return prefix + randomPart;
+        }
+
+        // Validate form fields
+        function validateForm() {
+            const form = document.getElementById('guestListForm');
+            const requiredFields = form.querySelectorAll('[data-required="true"]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'rgba(255,255,255,0.2)';
+                }
+            });
+
+            return isValid;
+        }
+
+        // Submit form function
+        async function submitForm() {
+            const form = document.getElementById('guestListForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Validate form first
+            if (!validateForm()) {
+                // Shake animation for visual feedback
+                form.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    form.style.animation = '';
+                }, 500);
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.classList.add('submitting');
+            
+            try {
+                // Generate reference number first
+                const refNumber = generateReferenceNumber();
+                
+                // Collect all form data
+                const formData = new FormData(form);
+                
+                // Add reference number to form data
+                formData.append('inquiryReference', refNumber);
+                formData.append('ticketNumber', refNumber);
+                formData.append('referenceId', refNumber);
+                formData.append('venue', 'Jardin Azul');
+                
+                // Submit to Formspree
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success - show success message
+                    document.getElementById('inquiryReferenceId').textContent = refNumber;
+                    document.getElementById('confirmEmail').textContent = formData.get('email');
+                    
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                document.getElementById('errorMessage').classList.add('active');
+                submitBtn.innerHTML = 'Submit Request';
+                submitBtn.classList.remove('submitting');
+            }
+        }
+
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load
+        window.scrollTo(0, 0);
+
+        // Loader handling with hard fallbacks
+        let loaderHidden = false;
+
+        function hideLoader(force = false) {
+            if (loaderHidden && !force) return;
+            loaderHidden = true;
+
+            const loader = document.getElementById('loader');
+            if (!loader) return;
+
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
+            document.body.style.overflow = 'auto';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+
+                const revealElements = document.querySelectorAll('.reveal');
+                revealElements.forEach(el => el.classList.add('active'));
+            }, 250);
+        }
+
+        // Fire as soon as DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => hideLoader(), 300);
+            }, { once: true });
+        } else {
+            setTimeout(() => hideLoader(), 300);
+        }
+
+        // Additional fallbacks in case external assets delay the window load event
+        window.addEventListener('load', () => hideLoader(), { once: true });
+        window.addEventListener('pageshow', () => hideLoader());
+        setTimeout(() => hideLoader(true), 2200);
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+
+    <script>
+        const translator = {
+            currentLang: 'en',
+            originalsCaptured: false,
+            translations: {"title_en": "Jardin Azul | Montreal Hospitality", "title_fr": "Jardin Azul | Montreal Hospitality", "en": {"Accueil": "Home", "Lieux": "Venues", "Sports": "Sports", "Services": "Services", "Événements": "Events", "Carrières": "Careers", "Contact": "Contact", "Galerie": "Gallery", "Cliquez pour agrandir": "Click images to expand", "Réservations": "Reservations", "Liste d’Invités et Billets": "Guest List & Tickets", "Type de Demande": "Request Type", "Liste d’Invités": "Guest List", "Billets": "Tickets", "Service aux Bouteilles": "Bottle Service", "Nom Complet *": "Full Name *", "Veuillez entrer votre nom complet": "Please enter your full name", "Adresse Courriel *": "Email Address *", "Veuillez entrer une adresse courriel valide": "Please enter a valid email", "Numéro de Téléphone *": "Phone Number *", "Veuillez entrer votre numéro de téléphone": "Please enter your phone number", "Date Préférée *": "Preferred Date *", "Veuillez sélectionner une date": "Please select a date", "Nombre d’Invités *": "Number of Guests *", "Sélectionnez le nombre d’invités": "Select number of guests", "1 invité": "1 Guest", "2 invités": "2 Guests", "3 invités": "3 Guests", "4 invités": "4 Guests", "5 invités": "5 Guests", "6+ invités": "6+ Guests", "10+ invités (grand groupe)": "10+ Guests (Large Party)", "Veuillez sélectionner le nombre d’invités": "Please select number of guests", "Demandes Spéciales": "Special Requests", "Soumettre la Demande": "Submit Request", "Notre équipe confirmera votre réservation dans les 24 heures": "Our team will confirm your reservation within 24 hours", "Demande Reçue !": "Request Received!", "Votre Numéro de Référence": "Your Reference Number", "Confirmation envoyée à": "Confirmation sent to", "Une erreur est survenue. Veuillez réessayer ou nous contacter directement au 514-378-0154.": "Something went wrong. Please try again or contact us directly at 514-378-0154.", "Pour une assistance immédiate :": "For immediate assistance:", "Points Forts": "Highlights", "À Quoi Vous Attendre": "What to Expect", "Emplacement": "Location", "Nous Trouver": "Find Us", "Obtenir l’Itinéraire": "Get Directions", "Retour à Tous les Lieux": "Back to All Venues", "Redéfinir l’art de la nuit à Montréal.": "Redefining the art of the night in Montreal.", "Explorer": "Explore", "Service": "Service", "Suivre": "Follow", "Confidentialité": "Privacy", "Conditions": "Terms", "votre@courriel.com": "your@email.com", "Toit-Terrasse": "Rooftop", "Une oasis en hauteur où la nature rencontre la vie nocturne sous les étoiles": "An elevated oasis where nature meets nightlife under the stars", "Cadre Jardin": "Garden Setting", "Verdure Luxuriante": "Lush Greenery", "Plein Air": "Open Air", "Vue sur la Ville": "Skyline Views", "Cocktails Botaniques": "Botanical Cocktails", "Du Jardin au Verre": "Garden-to-Glass", "Découvrir Jardin Azul": "Experience Jardin Azul", "Nous avons reçu votre demande et vous contacterons sous peu pour confirmer votre réservation au Jardin Azul.": "We've received your request and will contact you shortly to confirm your reservation at Jardin Azul.", "Jardin Botanique": "Botanical Garden", "Des plantes tropicales luxuriantes et des fleurs créent une ambiance de jungle urbaine.": "Lush tropical plants and flowers creating an urban jungle atmosphere.", "Vues au Coucher du Soleil": "Sunset Views", "Des vues panoramiques sur la ville, parfaites pour les cocktails à l’heure dorée.": "Panoramic city skyline views perfect for golden hour cocktails.", "Cocktails du Jardin": "Garden Cocktails", "Des boissons fraîches infusées de botanicals, préparées avec des herbes de notre jardin.": "Fresh botanical-infused drinks crafted with herbs from our garden.", "Nuits Étoilées": "Starry Nights", "Des guirlandes lumineuses et un éclairage ambiant transforment l’espace après la tombée de la nuit.": "String lights and ambient lighting transform the space after dark.", "997 Rue Saint-Jacques": "997 Rue Saint-Jacques", "Montréal, QC H3C 1G6": "Montreal, QC H3C 1G6", "Mer-Dim : 17h - 1h": "Wed-Sun: 5PM - 1AM", "Lun-Mar : Fermé": "Mon-Tue: Closed", "Code vestimentaire : chic décontracté / resort": "Dress Code: Smart Casual / Resort"}, "fr": {"Home": "Accueil", "Venues": "Lieux", "Sports": "Sports", "Services": "Services", "Events": "Événements", "Careers": "Carrières", "Contact": "Contact", "Gallery": "Galerie", "Click images to expand": "Cliquez pour agrandir", "Reservations": "Réservations", "Guest List & Tickets": "Liste d’Invités et Billets", "Request Type": "Type de Demande", "Guest List": "Liste d’Invités", "Tickets": "Billets", "Bottle Service": "Service aux Bouteilles", "Full Name *": "Nom Complet *", "Please enter your full name": "Veuillez entrer votre nom complet", "Email Address *": "Adresse Courriel *", "Please enter a valid email": "Veuillez entrer une adresse courriel valide", "Phone Number *": "Numéro de Téléphone *", "Please enter your phone number": "Veuillez entrer votre numéro de téléphone", "Preferred Date *": "Date Préférée *", "Please select a date": "Veuillez sélectionner une date", "Number of Guests *": "Nombre d’Invités *", "Select number of guests": "Sélectionnez le nombre d’invités", "1 Guest": "1 invité", "2 Guests": "2 invités", "3 Guests": "3 invités", "4 Guests": "4 invités", "5 Guests": "5 invités", "6+ Guests": "6+ invités", "10+ Guests (Large Party)": "10+ invités (grand groupe)", "Please select number of guests": "Veuillez sélectionner le nombre d’invités", "Special Requests": "Demandes Spéciales", "Submit Request": "Soumettre la Demande", "Our team will confirm your reservation within 24 hours": "Notre équipe confirmera votre réservation dans les 24 heures", "Request Received!": "Demande Reçue !", "Your Reference Number": "Votre Numéro de Référence", "Confirmation sent to": "Confirmation envoyée à", "Something went wrong. Please try again or contact us directly at 514-378-0154.": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement au 514-378-0154.", "For immediate assistance:": "Pour une assistance immédiate :", "Highlights": "Points Forts", "What to Expect": "À Quoi Vous Attendre", "Location": "Emplacement", "Find Us": "Nous Trouver", "Get Directions": "Obtenir l’Itinéraire", "Back to All Venues": "Retour à Tous les Lieux", "Redefining the art of the night in Montreal.": "Redéfinir l’art de la nuit à Montréal.", "Explore": "Explorer", "Service": "Service", "Follow": "Suivre", "Privacy": "Confidentialité", "Terms": "Conditions", "your@email.com": "votre@courriel.com", "Rooftop": "Toit-Terrasse", "An elevated oasis where nature meets nightlife under the stars": "Une oasis en hauteur où la nature rencontre la vie nocturne sous les étoiles", "Garden Setting": "Cadre Jardin", "Lush Greenery": "Verdure Luxuriante", "Open Air": "Plein Air", "Skyline Views": "Vue sur la Ville", "Botanical Cocktails": "Cocktails Botaniques", "Garden-to-Glass": "Du Jardin au Verre", "Experience Jardin Azul": "Découvrir Jardin Azul", "We've received your request and will contact you shortly to confirm your reservation at Jardin Azul.": "Nous avons reçu votre demande et vous contacterons sous peu pour confirmer votre réservation au Jardin Azul.", "Botanical Garden": "Jardin Botanique", "Lush tropical plants and flowers creating an urban jungle atmosphere.": "Des plantes tropicales luxuriantes et des fleurs créent une ambiance de jungle urbaine.", "Sunset Views": "Vues au Coucher du Soleil", "Panoramic city skyline views perfect for golden hour cocktails.": "Des vues panoramiques sur la ville, parfaites pour les cocktails à l’heure dorée.", "Garden Cocktails": "Cocktails du Jardin", "Fresh botanical-infused drinks crafted with herbs from our garden.": "Des boissons fraîches infusées de botanicals, préparées avec des herbes de notre jardin.", "Starry Nights": "Nuits Étoilées", "String lights and ambient lighting transform the space after dark.": "Des guirlandes lumineuses et un éclairage ambiant transforment l’espace après la tombée de la nuit.", "997 Rue Saint-Jacques": "997 Rue Saint-Jacques", "Montreal, QC H3C 1G6": "Montréal, QC H3C 1G6", "Wed-Sun: 5PM - 1AM": "Mer-Dim : 17h - 1h", "Mon-Tue: Closed": "Lun-Mar : Fermé", "Dress Code: Smart Casual / Resort": "Code vestimentaire : chic décontracté / resort"}},
+            placeholderTranslations: {"en": {"Entrez votre nom complet": "Enter your full name", "votre@courriel.com": "your@email.com", "(514) 000-0000": "(514) 000-0000", "Anniversaire, occasion spéciale, préférence de placement...": "Birthday celebration, special occasion, preferred seating...", "Détails supplémentaires sur votre événement, exigences particulières, thème, etc.": "Additional details about your event, special requirements, theme, etc...", "Nombre de participants": "Number of attendees", "Nombre approximatif d’invités": "Approximate guests", "Entreprise ou organisation": "Company or organization"}, "fr": {"Enter your full name": "Entrez votre nom complet", "your@email.com": "votre@courriel.com", "(514) 000-0000": "(514) 000-0000", "Birthday celebration, special occasion, preferred seating...": "Anniversaire, occasion spéciale, préférence de placement...", "Additional details about your event, special requirements, theme, etc...": "Détails supplémentaires sur votre événement, exigences particulières, thème, etc.", "Number of attendees": "Nombre de participants", "Approximate guests": "Nombre approximatif d’invités", "Company or organization": "Entreprise ou organisation"}},
+            captureOriginals() {
+                if (this.originalsCaptured) return;
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    node.__originalText = node.nodeValue;
+                }
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    el.dataset.originalPlaceholder = el.getAttribute('placeholder') || '';
+                });
+                document.querySelectorAll('option').forEach(el => {
+                    el.dataset.originalOption = el.textContent;
+                });
+                document.titleOriginal = document.title;
+                this.originalsCaptured = true;
+            },
+            init() {
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                if (savedLang === 'fr' || savedLang === 'en') {
+                    this.currentLang = savedLang;
+                } else if (browserLang === 'fr') {
+                    this.currentLang = 'fr';
+                }
+                this.captureOriginals();
+                this.updateUI();
+                this.translatePage();
+            },
+            setLanguage(lang) {
+                if (!['en', 'fr'].includes(lang)) return;
+                this.currentLang = lang;
+                localStorage.setItem('preferred_language', lang);
+                this.updateUI();
+                this.translatePage();
+            },
+            updateUI() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
+                });
+            },
+            replaceTextNode(node, map) {
+                const original = node.__originalText || node.nodeValue;
+                const trimmed = original.trim();
+                const translated = map[trimmed];
+                if (!translated) {
+                    node.nodeValue = original;
+                    return;
+                }
+                const leading = original.match(/^\s*/)[0];
+                const trailing = original.match(/\s*$/)[0];
+                node.nodeValue = leading + translated + trailing;
+            },
+            translatePage() {
+                this.captureOriginals();
+                const map = this.currentLang === 'fr' ? this.translations.fr : this.translations.en;
+                const placeholderMap = this.currentLang === 'fr' ? this.placeholderTranslations.fr : this.placeholderTranslations.en;
+                document.documentElement.lang = this.currentLang;
+                document.title = this.currentLang === 'fr' ? (this.translations.title_fr || document.titleOriginal) : (this.translations.title_en || document.titleOriginal);
+
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) {
+                    this.replaceTextNode(walker.currentNode, map);
+                }
+
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    const original = el.dataset.originalPlaceholder || el.getAttribute('placeholder') || '';
+                    el.setAttribute('placeholder', placeholderMap[original] || original);
+                });
+                document.querySelectorAll('option').forEach(el => {
+                    const original = el.dataset.originalOption || el.textContent;
+                    el.textContent = map[original.trim()] || original;
+                });
+            }
+        };
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+    </script>
+
+</body>
+</html>

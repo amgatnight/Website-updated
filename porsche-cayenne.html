@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Rent the Porsche Cayenne in Montreal through Montreal Hospitality — luxury performance SUV for refined drives and group travel.">
+    <link rel="canonical" href="https://montrealhospitality.com/porsche-cayenne">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Porsche Cayenne GTS | Exotic Fleet | Montreal Hospitality">
+    <meta property="og:description" content="Rent the Porsche Cayenne in Montreal through Montreal Hospitality — luxury performance SUV for refined drives and group travel.">
+    <meta property="og:url" content="https://montrealhospitality.com/porsche-cayenne">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Porsche Cayenne GTS | Exotic Fleet | Montreal Hospitality">
+    <meta name="twitter:description" content="Rent the Porsche Cayenne in Montreal through Montreal Hospitality — luxury performance SUV for refined drives and group travel.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Cayenne GTS | Exotic Fleet | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-main {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .gallery-main:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .gallery-thumb {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            aspect-ratio: 16/10;
+        }
+
+        .gallery-thumb:hover,
+        .gallery-thumb.active {
+            border-color: #C5A059;
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-thumb:hover img {
+            transform: scale(1.1);
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 10001;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(197, 160, 89, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: #C5A059;
+            color: #0B0F19;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(197, 160, 89, 0.8);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0B0F19;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-nav:hover {
+            background: #C5A059;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-prev { left: 2rem; }
+        .lightbox-next { right: 2rem; }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+        }
+
+        .spec-card {
+            background: linear-gradient(135deg, #1A1D24 0%, #0B0F19 100%);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .spec-card:hover {
+            border-color: #C5A059;
+            transform: translateY(-5px);
+        }
+
+        .form-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 0;
+            width: 100%;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #C5A059;
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-thumbs {
+                gap: 0.5rem;
+            }
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .lightbox-prev { left: 1rem; }
+            .lightbox-next { right: 1rem; }
+        }
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .success-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Error Message */
+        .error-message {
+            display: none;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: #ef4444;
+        }
+        .error-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        .submitting {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            font-weight: 600;
+        }
+        .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 38px;
+            height: 30px;
+            padding: 0 10px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .lang-btn:hover { color: #C5A059; }
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.08);
+        }
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.38);
+        }
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .nav-instagram-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .nav-instagram-link:hover {
+            color: #C5A059;
+            transform: scale(1.06);
+        }
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            height: 34px;
+            padding: 0 20px;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 11px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .nav-contact-btn:hover {
+            border-color: #C5A059;
+            color: #C5A059;
+        }
+
+    </style>
+    <base target="_self">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium bg-mh-navy/90 backdrop-blur-md border-b border-white/10">
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <a href="index.html" target="_self" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <div class="hidden lg:flex items-center gap-12">
+            <a href="index.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Home</a>
+            <a href="venues.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Venues</a>
+            <a href="sports.html" target="_self" class="link-hover hover:text-mh-gold transition-colors">Sports</a>
+            <a href="service.html" target="_self" class="link-hover text-mh-gold transition-colors">Services</a>
+            <a href="index.html#private-events" target="_self" class="link-hover hover:text-mh-gold transition-colors">Events</a>
+            <a href="index.html#careers" target="_self" class="link-hover hover:text-mh-gold transition-colors">Careers</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-8">
+            
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+<a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="nav-instagram-link"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="nav-contact-btn">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+        <a href="index.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Home</a>
+        <a href="venues.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Venues</a>
+        <a href="sports.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Sports</a>
+        <a href="service.html" target="_self" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Services</a>
+        <a href="index.html#private-events" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Events</a>
+        <a href="index.html#careers" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform">Careers</a>
+    
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active text-lg" data-lang="en" type="button" onclick="translator.setLanguage('en')">EN</button>
+            <div class="lang-divider h-6"></div>
+            <button class="lang-btn text-lg" data-lang="fr" type="button" onclick="translator.setLanguage('fr')">FR</button>
+        </div>
+
+
+</div>
+
+    <!-- Hero Section -->
+    <header class="relative h-[70vh] w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://www.westcoastexoticcars.com/imagetag/1689/3/l/Used-2023-Porsche-Cayenne-GTS-1684956511.jpg" 
+                 alt="Porsche Cayenne GTS" 
+                 class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/60 via-mh-navy/40 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+            <span class="tao-subheading text-mh-gold mb-4 tracking-[0.3em] text-xs block reveal">PERFORMANCE SUV</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl tao-heading text-white mb-4 leading-[0.95] reveal">
+                Porsche Cayenne<br>GTS
+            </h1>
+            <p class="text-gray-400 text-xl font-light mb-8 reveal">V8 Power Returns</p>
+            <div class="reveal">
+                <a href="#gallery" class="btn-hover inline-flex items-center gap-3 border border-white/30 text-white px-8 py-3 text-xs tracking-[0.25em] uppercase hover:border-mh-gold hover:text-mh-gold transition-all duration-300">
+                    View Gallery <i class="fa-solid fa-images"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-mh-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                
+                <!-- Image Gallery -->
+                <div class="reveal">
+                    <div class="gallery-main aspect-[16/10] bg-mh-gray" onclick="openLightbox(0)">
+                        <img id="mainImage" src="https://www.westcoastexoticcars.com/imagetag/1689/3/l/Used-2023-Porsche-Cayenne-GTS-1684956511.jpg" alt="Porsche Cayenne GTS">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                            <span class="text-white text-sm tracking-[0.2em] uppercase"><i class="fa-solid fa-expand mr-2"></i> Click to Expand</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-thumbs">
+                        <div class="gallery-thumb active" onclick="changeImage(0)">
+                            <img src="https://www.westcoastexoticcars.com/imagetag/1689/3/l/Used-2023-Porsche-Cayenne-GTS-1684956511.jpg" alt="Cayenne GTS - View 1">
+                        </div>
+                        <div class="gallery-thumb" onclick="changeImage(1)">
+                            <img src="https://images-porsche.imgix.net/-/media/B26741F914EF4DE0A463C2C9ED30287A_187A2CED01434579BFC3185413505FFF_cayenne-gts-cockpit-desktop-myt?w=1299&q=85&auto=format" alt="Cayenne GTS - View 2">
+                        </div>
+                        <div class="gallery-thumb" onclick="changeImage(2)">
+                            <img src="https://www.cnet.com/a/img/resize/00610e816673738c3216bf1c2a7bbfb7170d196d/hub/2021/06/04/62f46c25-5894-46e0-b146-2ea6113d47e1/2021-porsche-cayenne-gts-003.jpg?auto=webp&width=1200" alt="Cayenne GTS - View 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Details -->
+                <div class="reveal">
+                    <span class="tao-subheading text-mh-gold text-[11px] tracking-[0.3em] block mb-4">Vehicle Details</span>
+                    <h2 class="text-4xl md:text-5xl tao-heading text-white mb-6">Porsche Cayenne GTS</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8 font-light">
+                        The Porsche Cayenne GTS marks the triumphant return of the V8 engine to the GTS lineup. This performance SUV combines the practicality of a luxury family vehicle with the soul of a sports car. The twin-turbo 4.0L V8 delivers a thunderous exhaust note through the standard Sport Exhaust system, while the lowered air suspension and 21-inch RS Spyder Design wheels provide handling that defies physics. Inside, Alcantara dominates the cabin—from the heated sport seats to the headliner—creating a cockpit that bridges the gap between daily driver and weekend track weapon.
+                    </p>
+
+                    <!-- Specs Grid -->
+                    <div class="grid grid-cols-3 gap-4 mb-10">
+                        <div class="spec-card p-6 text-center rounded-lg">
+                            <i class="fa-solid fa-gauge-high text-mh-gold text-2xl mb-3"></i>
+                            <p class="text-3xl font-serif text-white mb-1">453</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">Horsepower</p>
+                        </div>
+                        <div class="spec-card p-6 text-center rounded-lg">
+                            <i class="fa-solid fa-stopwatch text-mh-gold text-2xl mb-3"></i>
+                            <p class="text-3xl font-serif text-white mb-1">4.5</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">0-100 sec</p>
+                        </div>
+                        <div class="spec-card p-6 text-center rounded-lg">
+                            <i class="fa-solid fa-gears text-mh-gold text-2xl mb-3"></i>
+                            <p class="text-3xl font-serif text-white mb-1">V8</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">Twin-Turbo</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
+                            <i class="fa-solid fa-chair text-mh-gold text-xl"></i>
+                            <div>
+                                <p class="text-white font-medium">5 Seats</p>
+                                <p class="text-xs text-gray-500">Sport Configuration</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
+                            <i class="fa-solid fa-suitcase text-mh-gold text-xl"></i>
+                            <div>
+                                <p class="text-white font-medium">5 Bags</p>
+                                <p class="text-xs text-gray-500">Luggage Space</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#inquiry" class="btn-hover flex-1 text-center bg-mh-gold text-mh-navy px-8 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white transition-all duration-300">
+                            Reserve Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="exotic-fleet.html" class="btn-hover flex-1 text-center border border-white/30 text-white px-8 py-4 text-xs tracking-[0.25em] uppercase hover:border-mh-gold hover:text-mh-gold transition-all duration-300">
+                            Back to Fleet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-mh-navy">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Highlights</span>
+                <h2 class="text-4xl md:text-5xl tao-heading text-white mb-6">Exceptional Features</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 reveal">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-mh-gold/10 flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-mh-gold text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Fully Insured</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Comprehensive coverage for complete peace of mind during your rental period.</p>
+                </div>
+                <div class="text-center p-8 reveal">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-mh-gold/10 flex items-center justify-center">
+                        <i class="fa-solid fa-clock text-mh-gold text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">24/7 Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Round-the-clock assistance from our dedicated fleet management team.</p>
+                </div>
+                <div class="text-center p-8 reveal">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-mh-gold/10 flex items-center justify-center">
+                        <i class="fa-solid fa-star text-mh-gold text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Premium Service</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Meticulously maintained vehicles delivered to your location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section id="inquiry" class="py-24 bg-mh-dark relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+            <div class="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4">Reservation</span>
+                <h2 class="text-4xl md:text-5xl tao-heading text-white mb-6">Reserve This Vehicle</h2>
+                <p class="text-gray-400 font-light text-lg">
+                    Complete the form below and our fleet manager will confirm your reservation within 2 hours.
+                </p>
+            </div>
+
+            <form id="guestListForm" action="https://formspree.io/f/mykdvnra" method="POST" novalidate class="space-y-8 reveal">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">First Name</label>
+                        <input type="text" name="firstName" class="form-input" placeholder="John" data-required="true">
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Last Name</label>
+                        <input type="text" name="lastName" class="form-input" placeholder="Doe" data-required="true">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Email</label>
+                        <input type="email" name="email" class="form-input" placeholder="john@example.com" data-required="true">
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Phone</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="+1 (514) 555-0199" data-required="true">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Pickup Date</label>
+                        <input type="date" name="pickupDate" class="form-input" data-required="true">
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Return Date</label>
+                        <input type="date" name="returnDate" class="form-input">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" name="chauffeur" value="yes" class="w-5 h-5 border border-white/30 rounded bg-transparent text-mh-gold focus:ring-mh-gold">
+                        <span class="text-gray-400 text-sm">Add Professional Chauffeur Service (+$150/day)</span>
+                    </label>
+                </div>
+
+                <div>
+                    <label class="block text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Special Requests</label>
+                    <textarea name="specialRequests" class="form-input resize-none" rows="4" placeholder="Any specific requirements..."></textarea>
+                </div>
+
+                <!-- Honeypot field to prevent spam -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <div class="text-center">
+                    <button type="button" onclick="submitForm()" id="submitBtn" class="btn-hover inline-flex items-center gap-3 bg-mh-gold text-mh-navy px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white transition-all duration-300">
+                        Submit Reservation <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message">
+                <i class="fa-solid fa-check-circle text-mh-gold text-4xl mb-4"></i>
+                <h3 class="text-white font-serif text-2xl mb-2">Request Received!</h3>
+                <p class="text-gray-400 text-sm mb-4">We've received your reservation for the Porsche Cayenne GTS. Our fleet manager will confirm within 2 hours.</p>
+                <div class="bg-mh-navy/50 p-4 inline-block mb-4">
+                    <p class="text-mh-gold text-xs uppercase tracking-wider mb-1">Your Reference Number</p>
+                    <p class="text-white text-xl font-serif" id="inquiryReferenceId">MH-CTC-2025-XX123XX123X1</p>
+                </div>
+                <div class="space-y-1 text-gray-400 text-xs">
+                    <p><i class="fa-solid fa-envelope text-mh-gold mr-2"></i> Confirmation sent to <span id="confirmEmail"></span></p>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message">
+                <i class="fa-solid fa-exclamation-circle text-2xl mb-2"></i>
+                <p class="font-light text-sm">Something went wrong. Please try again or contact us directly at 514-378-0154.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Bar -->
+    <section class="py-12 bg-mh-navy border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="reveal">
+                    <i class="fa-solid fa-phone text-mh-gold text-2xl mb-4"></i>
+                    <h4 class="text-white font-serif text-lg mb-2">Phone</h4>
+                    <p class="text-gray-400">514-378-0154</p>
+                    <p class="text-gray-500 text-sm">24/7 Fleet Manager</p>
+                </div>
+                <div class="reveal">
+                    <i class="fa-solid fa-envelope text-mh-gold text-2xl mb-4"></i>
+                    <h4 class="text-white font-serif text-lg mb-2">Email</h4>
+                    <p class="text-gray-400">info@montrealhospitality.com</p>
+                    <p class="text-gray-500 text-sm">Response within 2h</p>
+                </div>
+                <div class="reveal">
+                    <i class="fa-brands fa-whatsapp text-mh-gold text-2xl mb-4"></i>
+                    <h4 class="text-white font-serif text-lg mb-2">WhatsApp</h4>
+                    <p class="text-gray-400">514-378-0154</p>
+                    <p class="text-gray-500 text-sm">Instant Booking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Venues</a></li>
+                        <li><a href="sports.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Sports</a></li>
+                        <li><a href="service.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Service</a></li>
+                        <li><a href="index.html#careers" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">CONTACT</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="mailto:info@montrealhospitality.com" class="hover:text-mh-gold transition-colors">info@montrealhospitality.com</a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-close" onclick="closeLightbox(event)"><i class="fa-solid fa-times"></i></div>
+        <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img id="lightboxImg" class="lightbox-img" src="" alt="">
+        <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-counter"><span id="currentImg">1</span> / 3</div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Image Gallery Data - Porsche Cayenne GTS
+        const galleryImages = [
+            "https://www.westcoastexoticcars.com/imagetag/1689/3/l/Used-2023-Porsche-Cayenne-GTS-1684956511.jpg",
+            "https://images-porsche.imgix.net/-/media/B26741F914EF4DE0A463C2C9ED30287A_187A2CED01434579BFC3185413505FFF_cayenne-gts-cockpit-desktop-myt?w=1299&q=85&auto=format",
+            "https://www.cnet.com/a/img/resize/00610e816673738c3216bf1c2a7bbfb7170d196d/hub/2021/06/04/62f46c25-5894-46e0-b146-2ea6113d47e1/2021-porsche-cayenne-gts-003.jpg?auto=webp&width=1200"
+        ];
+        let currentImageIndex = 0;
+
+        // Generate reference number in format MH-CTC-2025-XX123XX123X1
+        function generateReferenceNumber() {
+            const prefix = 'MH-CTC-2025-';
+            let randomPart = '';
+            const pattern = [
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 1 },
+                { type: 'number', count: 1 }
+            ];
+            pattern.forEach(segment => {
+                for (let i = 0; i < segment.count; i++) {
+                    if (segment.type === 'letter') {
+                        randomPart += String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                    } else {
+                        randomPart += Math.floor(Math.random() * 10).toString();
+                    }
+                }
+            });
+            return prefix + randomPart;
+        }
+
+        function validateForm() {
+            const form = document.getElementById('guestListForm');
+            const requiredFields = form.querySelectorAll('[data-required="true"]');
+            let isValid = true;
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'rgba(255,255,255,0.2)';
+                }
+            });
+            return isValid;
+        }
+
+        async function submitForm() {
+            const form = document.getElementById('guestListForm');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (!validateForm()) {
+                form.style.animation = 'shake 0.5s';
+                setTimeout(() => { form.style.animation = ''; }, 500);
+                return;
+            }
+
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.classList.add('submitting');
+
+            try {
+                const refNumber = generateReferenceNumber();
+                const formData = new FormData(form);
+                formData.append('inquiryReference', refNumber);
+                formData.append('ticketNumber', refNumber);
+                formData.append('referenceId', refNumber);
+                formData.append('venue', 'Porsche Cayenne GTS');
+
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    document.getElementById('inquiryReferenceId').textContent = refNumber;
+                    document.getElementById('confirmEmail').textContent = formData.get('email');
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                document.getElementById('errorMessage').classList.add('active');
+                submitBtn.innerHTML = 'Submit Reservation <i class="fa-solid fa-paper-plane"></i>';
+                submitBtn.classList.remove('submitting');
+            }
+        }
+
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load
+        window.scrollTo(0, 0);
+
+        // Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    const revealElements = document.querySelectorAll('.reveal');
+                    revealElements.forEach(el => {
+                        el.classList.add('active');
+                    });
+                }, 800);
+            }, 1200);
+        });
+
+        // Gallery Functions
+        function changeImage(index) {
+            currentImageIndex = index;
+            const mainImage = document.getElementById('mainImage');
+            mainImage.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImage.src = galleryImages[index];
+                mainImage.style.opacity = '1';
+            }, 200);
+
+            // Update active thumb
+            document.querySelectorAll('.gallery-thumb').forEach((thumb, i) => {
+                if (i === index) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.src = galleryImages[currentImageIndex];
+            document.getElementById('currentImg').textContent = currentImageIndex + 1;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event.target.id === 'lightbox' || event.target.closest('.lightbox-close')) {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function changeLightboxImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            
+            document.getElementById('lightboxImg').src = galleryImages[currentImageIndex];
+            document.getElementById('currentImg').textContent = currentImageIndex + 1;
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox({target: {id: 'lightbox'}});
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                if (e.key === 'ArrowRight') changeLightboxImage(1);
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+
+    <script>
+        const translator = {
+            currentLang: 'en',
+            originalsCaptured: false,
+            translations: {"title_en": null, "title_fr": "Porsche Cayenne GTS | Flotte exotique | Montreal Hospitality", "en": {"Accueil": "Home", "Lieux": "Venues", "Sports": "Sports", "Services": "Services", "Événements": "Events", "Carrières": "Careers", "Contact": "Contact", "Voir la galerie": "View Gallery", "Cliquer pour agrandir": "Click to Expand", "Détails du véhicule": "Vehicle Details", "Points forts": "Highlights", "Caractéristiques exceptionnelles": "Exceptional Features", "Entièrement assuré": "Fully Insured", "Couverture complète pour une tranquillité d’esprit totale pendant votre période de location.": "Comprehensive coverage for complete peace of mind during your rental period.", "Assistance 24/7": "24/7 Support", "Assistance en tout temps de notre équipe de gestion de flotte dédiée.": "Round-the-clock assistance from our dedicated fleet management team.", "Service haut de gamme": "Premium Service", "Véhicules entretenus avec soin et livrés à votre emplacement.": "Meticulously maintained vehicles delivered to your location.", "Réservation": "Reservation", "Réserver ce véhicule": "Reserve This Vehicle", "Remplissez le formulaire ci-dessous et notre gestionnaire de flotte confirmera votre réservation dans les 2 heures.": "Complete the form below and our fleet manager will confirm your reservation within 2 hours.", "Prénom": "First Name", "Nom de famille": "Last Name", "Courriel": "Email", "Téléphone": "Phone", "Date de prise en charge": "Pickup Date", "Date de retour": "Return Date", "Ajouter le service de chauffeur professionnel (+150 $/jour)": "Add Professional Chauffeur Service (+$150/day)", "Demandes spéciales": "Special Requests", "Soumettre la réservation": "Submit Reservation", "Demande reçue !": "Request Received!", "Votre numéro de référence": "Your Reference Number", "Confirmation envoyée à": "Confirmation sent to", "Une erreur est survenue. Veuillez réessayer ou nous contacter directement au 514-378-0154.": "Something went wrong. Please try again or contact us directly at 514-378-0154.", "514-378-0154": "514-378-0154", "Gestionnaire de flotte 24/7": "24/7 Fleet Manager", "info@montrealhospitality.com": "info@montrealhospitality.com", "Réponse sous 2 h": "Response within 2h", "Réponse sous 24 h": "Response within 24h", "WhatsApp": "WhatsApp", "Réservation instantanée": "Instant Booking", "Redéfinir l’art de la nuit à Montréal.": "Redefining the art of the night in Montreal.", "Explorer": "Explore", "Service": "Service", "Suivre": "Follow", "Confidentialité": "Privacy", "Conditions": "Terms", "Retour à la flotte": "Back to Fleet", "Réserver maintenant": "Reserve Now", "Puissance": "Horsepower", "0-100 s": "0-100 sec", "Flotte": "Fleet", "Affréter maintenant": "Charter Now", "Aperçu": "Overview", "Spécifications": "Specifications", "Détails techniques": "Technical Details", "Performance": "Performance", "Autonomie": "Range", "Autonomie (nm)": "Range (nm)", "Vitesse max": "Max Speed", "Vitesse de croisière": "Cruise Speed", "Plafond": "Ceiling", "Distance de décollage": "Takeoff Distance", "Cabine": "Cabin", "Passagers": "Passengers", "Hauteur cabine": "Cabin Height", "Largeur cabine": "Cabin Width", "Longueur cabine": "Cabin Length", "Bagages": "Baggage", "Dimensions": "Dimensions", "Longueur": "Length", "Envergure": "Wingspan", "Hauteur": "Height", "Moteurs": "Engines", "Équipage": "Crew", "Galerie": "Gallery", "Intérieur et extérieur": "Interior & Exterior", "Affréter cet appareil": "Charter This Aircraft", "Départ": "Departure", "Destination": "Destination", "Date": "Date", "Demander un vol": "Request Charter", "Jet grande cabine": "Large Cabin Jet", "Jet intermédiaire": "Mid-Size Jet", "Super jet intermédiaire": "Super Mid-Size Jet", "Jusqu’à 14": "Up to 14", "Jusqu’à 16": "Up to 16", "Jusqu’à 9": "Up to 9", "Jusqu’à 10": "Up to 10", "2 + 1 agent de bord": "2 + 1 Attendant", "2": "2", "© 2024 Montreal Hospitality Group": "© 2024 Montreal Hospitality Group", "VUS PERFORMANCE": "PERFORMANCE SUV", "Le retour du V8": "V8 Power Returns", "Le Porsche Cayenne GTS marque le retour triomphal du moteur V8 dans la gamme GTS. Ce VUS performance combine la praticité d’un véhicule familial de luxe avec l’âme d’une voiture sport. Le V8 biturbo de 4,0 L livre une sonorité tonitruante grâce au système d’échappement sport de série, tandis que la suspension pneumatique abaissée et les roues RS Spyder Design de 21 pouces offrent une tenue de route bluffante. À l’intérieur, l’Alcantara domine l’habitacle — des sièges sport chauffants jusqu’au pavillon — créant un cockpit qui fait le pont entre usage quotidien et arme de piste du week-end.": "The Porsche Cayenne GTS marks the triumphant return of the V8 engine to the GTS lineup. This performance SUV combines the practicality of a luxury family vehicle with the soul of a sports car. The twin-turbo 4.0L V8 delivers a thunderous exhaust note through the standard Sport Exhaust system, while the lowered air suspension and 21-inch RS Spyder Design wheels provide handling that defies physics. Inside, Alcantara dominates the cabin—from the heated sport seats to the headliner—creating a cockpit that bridges the gap between daily driver and weekend track weapon.", "5 places": "5 Seats", "Configuration sport": "Sport Configuration", "5 bagages": "5 Bags", "Espace bagages": "Luggage Space", "Nous avons reçu votre réservation pour le Porsche Cayenne GTS. Notre gestionnaire de flotte confirmera dans les 2 heures.": "We've received your reservation for the Porsche Cayenne GTS. Our fleet manager will confirm within 2 hours."}, "fr": {"Home": "Accueil", "Venues": "Lieux", "Sports": "Sports", "Services": "Services", "Events": "Événements", "Careers": "Carrières", "Contact": "Contact", "View Gallery": "Voir la galerie", "Click to Expand": "Cliquer pour agrandir", "Vehicle Details": "Détails du véhicule", "Highlights": "Points forts", "Exceptional Features": "Caractéristiques exceptionnelles", "Fully Insured": "Entièrement assuré", "Comprehensive coverage for complete peace of mind during your rental period.": "Couverture complète pour une tranquillité d’esprit totale pendant votre période de location.", "24/7 Support": "Assistance 24/7", "Round-the-clock assistance from our dedicated fleet management team.": "Assistance en tout temps de notre équipe de gestion de flotte dédiée.", "Premium Service": "Service haut de gamme", "Meticulously maintained vehicles delivered to your location.": "Véhicules entretenus avec soin et livrés à votre emplacement.", "Reservation": "Réservation", "Reserve This Vehicle": "Réserver ce véhicule", "Complete the form below and our fleet manager will confirm your reservation within 2 hours.": "Remplissez le formulaire ci-dessous et notre gestionnaire de flotte confirmera votre réservation dans les 2 heures.", "First Name": "Prénom", "Last Name": "Nom de famille", "Email": "Courriel", "Phone": "Téléphone", "Pickup Date": "Date de prise en charge", "Return Date": "Date de retour", "Add Professional Chauffeur Service (+$150/day)": "Ajouter le service de chauffeur professionnel (+150 $/jour)", "Special Requests": "Demandes spéciales", "Submit Reservation": "Soumettre la réservation", "Request Received!": "Demande reçue !", "Your Reference Number": "Votre numéro de référence", "Confirmation sent to": "Confirmation envoyée à", "Something went wrong. Please try again or contact us directly at 514-378-0154.": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement au 514-378-0154.", "514-378-0154": "514-378-0154", "24/7 Fleet Manager": "Gestionnaire de flotte 24/7", "info@montrealhospitality.com": "info@montrealhospitality.com", "Response within 2h": "Réponse sous 2 h", "Response within 24h": "Réponse sous 24 h", "WhatsApp": "WhatsApp", "Instant Booking": "Réservation instantanée", "Redefining the art of the night in Montreal.": "Redéfinir l’art de la nuit à Montréal.", "Explore": "Explorer", "Service": "Service", "Follow": "Suivre", "Privacy": "Confidentialité", "Terms": "Conditions", "Back to Fleet": "Retour à la flotte", "Reserve Now": "Réserver maintenant", "Horsepower": "Puissance", "0-100 sec": "0-100 s", "Fleet": "Flotte", "Charter Now": "Affréter maintenant", "Overview": "Aperçu", "Specifications": "Spécifications", "Technical Details": "Détails techniques", "Performance": "Performance", "Range": "Autonomie", "Range (nm)": "Autonomie (nm)", "Max Speed": "Vitesse max", "Cruise Speed": "Vitesse de croisière", "Ceiling": "Plafond", "Takeoff Distance": "Distance de décollage", "Cabin": "Cabine", "Passengers": "Passagers", "Cabin Height": "Hauteur cabine", "Cabin Width": "Largeur cabine", "Cabin Length": "Longueur cabine", "Baggage": "Bagages", "Dimensions": "Dimensions", "Length": "Longueur", "Wingspan": "Envergure", "Height": "Hauteur", "Engines": "Moteurs", "Crew": "Équipage", "Gallery": "Galerie", "Interior & Exterior": "Intérieur et extérieur", "Charter This Aircraft": "Affréter cet appareil", "Departure": "Départ", "Destination": "Destination", "Date": "Date", "Request Charter": "Demander un vol", "Large Cabin Jet": "Jet grande cabine", "Mid-Size Jet": "Jet intermédiaire", "Super Mid-Size Jet": "Super jet intermédiaire", "Up to 14": "Jusqu’à 14", "Up to 16": "Jusqu’à 16", "Up to 9": "Jusqu’à 9", "Up to 10": "Jusqu’à 10", "2 + 1 Attendant": "2 + 1 agent de bord", "2": "2", "© 2024 Montreal Hospitality Group": "© 2024 Montreal Hospitality Group", "PERFORMANCE SUV": "VUS PERFORMANCE", "V8 Power Returns": "Le retour du V8", "The Porsche Cayenne GTS marks the triumphant return of the V8 engine to the GTS lineup. This performance SUV combines the practicality of a luxury family vehicle with the soul of a sports car. The twin-turbo 4.0L V8 delivers a thunderous exhaust note through the standard Sport Exhaust system, while the lowered air suspension and 21-inch RS Spyder Design wheels provide handling that defies physics. Inside, Alcantara dominates the cabin—from the heated sport seats to the headliner—creating a cockpit that bridges the gap between daily driver and weekend track weapon.": "Le Porsche Cayenne GTS marque le retour triomphal du moteur V8 dans la gamme GTS. Ce VUS performance combine la praticité d’un véhicule familial de luxe avec l’âme d’une voiture sport. Le V8 biturbo de 4,0 L livre une sonorité tonitruante grâce au système d’échappement sport de série, tandis que la suspension pneumatique abaissée et les roues RS Spyder Design de 21 pouces offrent une tenue de route bluffante. À l’intérieur, l’Alcantara domine l’habitacle — des sièges sport chauffants jusqu’au pavillon — créant un cockpit qui fait le pont entre usage quotidien et arme de piste du week-end.", "5 Seats": "5 places", "Sport Configuration": "Configuration sport", "5 Bags": "5 bagages", "Luggage Space": "Espace bagages", "We've received your reservation for the Porsche Cayenne GTS. Our fleet manager will confirm within 2 hours.": "Nous avons reçu votre réservation pour le Porsche Cayenne GTS. Notre gestionnaire de flotte confirmera dans les 2 heures."}},
+            placeholderTranslations: {"en": {"Jean": "John", "Tremblay": "Doe", "jean@exemple.com": "john@example.com", "+1 (514) 555-0199": "+1 (514) 555-0199", "Des demandes particulières...": "Any specific requirements..."}, "fr": {"John": "Jean", "Doe": "Tremblay", "john@example.com": "jean@exemple.com", "+1 (514) 555-0199": "+1 (514) 555-0199", "Any specific requirements...": "Des demandes particulières..."}},
+            captureOriginals() {
+                if (this.originalsCaptured) return;
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    node.__originalText = node.nodeValue;
+                }
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    el.dataset.originalPlaceholder = el.getAttribute('placeholder') || '';
+                });
+                document.querySelectorAll('option').forEach(el => {
+                    el.dataset.originalOption = el.textContent;
+                });
+                document.titleOriginal = document.title;
+                this.originalsCaptured = true;
+            },
+            init() {
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                if (savedLang === 'fr' || savedLang === 'en') {
+                    this.currentLang = savedLang;
+                } else if (browserLang === 'fr') {
+                    this.currentLang = 'fr';
+                }
+                this.captureOriginals();
+                this.updateUI();
+                this.translatePage();
+            },
+            setLanguage(lang) {
+                if (!['en', 'fr'].includes(lang)) return;
+                this.currentLang = lang;
+                localStorage.setItem('preferred_language', lang);
+                this.updateUI();
+                this.translatePage();
+            },
+            updateUI() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
+                });
+            },
+            replaceTextNode(node, map) {
+                const original = node.__originalText || node.nodeValue;
+                const trimmed = original.trim();
+                const translated = map[trimmed];
+                if (!translated) {
+                    node.nodeValue = original;
+                    return;
+                }
+                const leading = original.match(/^\s*/)[0];
+                const trailing = original.match(/\s*$/)[0];
+                node.nodeValue = leading + translated + trailing;
+            },
+            translatePage() {
+                this.captureOriginals();
+                const map = this.currentLang === 'fr' ? this.translations.fr : this.translations.en;
+                const placeholderMap = this.currentLang === 'fr' ? this.placeholderTranslations.fr : this.placeholderTranslations.en;
+                document.documentElement.lang = this.currentLang;
+                document.title = this.currentLang === 'fr' ? (this.translations.title_fr || document.titleOriginal) : (this.translations.title_en || document.titleOriginal);
+
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode(node) {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                while (walker.nextNode()) {
+                    this.replaceTextNode(walker.currentNode, map);
+                }
+
+                document.querySelectorAll('[placeholder]').forEach(el => {
+                    const original = el.dataset.originalPlaceholder || el.getAttribute('placeholder') || '';
+                    el.setAttribute('placeholder', placeholderMap[original] || original);
+                });
+
+                document.querySelectorAll('option').forEach(el => {
+                    const original = el.dataset.originalOption || el.textContent;
+                    el.textContent = map[original.trim()] || original;
+                });
+            }
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+    </script>
+
+</body>
+</html>

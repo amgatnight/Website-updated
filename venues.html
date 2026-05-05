@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Discover Montreal&#x27;s most exclusive venues for private events, curated and managed by Montreal Hospitality.">
+    <link rel="canonical" href="https://montrealhospitality.com/venues">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Venues | Montreal Hospitality">
+    <meta property="og:description" content="Discover Montreal&#x27;s most exclusive venues for private events, curated and managed by Montreal Hospitality.">
+    <meta property="og:url" content="https://montrealhospitality.com/venues">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Venues | Montreal Hospitality">
+    <meta name="twitter:description" content="Discover Montreal&#x27;s most exclusive venues for private events, curated and managed by Montreal Hospitality.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venues | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Nav */
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        /* Image Hover Effects */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Video zoom effect */
+        .video-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.7s ease;
+        }
+        .group:hover .video-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Smooth underline animation */
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* Button hover animations */
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        /* Card hover lift */
+        .card-lift {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger children animations */
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .stagger-children.active > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(5) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(6) { transition-delay: 500ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(7) { transition-delay: 600ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(8) { transition-delay: 700ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(9) { transition-delay: 800ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(10) { transition-delay: 900ms; opacity: 1; transform: translateY(0); }
+
+        /* Dropdown Filter Styles */
+        .filter-dropdown {
+            position: relative;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            transition: border-color 0.3s ease;
+        }
+        .filter-dropdown:hover {
+            border-color: #C5A059;
+        }
+        .filter-dropdown select {
+            appearance: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 12px 40px 12px 0;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .filter-dropdown select:focus {
+            outline: none;
+        }
+        .filter-dropdown select option {
+            background: #0B0F19;
+            color: white;
+            padding: 10px;
+        }
+        .filter-dropdown::after {
+            content: '\f107';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            pointer-events: none;
+            font-size: 12px;
+        }
+
+        /* Venue card overlay */
+        .venue-overlay {
+            background: linear-gradient(to top, rgba(11, 15, 25, 0.9) 0%, rgba(11, 15, 25, 0.4) 50%, transparent 100%);
+        }
+
+        /* View button on hover */
+        .view-btn {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        .group:hover .view-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Clear button */
+        .clear-btn {
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        .clear-btn:hover {
+            border-color: #C5A059;
+            color: #C5A059;
+        }
+
+        /* Mobile filter bar hide/show animation */
+        #filter-section {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #filter-section.mobile-hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .lang-btn:hover {
+            color: #C5A059;
+        }
+        
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile Language Switcher */
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+    </style>
+<base target="_self">
+<base target="_self">
+<base target="_blank">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium bg-mh-navy/90 backdrop-blur-md border-b border-white/10">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" target="_self" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-12">
+              <a href="index.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_home">Home</a>
+              <a href="venues.html" target="_self" class="link-hover text-mh-gold transition-colors" data-i18n="nav_venues">Venues</a>
+              <a href="sports.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_sports">Sports</a>
+              <a href="service.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_services">Services</a>
+              <a href="event.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_events">Events</a>
+              <a href="index.html#careers" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_careers">Careers</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="hidden lg:flex items-center gap-8">
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+            
+            <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="hover:text-mh-gold transition-colors hover:scale-110 transform duration-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all" data-i18n="nav_contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+           <a href="index.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_home">Home</a>
+           <a href="venues.html" target="_self" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_venues">Venues</a>
+           <a href="sports.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_sports">Sports</a>
+           <a href="service.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_services">Services</a>
+           <a href="event.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_events">Events</a>
+           <a href="index.html#careers" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_careers">Careers</a>
+           
+           <!-- Mobile Language Switcher -->
+           <div class="mobile-lang-switcher">
+               <button class="lang-btn active text-lg" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+               <div class="lang-divider h-6"></div>
+               <button class="lang-btn text-lg" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+           </div>
+    </div>
+
+    <!-- Hero Section with Slideshow -->
+    <header class="relative h-[50vh] w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <!-- Slideshow Container -->
+            <div id="hero-slideshow" class="w-full h-full relative">
+                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770663408/494919489_18065050060967846_8298752607161143617_n_qdutpx.jpg" 
+                     class="slideshow-img absolute inset-0 w-full h-full object-cover opacity-30 scale-105 transition-opacity duration-1000" 
+                     style="opacity: 1;"
+                     alt="Slide 1">
+                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769638018/Gemini_Generated_Image_jlwtqejlwtqejlwt_bq4pqd.jpg" 
+                     class="slideshow-img absolute inset-0 w-full h-full object-cover opacity-30 scale-105 transition-opacity duration-1000" 
+                     style="opacity: 0;"
+                     alt="Slide 2">
+                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770156085/IMG_1694_oe5gzf.jpg" 
+                     class="slideshow-img absolute inset-0 w-full h-full object-cover opacity-30 scale-105 transition-opacity duration-1000" 
+                     style="opacity: 0;"
+                     alt="Slide 3">
+                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770663487/After_dinner_it_s_straight_to_the_dance_floor_Tonight_zack.cola_marcel.wynn_bring_you_2_oouas3.jpg" 
+                     class="slideshow-img absolute inset-0 w-full h-full object-cover opacity-30 scale-105 transition-opacity duration-1000" 
+                     style="opacity: 0;"
+                     alt="Slide 4">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/60 via-mh-navy/40 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl tao-heading text-white mb-6 leading-[0.95] reveal" data-i18n="page_title">
+                Venues
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg reveal" data-i18n="page_subtitle">
+                Discover Montreal's most prestigious nightlife destinations
+            </p>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section id="filter-section" class="py-8 bg-mh-navy border-b border-white/10 sticky top-[88px] z-30">
+        <div class="max-w-[95%] mx-auto px-6">
+            <div class="flex flex-wrap items-center justify-between gap-6 reveal">
+                <div class="flex flex-wrap items-center gap-8 flex-1">
+                    <!-- Cities Dropdown -->
+                    <div class="filter-dropdown min-w-[150px]">
+                        <select id="city-filter">
+                            <option value="all" data-i18n="filter_cities">Cities</option>
+                            <option value="montreal">Montreal</option>
+                            <option value="pointe-calumet">Pointe-Calumet</option>
+                        </select>
+                    </div>
+
+                    <!-- Venue Types Dropdown -->
+                    <div class="filter-dropdown min-w-[150px]">
+                        <select id="type-filter">
+                            <option value="all" data-i18n="filter_types">Venue Types</option>
+                            <option value="nightclub" data-i18n="type_nightclub">Nightclub</option>
+                            <option value="rooftop" data-i18n="type_rooftop">Rooftop</option>
+                            <option value="supper" data-i18n="type_supper">Supper Club</option>
+                            <option value="bar" data-i18n="type_bar">Bar</option>
+                            <option value="beach" data-i18n="type_beach">Beach Club</option>
+                            <option value="event" data-i18n="type_event">Event Space</option>
+                        </select>
+                    </div>
+
+                    <!-- Brands Dropdown -->
+                    <div class="filter-dropdown min-w-[150px]">
+                        <select id="brand-filter">
+                            <option value="all" data-i18n="filter_brands">Brands</option>
+                            <option value="yoko-luna">Yoko Luna</option>
+                            <option value="hang-bar">Hang Bar</option>
+                            <option value="bordelle">Bord'Elle</option>
+                            <option value="beachclub">Beachclub</option>
+                            <option value="time-groupe">Time Groupe</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Clear Button -->
+                <button id="clear-filters" class="clear-btn px-6 py-2 text-xs tracking-[0.2em] uppercase text-white hover:text-mh-gold transition-colors" data-i18n="btn_clear">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues Grid - TAO Style -->
+    <section id="venues-grid" class="py-16 bg-mh-dark">
+        <div class="max-w-[95%] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+
+                <!-- Yoko Luna -->
+                <a href="yoko-luna.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="rooftop nightclub" data-brand="yoko-luna">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769638377/473706203_18053071472498519_2657822319212069239_n_vf5i6r.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="Yoko Luna">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">Yoko Luna</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_old_mtl">Old Montreal</p>
+                    </div>
+                </a>
+
+                <!-- Hang Bar -->
+                <a href="hang-bar.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="bar" data-brand="hang-bar">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769647795/HangBarNYE_k69lgr.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="Hang Bar">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">Hang Bar</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_downtown">Downtown</p>
+                    </div>
+                </a>
+
+                <!-- Bord'Elle -->
+                <a href="bordelle.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="supper nightclub" data-brand="bordelle">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769637448/Corporate_rdyrdn.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="Bord'Elle">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">Bord'Elle</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_old_port">Old Port</p>
+                    </div>
+                </a>
+
+                <!-- 212 Montreal -->
+                <a href="212.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="nightclub">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770156124/IMG_1696_o0453l.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="212 Montreal">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">212 Montreal</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_downtown">Downtown</p>
+                    </div>
+                </a>
+
+                <!-- Jardin Azul -->
+                <a href="jardin-azul.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="rooftop bar">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770156232/469422844_122151683468330294_8633735043064570245_n_ommhfi.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="Jardin Azul">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">Jardin Azul</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_plateau">Plateau</p>
+                    </div>
+                </a>
+
+                <!-- La Voûte -->
+                <a href="la-voute.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="nightclub">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770678468/Untitled-2_hkshfs.webp" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="La Voûte">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">La Voûte</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_old_mtl">Old Montreal</p>
+                    </div>
+                </a>
+
+                <!-- Soubois -->
+                <a href="soubois.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="supper">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770678514/soubois-montreal_vkybjn.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="Soubois">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">Soubois</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_downtown">Downtown</p>
+                    </div>
+                </a>
+
+                <!-- Beachclub -->
+                <a href="beach-club.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="pointe-calumet" data-type="beach nightclub" data-brand="beachclub">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771184816/2022-06-28_hfian3.webp" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="Beachclub"
+                             onerror="this.src='https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&q=80'">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">Beachclub</h3>
+                        <p class="text-gray-400 text-sm">Pointe-Calumet</p>
+                    </div>
+                </a>
+
+                <!-- Time Groupe -->
+                <a href="time-groupe.html" target="_self" class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card block" data-city="montreal" data-type="event" data-brand="time-groupe">
+                    <div class="img-zoom-container w-full h-full relative">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771184897/633863735_1272702998248050_2610531299358818178_n_jd8w3h.jpg" 
+                             class="img-zoom w-full h-full object-cover" 
+                             alt="Time Groupe"
+                             onerror="this.src='https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80'">
+                        <div class="absolute inset-0 venue-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mh-navy/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <span class="view-btn border border-white text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="btn_view">
+                            View
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full z-30">
+                        <h3 class="text-xl font-serif text-white mb-1">Time Groupe</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="loc_downtown">Downtown</p>
+                    </div>
+                </a>
+
+                <!-- Coming Soon -->
+                <div class="group relative h-[400px] overflow-hidden cursor-pointer reveal venue-card bg-mh-gray" data-city="montreal">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <span class="tao-subheading text-mh-gold text-[10px] tracking-[0.3em] uppercase block mb-4" data-i18n="coming_soon">Coming Soon</span>
+                            <h3 class="text-2xl font-serif text-white mb-4" data-i18n="new_venue">New Venue</h3>
+                            <p class="text-gray-500 text-sm mb-6" data-i18n="stay_tuned">Stay tuned for our newest addition</p>
+                            <a href="mailto:info@montrealhospitality" class="btn-hover border border-mh-gold text-mh-gold px-6 py-2 text-xs tracking-[0.2em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all" data-i18n="notify_me">
+                                Notify Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Events CTA -->
+    <section class="py-24 bg-mh-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+            <div class="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-mh-gold to-transparent"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+            <span class="tao-subheading text-mh-gold text-[11px] block mb-6" data-i18n="cta_subtitle">Private Events</span>
+            <h2 class="text-4xl md:text-5xl tao-heading text-white mb-8" data-i18n="cta_title">Host Your Event With Us</h2>
+            <p class="text-gray-400 font-light text-lg mb-12 max-w-2xl mx-auto" data-i18n="cta_desc">
+                From corporate gatherings to milestone celebrations, our dedicated events team ensures every detail is flawless.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="inquire.html" target="_self" class="btn-hover inline-flex items-center gap-3 bg-mh-gold text-mh-navy px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white transition-all duration-300">
+                    <span data-i18n="btn_planning">Start Planning</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="mailto:info@montrealhospitality" class="btn-hover inline-flex items-center gap-3 border border-white/40 text-white px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300">
+                    <i class="fa-solid fa-envelope"></i> <span data-i18n="btn_email">Email Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light" data-i18n="footer_tagline">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_explore">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_venues">Venues</a></li>
+                        <li><a href="sports.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_sports">Sports</a></li>
+                        <li><a href="service.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_services">Services</a></li>
+                        <li><a href="index.html#careers" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_careers">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_contact">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="mailto:info@montrealhospitality" class="hover:text-mh-gold transition-colors">info@montrealhospitality</a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_follow">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_privacy">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_terms">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Translation System
+        const translations = {
+            en: {
+                // Navigation
+                nav_home: "Home",
+                nav_venues: "Venues",
+                nav_sports: "Sports",
+                nav_services: "Services",
+                nav_events: "Events",
+                nav_careers: "Careers",
+                nav_contact: "Contact",
+                
+                // Page Header
+                page_title: "Venues",
+                page_subtitle: "Discover Montreal's most prestigious nightlife destinations",
+                
+                // Filters
+                filter_cities: "Cities",
+                filter_types: "Venue Types",
+                filter_brands: "Brands",
+                btn_clear: "Clear",
+                
+                // Venue Types
+                type_nightclub: "Nightclub",
+                type_rooftop: "Rooftop",
+                type_supper: "Supper Club",
+                type_bar: "Bar",
+                type_beach: "Beach Club",
+                type_event: "Event Space",
+                
+                // Buttons
+                btn_view: "View",
+                
+                // Locations
+                loc_old_mtl: "Old Montreal",
+                loc_downtown: "Downtown",
+                loc_old_port: "Old Port",
+                loc_plateau: "Plateau",
+                
+                // Coming Soon
+                coming_soon: "Coming Soon",
+                new_venue: "New Venue",
+                stay_tuned: "Stay tuned for our newest addition",
+                notify_me: "Notify Me",
+                
+                // CTA Section
+                cta_subtitle: "Private Events",
+                cta_title: "Host Your Event With Us",
+                cta_desc: "From corporate gatherings to milestone celebrations, our dedicated events team ensures every detail is flawless.",
+                btn_planning: "Start Planning",
+                btn_email: "Email Us",
+                
+                // Footer
+                footer_tagline: "Redefining the art of the night in Montreal.",
+                footer_explore: "Explore",
+                footer_contact: "Contact",
+                footer_follow: "Follow",
+                footer_privacy: "Privacy",
+                footer_terms: "Terms"
+            },
+            fr: {
+                // Navigation
+                nav_home: "Accueil",
+                nav_venues: "Lieux",
+                nav_sports: "Sports",
+                nav_services: "Services",
+                nav_events: "Événements",
+                nav_careers: "Carrières",
+                nav_contact: "Contact",
+                
+                // Page Header
+                page_title: "Lieux",
+                page_subtitle: "Découvrez les destinations nocturnes les plus prestigieuses de Montréal",
+                
+                // Filters
+                filter_cities: "Villes",
+                filter_types: "Types de Lieux",
+                filter_brands: "Marques",
+                btn_clear: "Effacer",
+                
+                // Venue Types
+                type_nightclub: "Boîte de Nuit",
+                type_rooftop: "Sur le Toit",
+                type_supper: "Supper Club",
+                type_bar: "Bar",
+                type_beach: "Club de Plage",
+                type_event: "Espace Événementiel",
+                
+                // Buttons
+                btn_view: "Voir",
+                
+                // Locations
+                loc_old_mtl: "Vieux-Montréal",
+                loc_downtown: "Centre-ville",
+                loc_old_port: "Vieux-Port",
+                loc_plateau: "Plateau",
+                
+                // Coming Soon
+                coming_soon: "Bientôt Disponible",
+                new_venue: "Nouveau Lieu",
+                stay_tuned: "Restez à l'écoute pour notre nouvelle addition",
+                notify_me: "Me Notifier",
+                
+                // CTA Section
+                cta_subtitle: "Événements Privés",
+                cta_title: "Organisez Votre Événement Avec Nous",
+                cta_desc: "Des rassemblements d'entreprise aux célébrations importantes, notre équipe d'événements dédiée assure que chaque détail soit impeccable.",
+                btn_planning: "Commencer la Planification",
+                btn_email: "Nous Contacter",
+                
+                // Footer
+                footer_tagline: "Redéfinir l'art de la nuit à Montréal.",
+                footer_explore: "Explorer",
+                footer_contact: "Contact",
+                footer_follow: "Suivre",
+                footer_privacy: "Confidentialité",
+                footer_terms: "Conditions"
+            }
+        };
+
+        // Translator Object
+        const translator = {
+            currentLang: 'en',
+            
+            init() {
+                // Check for saved language preference or browser language
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                
+                if (savedLang && translations[savedLang]) {
+                    this.currentLang = savedLang;
+                } else if (translations[browserLang]) {
+                    this.currentLang = browserLang;
+                }
+                
+                this.updateUI();
+                this.translatePage();
+            },
+            
+            setLanguage(lang) {
+                if (translations[lang]) {
+                    this.currentLang = lang;
+                    localStorage.setItem('preferred_language', lang);
+                    this.updateUI();
+                    this.translatePage();
+                    
+                    // Update html lang attribute
+                    document.documentElement.lang = lang;
+                }
+            },
+            
+            updateUI() {
+                // Update language buttons
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    if (btn.dataset.lang === this.currentLang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            },
+            
+            translatePage() {
+                const texts = translations[this.currentLang];
+                
+                // Translate elements with data-i18n attribute
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.dataset.i18n;
+                    if (texts[key]) {
+                        element.textContent = texts[key];
+                    }
+                });
+                
+                // Translate placeholders
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                    const key = element.dataset.i18nPlaceholder;
+                    if (texts[key]) {
+                        element.placeholder = texts[key];
+                    }
+                });
+            }
+        };
+
+        // Initialize translator when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load (before showing content)
+        window.scrollTo(0, 0);
+
+        // Loader and Hero Animation Trigger
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+
+            // Hide loader after 1.2s
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+
+                    // Trigger reveal animations after loader is gone
+                    const revealElements = document.querySelectorAll('.reveal');
+                    revealElements.forEach(el => {
+                        el.classList.add('active');
+                    });
+
+                    // Trigger stagger animations
+                    const staggerContainers = document.querySelectorAll('.stagger-children');
+                    staggerContainers.forEach(container => {
+                        container.classList.add('active');
+                    });
+
+                }, 800);
+            }, 1200);
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Filter Functionality
+        const cityFilter = document.getElementById('city-filter');
+        const typeFilter = document.getElementById('type-filter');
+        const brandFilter = document.getElementById('brand-filter');
+        const clearBtn = document.getElementById('clear-filters');
+        const venueCards = document.querySelectorAll('.venue-card');
+
+        function filterVenues() {
+            const cityValue = cityFilter.value;
+            const typeValue = typeFilter.value;
+            const brandValue = brandFilter.value;
+
+            venueCards.forEach(card => {
+                const city = card.getAttribute('data-city');
+                const type = card.getAttribute('data-type');
+                const brand = card.getAttribute('data-brand');
+
+                const cityMatch = cityValue === 'all' || city === cityValue;
+                const typeMatch = typeValue === 'all' || (type && type.includes(typeValue));
+                const brandMatch = brandValue === 'all' || brand === brandValue;
+
+                if (cityMatch && typeMatch && brandMatch) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        cityFilter.addEventListener('change', filterVenues);
+        typeFilter.addEventListener('change', filterVenues);
+        brandFilter.addEventListener('change', filterVenues);
+
+        clearBtn.addEventListener('click', () => {
+            cityFilter.value = 'all';
+            typeFilter.value = 'all';
+            brandFilter.value = 'all';
+            filterVenues();
+        });
+
+        // Hero Slideshow
+        const slideshowImages = document.querySelectorAll('.slideshow-img');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            // Hide current slide
+            slideshowImages[currentSlide].style.opacity = '0';
+
+            // Move to next slide
+            currentSlide = (currentSlide + 1) % slideshowImages.length;
+
+            // Show new slide
+            slideshowImages[currentSlide].style.opacity = '1';
+        }
+
+        // Change slide every 2.5 seconds
+        setInterval(nextSlide, 2500);
+
+        // Mobile scroll behavior for filter bar - hide on scroll down, show on scroll up
+        const filterSection = document.getElementById('filter-section');
+        let lastScrollY = window.scrollY;
+        let scrollThreshold = 100; // Minimum scroll before hiding
+        let isMobile = window.innerWidth < 1024; // lg breakpoint
+
+        function handleScroll() {
+            if (!isMobile) return; // Only on mobile/tablet
+            
+            const currentScrollY = window.scrollY;
+            
+            // Only hide after scrolling past threshold
+            if (currentScrollY > scrollThreshold) {
+                if (currentScrollY > lastScrollY) {
+                    // Scrolling down - hide filter bar
+                    filterSection.classList.add('mobile-hidden');
+                } else {
+                    // Scrolling up - show filter bar
+                    filterSection.classList.remove('mobile-hidden');
+                }
+            } else {
+                // Always show when near top
+                filterSection.classList.remove('mobile-hidden');
+            }
+            
+            lastScrollY = currentScrollY;
+        }
+
+        // Check if mobile on resize
+        window.addEventListener('resize', () => {
+            isMobile = window.innerWidth < 1024;
+            if (!isMobile) {
+                filterSection.classList.remove('mobile-hidden');
+            }
+        });
+
+        // Throttled scroll listener
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Yoko Luna — exclusive Montreal venue available through Montreal Hospitality for private events and bespoke gatherings.">
+    <link rel="canonical" href="https://montrealhospitality.com/yoko-luna">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Yoko Luna | Montreal Hospitality">
+    <meta property="og:description" content="Yoko Luna — exclusive Montreal venue available through Montreal Hospitality for private events and bespoke gatherings.">
+    <meta property="og:url" content="https://montrealhospitality.com/yoko-luna">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yoko Luna | Montreal Hospitality">
+    <meta name="twitter:description" content="Yoko Luna — exclusive Montreal venue available through Montreal Hospitality for private events and bespoke gatherings.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoko Luna | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Nav */
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        /* Image Hover Effects */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Smooth underline animation */
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* Button hover animations */
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gallery Grid */
+        .gallery-item {
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        /* Form Styles */
+        .form-input {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 18px;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #C5A059;
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #C5A059;
+        }
+
+        /* Custom Select */
+        .custom-select {
+            position: relative;
+        }
+        .custom-select select {
+            appearance: none;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .custom-select select:focus {
+            outline: none;
+            border-color: #C5A059;
+        }
+        .custom-select::after {
+            content: '\f107';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #C5A059;
+            pointer-events: none;
+        }
+        .custom-select select option {
+            background: #0B0F19;
+            color: white;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .radio-item input[type="radio"] {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .radio-item input[type="radio"]:checked {
+            border-color: #C5A059;
+        }
+        .radio-item input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #C5A059;
+            border-radius: 50%;
+        }
+        .radio-item label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .success-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Reference Number Display */
+        .reference-display {
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .reference-number {
+            font-family: 'Montserrat', monospace;
+            font-size: 18px;
+            font-weight: 600;
+            color: #C5A059;
+            letter-spacing: 0.1em;
+        }
+    
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .lang-btn:hover { color: #C5A059; }
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+    </style>
+<base target="_self">
+<base target="_self">
+<base target="_blank">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="closeLightbox()">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+        <button class="absolute left-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(-1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium bg-mh-navy/90 backdrop-blur-md border-b border-white/10">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" target="_self" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-12">
+            <a href="index.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_home">Home</a>
+            <a href="venues.html" target="_self" class="link-hover text-mh-gold transition-colors" data-i18n="nav_venues">Venues</a>
+            <a href="sports.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_sports">Sports</a>
+            <a href="service.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_services">Services</a>
+            <a href="event.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_events">Events</a>
+            <a href="index.html#careers" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_careers">Careers</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="hidden lg:flex items-center gap-8">
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+            <a href="https://www.instagram.com/montrealhospitality/?hl=en" class="hover:text-mh-gold transition-colors hover:scale-110 transform duration-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all" data-i18n="nav_contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+        <a href="index.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_home">Home</a>
+        <a href="venues.html" target="_self" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_venues">Venues</a>
+        <a href="sports.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_sports">Sports</a>
+        <a href="service.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_services">Services</a>
+        <a href="event.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_events">Events</a>
+        <a href="index.html#careers" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_careers">Careers</a>
+        <!-- Mobile Language Switcher -->
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active text-lg" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+            <div class="lang-divider h-6"></div>
+            <button class="lang-btn text-lg" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-[60vh] w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769638377/473706203_18053071472498519_2657822319212069239_n_vf5i6r.jpg" 
+                 class="w-full h-full object-cover opacity-40 scale-105" 
+                 alt="Yoko Luna">
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/60 via-mh-navy/40 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+            <span class="tao-subheading text-mh-gold text-[11px] block mb-4 reveal" data-i18n="hero_location">Old Montreal</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl tao-heading text-white mb-6 leading-[0.95] reveal">
+                Yoko Luna
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg reveal" data-i18n="hero_tagline">
+                Canada's largest supper club — where Japanese elegance meets Montreal nightlife
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-mh-dark">
+        
+        <!-- Venue Info -->
+        <section class="py-16 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12 text-center reveal">
+                    <div>
+                        <i class="fa-solid fa-utensils text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2" data-i18n="info_1_label">Dining</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="info_1_detail">Japanese Fusion Cuisine</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-music text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2" data-i18n="info_2_label">Nightlife</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="info_2_detail">DJ & Live Entertainment</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-champagne-glasses text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2" data-i18n="info_3_label">Bottle Service</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="info_3_detail">Premium Selections</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery & Form Split Section -->
+        <section class="py-20">
+            <div class="max-w-[95%] mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                    
+                    <!-- Left Side: Gallery -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="gallery_label">Gallery</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8" data-i18n="gallery_title">Experience Yoko Luna</h2>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(0)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769638377/473706203_18053071472498519_2657822319212069239_n_vf5i6r.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Yoko Luna Main Room">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(1)">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/04/6e/03/main-room-of-the-dining.jpg?w=900&h=500&s=1" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Yoko Luna Dining">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(2)">
+                                <img src="https://d2q6z78khxmx42.cloudfront.net/2023/04/sdQUx7KU-Anonymus_YOKO_2304050133HD-1920x1440.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Yoko Luna Interior">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(3)">
+                                <img src="https://yokoluna.com/wp-content/uploads/2023/02/A-nod-to-the-dazzling-sculpture-that-overlooks-the-entire-restaurant.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Yoko Luna Sculpture">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(4)">
+                                <img src="https://images-dh-production-baselayer.dailyhive.com/uploads/2022/05/Yoko-Luna-Garden-1.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Yoko Luna Garden">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(5)">
+                                <img src="https://jegantic.com/wp-content/uploads/2023/05/yoko-luna-impressive-bar-1-1.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Yoko Luna Bar">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-500 text-sm mt-6 italic" data-i18n="gallery_hint">Click images to expand</p>
+                    </div>
+
+                    <!-- Right Side: Guest List / Tickets Form -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="form_label">Reservations</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8" data-i18n="form_title">Guest List & Tickets</h2>
+                        
+                        <div class="bg-mh-gray/30 border border-white/10 p-8 lg:p-10">
+                            <!-- Reference Number Display (Hidden initially) -->
+                            <div id="referenceDisplay" class="reference-display" style="display: none;">
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-2">Your Reference Number</p>
+                                <p id="referenceNumber" class="reference-number"></p>
+                            </div>
+
+                            <form id="guestListForm" action="https://formspree.io/f/mykdvnra" method="POST">
+                                <input type="hidden" name="inquiryReference" id="inquiryReferenceInput">
+                                <input type="hidden" name="venue" value="Yoko Luna">
+                                
+                                <!-- Request Type -->
+                                <div class="mb-8">
+                                    <label class="form-label" data-i18n="form_req_type">Request Type</label>
+                                    <div class="radio-group">
+                                        <div class="radio-item">
+                                            <input type="radio" id="guestlist" name="requestType" value="guestlist" checked>
+                                            <label for="guestlist" data-i18n="form_guestlist">Guest List</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="tickets" name="requestType" value="tickets">
+                                            <label for="tickets" data-i18n="form_tickets">Tickets</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="bottle" name="requestType" value="bottle">
+                                            <label for="bottle" data-i18n="form_bottle">Bottle Service</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Name -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="fullName" data-i18n="form_name">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your full name" required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="email" data-i18n="form_email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="phone" data-i18n="form_phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="(514) 000-0000" required>
+                                </div>
+
+                                <!-- Date -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="date" data-i18n="form_date">Preferred Date *</label>
+                                    <input type="date" id="date" name="date" class="form-input" required>
+                                </div>
+
+                                <!-- Guests -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="guests" data-i18n="form_guests">Number of Guests *</label>
+                                    <div class="custom-select">
+                                        <select id="guests" name="guests" required>
+                                            <option value="">Select number of guests</option>
+                                            <option value="1">1 Guest</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5 Guests</option>
+                                            <option value="6">6+ Guests</option>
+                                            <option value="10">10+ Guests (Large Party)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Special Requests -->
+                                <div class="mb-8">
+                                    <label class="form-label" for="requests" data-i18n="form_special">Special Requests</label>
+                                    <textarea id="requests" name="requests" rows="3" class="form-input resize-none" placeholder="Birthday celebration, special occasion, preferred seating..."></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn-hover w-full bg-mh-gold text-mh-navy py-4 text-xs tracking-[0.25em] uppercase font-semibold hover:bg-white transition-all duration-300">
+                                    <span data-i18n="form_submit">Submit Request</span>
+                                </button>
+
+                                <p class="text-gray-500 text-xs mt-4 text-center" data-i18n="form_note">
+                                    Our team will confirm your reservation within 24 hours
+                                </p>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div id="successMessage" class="success-message">
+                                <i class="fa-solid fa-check-circle text-mh-gold text-3xl mb-4"></i>
+                                <h3 class="text-white font-serif text-xl mb-2" data-i18n="success_title">Request Received!</h3>
+                                <p class="text-gray-400 text-sm">We've received your request and will contact you shortly to confirm your reservation at Yoko Luna.</p>
+                                <p class="text-mh-gold mt-4 font-mono text-sm" id="successReference"></p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="mt-8 flex items-center gap-4 text-sm text-gray-400">
+                            <i class="fa-solid fa-phone text-mh-gold"></i>
+                            <span>For immediate assistance: <a href="tel:514-378-0154" class="text-white hover:text-mh-gold transition-colors">514-378-0154</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-mh-navy">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="highlights_label">Highlights</span>
+                    <h2 class="text-3xl md:text-4xl tao-heading text-white" data-i18n="highlights_title">What to Expect</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-tree text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_1_title">Indoor Garden</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_1_desc">Lush greenery cascading from 40-foot ceilings creating an urban oasis atmosphere.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-lightbulb text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_2_title">Iconic Sculpture</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_2_desc">A dazzling centerpiece sculpture overlooking the entire restaurant and dance floor.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-compact-disc text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_3_title">World-Class DJs</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_3_desc">International and local talent spinning the best in house, hip-hop, and top 40.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-wine-glass text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_4_title">Craft Cocktails</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_4_desc">Innovative Japanese-inspired cocktails crafted by award-winning mixologists.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="py-20 bg-mh-dark">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="location_label">Location</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-6" data-i18n="location_title">Find Us</h2>
+                        <div class="space-y-4 text-gray-400">
+                            <p class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot text-mh-gold mt-1"></i>
+                                <span>1234 de la Montagne Street<br>Montreal,QC, H3G 1Z1</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-clock text-mh-gold"></i>
+                                <span>Fri-Sun: 7PM - 3AM<br>Sun-Tue: Closed</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-shirt text-mh-gold"></i>
+                                <span>Dress Code: Smart Elegant</span>
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 flex gap-4">
+                            <a href="#" class="btn-hover inline-flex items-center gap-2 border border-mh-gold text-mh-gold px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all">
+                                <i class="fa-solid fa-map"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal aspect-video border border-white/10 overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.845123456789!2d-73.5745!3d45.4975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a41d3f6e7d7%3A0x8c9c7b8a6e5f4d3c!2s1234%20Rue%20de%20la%20Montagne%2C%20Montr%C3%A9al%2C%20QC%20H3G%201Z1!5e0!3m2!1sen!2sca!4v1234567890"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Venues -->
+        <section class="py-12 border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-6 text-center reveal">
+                <a href="venues.html" target="_self" class="inline-flex items-center gap-3 text-mh-gold hover:text-white transition-colors text-sm tracking-[0.2em] uppercase">
+                    <i class="fa-solid fa-arrow-left"></i> <span data-i18n="back_venues">Back to All Venues</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light" data-i18n="footer_tagline">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_explore">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Venues</a></li>
+                        <li><a href="sports.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Sports</a></li>
+                        <li><a href="service.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Service</a></li>
+                        <li><a href="index.html#careers" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_contact">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="/cdn-cgi/l/email-protection#8ee7e0e8e1cee3e1e0fafcebefe2e6e1fdfee7faefe2e7faf7a0ede1e3" class="hover:text-mh-gold transition-colors"><span class="__cf_email__" data-cfemail="31585f575e715c5e5f454354505d595e42415845505d5845481f525e5c">[email&#160;protected]</span></a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_follow">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_privacy">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_terms">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <script>
+        // Translation System
+        const translations = {
+            en: {
+                nav_home: 'Home',
+                nav_venues: 'Venues',
+                nav_sports: 'Sports',
+                nav_services: 'Services',
+                nav_events: 'Events',
+                nav_careers: 'Careers',
+                nav_contact: 'Contact',
+                hero_location: 'Old Montreal',
+                hero_tagline: 'Canada\'s largest supper club — where Japanese elegance meets Montreal nightlife',
+                info_1_label: 'Dining',
+                info_1_detail: 'Japanese Fusion Cuisine',
+                info_2_label: 'Nightlife',
+                info_2_detail: 'DJ & Live Entertainment',
+                info_3_label: 'Bottle Service',
+                info_3_detail: 'Premium Selections',
+                gallery_label: 'Gallery',
+                gallery_title: 'Experience Yoko Luna',
+                gallery_hint: 'Click images to expand',
+                form_label: 'Reservations',
+                form_title: 'Guest List & Tickets',
+                form_req_type: 'Request Type',
+                form_guestlist: 'Guest List',
+                form_tickets: 'Tickets',
+                form_bottle: 'Bottle Service',
+                form_name: 'Full Name *',
+                form_email: 'Email Address *',
+                form_phone: 'Phone Number *',
+                form_date: 'Preferred Date *',
+                form_guests: 'Number of Guests *',
+                form_select_guests: 'Select number of guests',
+                form_special: 'Special Requests',
+                form_submit: 'Submit Request',
+                form_note: 'Our team will confirm your reservation within 24 hours',
+                success_title: 'Request Received!',
+                success_msg: 'We\'ve received your request and will contact you shortly to confirm your reservation at Yoko Luna.',
+                assistance: 'For immediate assistance:',
+                highlights_label: 'Highlights',
+                highlights_title: 'What to Expect',
+                feat_1_title: 'Indoor Garden',
+                feat_1_desc: 'Lush greenery cascading from 40-foot ceilings creating an urban oasis atmosphere.',
+                feat_2_title: 'Iconic Sculpture',
+                feat_2_desc: 'A dazzling centerpiece sculpture overlooking the entire restaurant and dance floor.',
+                feat_3_title: 'World-Class DJs',
+                feat_3_desc: 'International and local talent spinning the best in house, hip-hop, and top 40.',
+                feat_4_title: 'Craft Cocktails',
+                feat_4_desc: 'Innovative Japanese-inspired cocktails crafted by award-winning mixologists.',
+                location_label: 'Location',
+                location_title: 'Find Us',
+                hours: 'Fri-Sun: 7PM - 3AM<br>Sun-Tue: Closed',
+                dresscode: 'Dress Code: Smart Elegant',
+                directions: 'Get Directions',
+                back_venues: 'Back to All Venues',
+                footer_tagline: 'Redefining the art of the night in Montreal.',
+                footer_explore: 'Explore',
+                footer_contact: 'Contact',
+                footer_follow: 'Follow',
+                footer_privacy: 'Privacy',
+                footer_terms: 'Terms'
+            },
+            fr: {
+                nav_home: 'Accueil',
+                nav_venues: 'Lieux',
+                nav_sports: 'Sports',
+                nav_services: 'Services',
+                nav_events: 'Événements',
+                nav_careers: 'Carrières',
+                nav_contact: 'Contact',
+                hero_location: 'Vieux-Montréal',
+                hero_tagline: 'Le plus grand supper club du Canada — où l\'élégance japonaise rencontre la vie nocturne montréalaise',
+                info_1_label: 'Restauration',
+                info_1_detail: 'Cuisine Fusion Japonaise',
+                info_2_label: 'Vie Nocturne',
+                info_2_detail: 'DJ & Spectacles Live',
+                info_3_label: 'Service aux Tables',
+                info_3_detail: 'Sélections Premium',
+                gallery_label: 'Galerie',
+                gallery_title: 'Découvrir Yoko Luna',
+                gallery_hint: 'Cliquez pour agrandir',
+                form_label: 'Réservations',
+                form_title: 'Liste d\'Invités & Billets',
+                form_req_type: 'Type de Demande',
+                form_guestlist: 'Liste d\'Invités',
+                form_tickets: 'Billets',
+                form_bottle: 'Service aux Tables',
+                form_name: 'Nom Complet *',
+                form_email: 'Adresse Courriel *',
+                form_phone: 'Numéro de Téléphone *',
+                form_date: 'Date Préférée *',
+                form_guests: 'Nombre d\'Invités *',
+                form_select_guests: 'Sélectionner le nombre d\'invités',
+                form_special: 'Demandes Spéciales',
+                form_submit: 'Soumettre la Demande',
+                form_note: 'Notre équipe confirmera votre réservation dans les 24 heures',
+                success_title: 'Demande Reçue!',
+                success_msg: 'Nous avons reçu votre demande et vous contacterons sous peu pour confirmer votre réservation chez Yoko Luna.',
+                assistance: 'Pour assistance immédiate:',
+                highlights_label: 'Points Forts',
+                highlights_title: 'Ce Qui Vous Attend',
+                feat_1_title: 'Jardin Intérieur',
+                feat_1_desc: 'Verdure luxuriante en cascade depuis des plafonds de 40 pieds créant une atmosphère d\'oasis urbaine.',
+                feat_2_title: 'Sculpture Emblématique',
+                feat_2_desc: 'Une sculpture centrale éblouissante surplombant l\'ensemble du restaurant et de la piste de danse.',
+                feat_3_title: 'DJs de Classe Mondiale',
+                feat_3_desc: 'Talents internationaux et locaux faisant tourner le meilleur de la house, du hip-hop et du top 40.',
+                feat_4_title: 'Cocktails Artisanaux',
+                feat_4_desc: 'Cocktails innovants d\'inspiration japonaise créés par des mixologistes primés.',
+                location_label: 'Emplacement',
+                location_title: 'Nous Trouver',
+                hours: 'Ven-Dim: 19h - 3h<br>Dim-Mar: Fermé',
+                dresscode: 'Code Vestimentaire: Élégant',
+                directions: 'Obtenir l\'Itinéraire',
+                back_venues: 'Retour aux Lieux',
+                footer_tagline: 'Redéfinir l\'art de la nuit à Montréal.',
+                footer_explore: 'Explorer',
+                footer_contact: 'Contact',
+                footer_follow: 'Suivre',
+                footer_privacy: 'Confidentialité',
+                footer_terms: 'Conditions'
+            }
+        };
+
+        const translator = {
+            currentLang: 'en',
+            init() {
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                if (savedLang && translations[savedLang]) {
+                    this.currentLang = savedLang;
+                } else if (translations[browserLang]) {
+                    this.currentLang = browserLang;
+                }
+                this.updateUI();
+                this.translatePage();
+            },
+            setLanguage(lang) {
+                if (translations[lang]) {
+                    this.currentLang = lang;
+                    localStorage.setItem('preferred_language', lang);
+                    this.updateUI();
+                    this.translatePage();
+                    document.documentElement.lang = lang;
+                }
+            },
+            updateUI() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
+                });
+            },
+            translatePage() {
+                const texts = translations[this.currentLang];
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.dataset.i18n;
+                    if (texts[key] !== undefined) {
+                        element.innerHTML = texts[key];
+                    }
+                });
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                    const key = element.dataset.i18nPlaceholder;
+                    if (texts[key] !== undefined) {
+                        element.placeholder = texts[key];
+                    }
+                });
+            }
+        };
+        translator.init();
+
+    </script><script>
+        // Gallery Images Array
+        const galleryImages = [
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1769638377/473706203_18053071472498519_2657822319212069239_n_vf5i6r.jpg",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/04/6e/03/main-room-of-the-dining.jpg?w=900&h=500&s=1",
+            "https://d2q6z78khxmx42.cloudfront.net/2023/04/sdQUx7KU-Anonymus_YOKO_2304050133HD-1920x1440.jpg",
+            "https://yokoluna.com/wp-content/uploads/2023/02/A-nod-to-the-dazzling-sculpture-that-overlooks-the-entire-restaurant.jpg",
+            "https://images-dh-production-baselayer.dailyhive.com/uploads/2022/05/Yoko-Luna-Garden-1.jpg",
+            "https://jegantic.com/wp-content/uploads/2023/05/yoko-luna-impressive-bar-1-1.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        // Generate Reference Number Function
+        function generateReferenceNumber() {
+            const prefix = 'MH-EVT';
+            const year = new Date().getFullYear();
+            
+            // Generate random string: 2 letters + 3 digits + 2 letters + 3 digits + 1 letter + 1 digit
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const nums = '0123456789';
+            
+            let randomPart = '';
+            
+            // 2 random letters
+            for (let i = 0; i < 2; i++) {
+                randomPart += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            
+            // 3 random digits
+            for (let i = 0; i < 3; i++) {
+                randomPart += nums.charAt(Math.floor(Math.random() * nums.length));
+            }
+            
+            // 2 random letters
+            for (let i = 0; i < 2; i++) {
+                randomPart += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            
+            // 3 random digits
+            for (let i = 0; i < 3; i++) {
+                randomPart += nums.charAt(Math.floor(Math.random() * nums.length));
+            }
+            
+            // 1 letter + 1 digit
+            randomPart += chars.charAt(Math.floor(Math.random() * chars.length));
+            randomPart += nums.charAt(Math.floor(Math.random() * nums.length));
+            
+            return `${prefix}-${year}-${randomPart}`;
+        }
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[index];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            }
+        });
+
+        // Form Handler with Reference Number Generation
+        const form = document.getElementById('guestListForm');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Generate reference number
+            const referenceNumber = generateReferenceNumber();
+            
+            // Set the hidden input value
+            document.getElementById('inquiryReferenceInput').value = referenceNumber;
+            
+            // Display reference number to user
+            document.getElementById('referenceNumber').textContent = referenceNumber;
+            document.getElementById('referenceDisplay').style.display = 'block';
+            document.getElementById('successReference').textContent = `Ref: ${referenceNumber}`;
+            
+            // Collect form data
+            const formData = new FormData(form);
+            
+            // Submit to Formspree
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Hide form and show success message
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        form.reset();
+                        form.style.display = 'block';
+                        document.getElementById('successMessage').classList.remove('active');
+                        document.getElementById('referenceDisplay').style.display = 'none';
+                    }, 5000);
+                } else {
+                    alert('There was a problem submitting your request. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem submitting your request. Please try again.');
+            });
+        });
+
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load
+        window.scrollTo(0, 0);
+
+        // Loader and Hero Animation Trigger
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+                }, 800);
+            }, 1200);
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Close mobile menu when resizing to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024 && isMenuOpen) {
+                toggleMenu();
+            }
+        });
+
+        // Set minimum date to today for the reservation form
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            dateInput.min = `${yyyy}-${mm}-${dd}`;
+        }
+    </script>
+</body>
+</html>

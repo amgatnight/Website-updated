@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Hang Bar — exclusive Montreal venue available through Montreal Hospitality for private events, parties, and bookings.">
+    <link rel="canonical" href="https://montrealhospitality.com/hang-bar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Hang Bar | Montreal Hospitality">
+    <meta property="og:description" content="Hang Bar — exclusive Montreal venue available through Montreal Hospitality for private events, parties, and bookings.">
+    <meta property="og:url" content="https://montrealhospitality.com/hang-bar">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hang Bar | Montreal Hospitality">
+    <meta name="twitter:description" content="Hang Bar — exclusive Montreal venue available through Montreal Hospitality for private events, parties, and bookings.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hang Bar | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Nav */
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        /* Image Hover Effects */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        /* Smooth underline animation */
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* Button hover animations */
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gallery Grid */
+        .gallery-item {
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        /* Form Styles */
+        .form-input {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 18px;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #C5A059;
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #C5A059;
+        }
+
+        /* Custom Select */
+        .custom-select {
+            position: relative;
+        }
+        .custom-select select {
+            appearance: none;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .custom-select select:focus {
+            outline: none;
+            border-color: #C5A059;
+        }
+        .custom-select::after {
+            content: '\f107';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #C5A059;
+            pointer-events: none;
+        }
+        .custom-select select option {
+            background: #0B0F19;
+            color: white;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .radio-item input[type="radio"] {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .radio-item input[type="radio"]:checked {
+            border-color: #C5A059;
+        }
+        .radio-item input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #C5A059;
+            border-radius: 50%;
+        }
+        .radio-item label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .success-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Error Message */
+        .error-message {
+            display: none;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: #ef4444;
+        }
+        .error-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        .submitting {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Validation error styles */
+        .form-input:invalid:not(:placeholder-shown) {
+            border-color: #ef4444;
+        }
+        .validation-error {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+        .form-input:invalid:not(:placeholder-shown) + .validation-error {
+            display: block;
+        }
+    
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .lang-btn:hover { color: #C5A059; }
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+    </style>
+<base target="_self">
+<base target="_self">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="closeLightbox()">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+        <button class="absolute left-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(-1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-6 text-white text-3xl hover:text-mh-gold transition-colors z-50" onclick="changeImage(1); event.stopPropagation();">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium bg-mh-navy/90 backdrop-blur-md border-b border-white/10">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" target="_self" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-12">
+            <a href="index.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_home">Home</a>
+            <a href="venues.html" target="_self" class="link-hover text-mh-gold transition-colors" data-i18n="nav_venues">Venues</a>
+            <a href="sports.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_sports">Sports</a>
+            <a href="service.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_services">Services</a>
+            <a href="event.html" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_events">Events</a>
+            <a href="index.html#careers" target="_self" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_careers">Careers</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="hidden lg:flex items-center gap-8">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+            <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="hover:text-mh-gold transition-colors hover:scale-110 transform duration-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all" data-i18n="nav_contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+        <a href="index.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_home">Home</a>
+        <a href="venues.html" target="_self" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_venues">Venues</a>
+        <a href="sports.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_sports">Sports</a>
+        <a href="service.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_services">Services</a>
+        <a href="event.html" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_events">Events</a>
+        <a href="index.html#careers" target="_self" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_careers">Careers</a>
+        <!-- Mobile Language Switcher -->
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active text-lg" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+            <div class="lang-divider h-6"></div>
+            <button class="lang-btn text-lg" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-[60vh] w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769647795/HangBarNYE_k69lgr.jpg" 
+                 class="w-full h-full object-cover opacity-40 scale-105" 
+                 alt="Hang Bar">
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/60 via-mh-navy/40 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+            <span class="tao-subheading text-mh-gold text-[11px] block mb-4 reveal" data-i18n="hero_location">Downtown Montreal</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl tao-heading text-white mb-6 leading-[0.95] reveal">
+                Hang Bar
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg reveal" data-i18n="hero_tagline">
+                Where sophistication meets energy in the heart of the city
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-mh-dark">
+        
+        <!-- Venue Info -->
+        <section class="py-16 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12 text-center reveal">
+                    <div>
+                        <i class="fa-solid fa-martini-glass-citrus text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2" data-i18n="info_1_label">Craft Cocktails</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="info_1_detail">Signature Mixology</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-music text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2" data-i18n="info_2_label">Live DJs</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="info_2_detail">Daily Entertainment</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-champagne-glasses text-mh-gold text-2xl mb-4"></i>
+                        <h3 class="tao-subheading text-white text-[11px] mb-2" data-i18n="info_3_label">Bottle Service</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="info_3_detail">VIP Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery & Form Split Section -->
+        <section class="py-20">
+            <div class="max-w-[95%] mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                    
+                    <!-- Left Side: Gallery -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="gallery_label">Gallery</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8" data-i18n="gallery_title">Experience Hang Bar</h2>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(0)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769647795/HangBarNYE_k69lgr.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Hang Bar Main">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(1)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185566/unnamed_kn0c7o.webp" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Hang Bar Interior">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(2)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185813/514784393_17985437336824543_3293680289249778558_n_wrw5s6.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Hang Bar Cocktails">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(3)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185896/504353455_17985437411824543_4879830470796959571_n_syurq8.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Hang Bar Atmosphere">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(4)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185896/504353455_17985437411824543_4879830470796959571_n_syurq8.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Hang Bar Drinks">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="gallery-item group relative overflow-hidden aspect-[4/3]" onclick="openLightbox(5)">
+                                <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771186039/481778608_17972112833824543_2187971896455543792_n_imqtko.jpg" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                     alt="Hang Bar Night">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-500 text-sm mt-6 italic" data-i18n="gallery_hint">Click images to expand</p>
+                    </div>
+
+                    <!-- Right Side: Guest List / Tickets Form -->
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="form_label">Reservations</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-8" data-i18n="form_title">Guest List & Tickets</h2>
+                        
+                        <div class="bg-mh-gray/30 border border-white/10 p-8 lg:p-10">
+                            <form id="guestListForm" action="https://formspree.io/f/mykdvnra" method="POST" novalidate>
+                                
+                                <!-- Request Type -->
+                                <div class="mb-8">
+                                    <label class="form-label" data-i18n="form_req_type">Request Type</label>
+                                    <div class="radio-group">
+                                        <div class="radio-item">
+                                            <input type="radio" id="guestlist" name="requestType" value="guestlist" checked>
+                                            <label for="guestlist" data-i18n="form_guestlist">Guest List</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="tickets" name="requestType" value="tickets">
+                                            <label for="tickets" data-i18n="form_tickets">Tickets</label>
+                                        </div>
+                                        <div class="radio-item">
+                                            <input type="radio" id="bottle" name="requestType" value="bottle">
+                                            <label for="bottle" data-i18n="form_bottle">Bottle Service</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Name -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="fullName" data-i18n="form_name">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your full name" data-required="true">
+                                    <span class="validation-error">Please enter your full name</span>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="email" data-i18n="form_email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" data-required="true">
+                                    <span class="validation-error">Please enter a valid email</span>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="phone" data-i18n="form_phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="(514) 000-0000" data-required="true">
+                                    <span class="validation-error">Please enter your phone number</span>
+                                </div>
+
+                                <!-- Date -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="date" data-i18n="form_date">Preferred Date *</label>
+                                    <input type="date" id="date" name="date" class="form-input" data-required="true">
+                                    <span class="validation-error">Please select a date</span>
+                                </div>
+
+                                <!-- Guests -->
+                                <div class="mb-6">
+                                    <label class="form-label" for="guests" data-i18n="form_guests">Number of Guests *</label>
+                                    <div class="custom-select">
+                                        <select id="guests" name="guests" data-required="true">
+                                            <option value="">Select number of guests</option>
+                                            <option value="1">1 Guest</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5 Guests</option>
+                                            <option value="6">6+ Guests</option>
+                                            <option value="10">10+ Guests (Large Party)</option>
+                                        </select>
+                                    </div>
+                                    <span class="validation-error">Please select number of guests</span>
+                                </div>
+
+                                <!-- Special Requests -->
+                                <div class="mb-8">
+                                    <label class="form-label" for="requests" data-i18n="form_special">Special Requests</label>
+                                    <textarea id="requests" name="requests" rows="3" class="form-input resize-none" placeholder="Birthday celebration, special occasion, preferred seating..."></textarea>
+                                </div>
+
+                                <!-- Honeypot field to prevent spam -->
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <!-- Submit Button -->
+                                <button type="button" onclick="submitForm()" id="submitBtn" class="btn-hover w-full bg-mh-gold text-mh-navy py-4 text-xs tracking-[0.25em] uppercase font-semibold hover:bg-white transition-all duration-300">
+                                    <span data-i18n="form_submit">Submit Request</span>
+                                </button>
+
+                                <p class="text-gray-500 text-xs mt-4 text-center" data-i18n="form_note">
+                                    Our team will confirm your reservation within 24 hours
+                                </p>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div id="successMessage" class="success-message">
+                                <i class="fa-solid fa-check-circle text-mh-gold text-4xl mb-4"></i>
+                                <h3 class="text-white font-serif text-2xl mb-2">Request Received!</h3>
+                                <p class="text-gray-400 text-sm mb-4">We've received your request and will contact you shortly to confirm your reservation at Hang Bar.</p>
+                                <div class="bg-mh-navy/50 p-4 inline-block mb-4">
+                                    <p class="text-mh-gold text-xs uppercase tracking-wider mb-1">Your Reference Number</p>
+                                    <p class="text-white text-xl font-serif" id="inquiryReferenceId">MH-CTC-2025-XX123XX123X1</p>
+                                </div>
+                                <div class="space-y-1 text-gray-400 text-xs">
+                                    <p><i class="fa-solid fa-envelope text-mh-gold mr-2"></i> Confirmation sent to <span id="confirmEmail"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ceb7a1bbbc8eaba3afa7a2e0ada1a3">[email&#160;protected]</a></span></p>
+                                </div>
+                            </div>
+
+                            <!-- Error Message -->
+                            <div id="errorMessage" class="error-message">
+                                <i class="fa-solid fa-exclamation-circle text-2xl mb-2"></i>
+                                <p class="font-light text-sm">Something went wrong. Please try again or contact us directly at 514-378-0154.</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="mt-8 flex items-center gap-4 text-sm text-gray-400">
+                            <i class="fa-solid fa-phone text-mh-gold"></i>
+                            <span>For immediate assistance: <a href="tel:5143780154" class="text-white hover:text-mh-gold transition-colors">514-378-0154</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-mh-navy">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="highlights_label">Highlights</span>
+                    <h2 class="text-3xl md:text-4xl tao-heading text-white" data-i18n="highlights_title">What to Expect</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-glass-water text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_1_title">Craft Cocktails</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_1_desc">Expert mixologists creating signature drinks with premium spirits and fresh ingredients.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-headphones text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_2_title">Live DJs</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_2_desc">Resident and guest DJs spinning the best in hip-hop, R&B, and house music nightly.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-couch text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_3_title">VIP Booths</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_3_desc">Reserved seating with dedicated service for the ultimate nightlife experience.</p>
+                    </div>
+
+                    <div class="group p-6 border border-white/10 hover:border-mh-gold/50 transition-all duration-300 reveal">
+                        <div class="w-12 h-12 rounded-full border border-mh-gold/30 flex items-center justify-center mb-6 group-hover:bg-mh-gold/10 transition-colors">
+                            <i class="fa-solid fa-bolt text-mh-gold"></i>
+                        </div>
+                        <h3 class="text-white font-serif text-xl mb-3" data-i18n="feat_4_title">High Energy</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="feat_4_desc">An electric atmosphere where Montreal's elite come to see and be seen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="py-20 bg-mh-dark">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="location_label">Location</span>
+                        <h2 class="text-3xl md:text-4xl tao-heading text-white mb-6" data-i18n="location_title">Find Us</h2>
+                        <div class="space-y-4 text-gray-400">
+                            <p class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot text-mh-gold mt-1"></i>
+                                <span>686 R. Notre Dame O<br>Downtown Montreal, QC H3C 1J2</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-clock text-mh-gold"></i>
+                                <span>Tues-Sat: 6PM - 1AM<br>Sun-Mon: Closed</span>
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <i class="fa-solid fa-shirt text-mh-gold"></i>
+                                <span>Dress Code: Smart Casual / Stylish</span>
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 flex gap-4">
+                            <a href="#" class="btn-hover inline-flex items-center gap-2 border border-mh-gold text-mh-gold px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all">
+                                <i class="fa-solid fa-map"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal aspect-video border border-white/10 overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.845123456789!2d-73.5745!3d45.4975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a41d3f6e7d7%3A0x8c9c7b8a6e5f4d3c!2s686%20R.%20Notre%20Dame%20O%2C%20Montr%C3%A9al%2C%20QC%20H3C%201J2!5e0!3m2!1sen!2sca!4v1234567890"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Venues -->
+        <section class="py-12 border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-6 text-center reveal">
+                <a href="venues.html" target="_self" class="inline-flex items-center gap-3 text-mh-gold hover:text-white transition-colors text-sm tracking-[0.2em] uppercase">
+                    <i class="fa-solid fa-arrow-left"></i> <span data-i18n="back_venues">Back to All Venues</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light" data-i18n="footer_tagline">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_explore">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Venues</a></li>
+                        <li><a href="sports.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Sports</a></li>
+                        <li><a href="service.html" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Service</a></li>
+                        <li><a href="index.html#careers" target="_self" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_contact">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="/cdn-cgi/l/email-protection#670e090108270a0809131502060b0f0814170e13060b0e131e4904080a" class="hover:text-mh-gold transition-colors"><span class="__cf_email__" data-cfemail="066f686069466b6968727463676a6e6975766f72676a6f727f2865696b">[email&#160;protected]</span></a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_follow">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" target="_self" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_privacy">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_terms">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Translation System
+        const translations = {
+            en: {
+                nav_home: 'Home',
+                nav_venues: 'Venues',
+                nav_sports: 'Sports',
+                nav_services: 'Services',
+                nav_events: 'Events',
+                nav_careers: 'Careers',
+                nav_contact: 'Contact',
+                hero_location: 'Downtown Montreal',
+                hero_tagline: 'Where sophistication meets energy in the heart of the city',
+                info_1_label: 'Craft Cocktails',
+                info_1_detail: 'Signature Mixology',
+                info_2_label: 'Live DJs',
+                info_2_detail: 'Daily Entertainment',
+                info_3_label: 'Bottle Service',
+                info_3_detail: 'VIP Experience',
+                gallery_label: 'Gallery',
+                gallery_title: 'Experience Hang Bar',
+                gallery_hint: 'Click images to expand',
+                form_label: 'Reservations',
+                form_title: 'Guest List & Tickets',
+                form_req_type: 'Request Type',
+                form_guestlist: 'Guest List',
+                form_tickets: 'Tickets',
+                form_bottle: 'Bottle Service',
+                form_name: 'Full Name *',
+                form_email: 'Email Address *',
+                form_phone: 'Phone Number *',
+                form_date: 'Preferred Date *',
+                form_guests: 'Number of Guests *',
+                form_select_guests: 'Select number of guests',
+                form_special: 'Special Requests',
+                form_submit: 'Submit Request',
+                form_note: 'Our team will confirm your reservation within 24 hours',
+                success_title: 'Request Received!',
+                success_msg: 'We\'ve received your request and will contact you shortly to confirm your reservation at Hang Bar.',
+                assistance: 'For immediate assistance:',
+                highlights_label: 'Highlights',
+                highlights_title: 'What to Expect',
+                feat_1_title: 'Craft Cocktails',
+                feat_1_desc: 'Expert mixologists creating signature drinks with premium spirits and fresh ingredients.',
+                feat_2_title: 'Live DJs',
+                feat_2_desc: 'Resident and guest DJs spinning the best in hip-hop, R&B, and house music nightly.',
+                feat_3_title: 'VIP Booths',
+                feat_3_desc: 'Reserved seating with dedicated service for the ultimate nightlife experience.',
+                feat_4_title: 'High Energy',
+                feat_4_desc: 'An electric atmosphere where Montreal\'s elite come to see and be seen.',
+                location_label: 'Location',
+                location_title: 'Find Us',
+                hours: 'Tues-Sat: 6PM - 1AM<br>Sun-Mon: Closed',
+                dresscode: 'Dress Code: Smart Casual / Stylish',
+                directions: 'Get Directions',
+                back_venues: 'Back to All Venues',
+                footer_tagline: 'Redefining the art of the night in Montreal.',
+                footer_explore: 'Explore',
+                footer_contact: 'Contact',
+                footer_follow: 'Follow',
+                footer_privacy: 'Privacy',
+                footer_terms: 'Terms'
+            },
+            fr: {
+                nav_home: 'Accueil',
+                nav_venues: 'Lieux',
+                nav_sports: 'Sports',
+                nav_services: 'Services',
+                nav_events: 'Événements',
+                nav_careers: 'Carrières',
+                nav_contact: 'Contact',
+                hero_location: 'Centre-Ville de Montréal',
+                hero_tagline: 'Où la sophistication rencontre l\'énergie au cœur de la ville',
+                info_1_label: 'Cocktails Artisanaux',
+                info_1_detail: 'Mixologie Signature',
+                info_2_label: 'DJs Live',
+                info_2_detail: 'Divertissement Quotidien',
+                info_3_label: 'Service aux Tables',
+                info_3_detail: 'Expérience VIP',
+                gallery_label: 'Galerie',
+                gallery_title: 'Découvrir Hang Bar',
+                gallery_hint: 'Cliquez pour agrandir',
+                form_label: 'Réservations',
+                form_title: 'Liste d\'Invités & Billets',
+                form_req_type: 'Type de Demande',
+                form_guestlist: 'Liste d\'Invités',
+                form_tickets: 'Billets',
+                form_bottle: 'Service aux Tables',
+                form_name: 'Nom Complet *',
+                form_email: 'Adresse Courriel *',
+                form_phone: 'Numéro de Téléphone *',
+                form_date: 'Date Préférée *',
+                form_guests: 'Nombre d\'Invités *',
+                form_select_guests: 'Sélectionner le nombre d\'invités',
+                form_special: 'Demandes Spéciales',
+                form_submit: 'Soumettre la Demande',
+                form_note: 'Notre équipe confirmera votre réservation dans les 24 heures',
+                success_title: 'Demande Reçue!',
+                success_msg: 'Nous avons reçu votre demande et vous contacterons sous peu pour confirmer votre réservation chez Hang Bar.',
+                assistance: 'Pour assistance immédiate:',
+                highlights_label: 'Points Forts',
+                highlights_title: 'Ce Qui Vous Attend',
+                feat_1_title: 'Cocktails Artisanaux',
+                feat_1_desc: 'Mixologistes experts créant des boissons signature avec des spiritueux premium et des ingrédients frais.',
+                feat_2_title: 'DJs Live',
+                feat_2_desc: 'DJs résidents et invités faisant tourner le meilleur hip-hop, R&B et house music chaque soir.',
+                feat_3_title: 'Cabines VIP',
+                feat_3_desc: 'Places réservées avec service dédié pour l\'expérience nocturne ultime.',
+                feat_4_title: 'Haute Énergie',
+                feat_4_desc: 'Une atmosphère électrique où l\'élite de Montréal vient voir et être vue.',
+                location_label: 'Emplacement',
+                location_title: 'Nous Trouver',
+                hours: 'Mar-Sam: 18h - 1h<br>Dim-Lun: Fermé',
+                dresscode: 'Code Vestimentaire: Décontracté Chic',
+                directions: 'Obtenir l\'Itinéraire',
+                back_venues: 'Retour aux Lieux',
+                footer_tagline: 'Redéfinir l\'art de la nuit à Montréal.',
+                footer_explore: 'Explorer',
+                footer_contact: 'Contact',
+                footer_follow: 'Suivre',
+                footer_privacy: 'Confidentialité',
+                footer_terms: 'Conditions'
+            }
+        };
+
+        const reverseTranslations = Object.fromEntries(
+            Object.entries(translations).map(([en, fr]) => [fr, en])
+        );
+
+        const translator = {
+            currentLang: 'en',
+            textNodes: [],
+            placeholders: [],
+            titles: [],
+
+            init() {
+                this.collectTranslatables();
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = (navigator.language || 'en').split('-')[0];
+                const initialLang = savedLang || (browserLang === 'fr' ? 'fr' : 'en');
+                this.setLanguage(initialLang);
+            },
+
+            normalizeText(text) {
+                return (text || '').replace(/\s+/g, ' ').trim();
+            },
+
+            getEnglishBase(text) {
+                const normalized = this.normalizeText(text);
+                if (!normalized) return null;
+                if (translations[normalized]) return normalized;
+                if (reverseTranslations[normalized]) return reverseTranslations[normalized];
+                return null;
+            },
+
+            collectTranslatables() {
+                this.textNodes = [];
+                this.placeholders = [];
+                this.titles = [];
+
+                const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode: (node) => {
+                        if (!node.parentElement) return NodeFilter.FILTER_REJECT;
+                        const tag = node.parentElement.tagName;
+                        if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+                        if (!this.normalizeText(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+
+                let node;
+                while ((node = walker.nextNode())) {
+                    const englishBase = this.getEnglishBase(node.nodeValue);
+                    if (!englishBase) continue;
+
+                    const original = node.nodeValue;
+                    const match = original.match(/^(\s*)(.*?)(\s*)$/s) || ['', '', original, ''];
+                    this.textNodes.push({
+                        node,
+                        en: englishBase,
+                        fr: translations[englishBase],
+                        leading: match[1] || '',
+                        trailing: match[3] || ''
+                    });
+                }
+
+                document.querySelectorAll('[placeholder]').forEach((el) => {
+                    const englishBase = this.getEnglishBase(el.getAttribute('placeholder'));
+                    if (!englishBase) return;
+                    this.placeholders.push({
+                        el,
+                        en: englishBase,
+                        fr: translations[englishBase]
+                    });
+                });
+
+                const titleBase = this.getEnglishBase(document.title);
+                if (titleBase) {
+                    this.titles.push({ en: titleBase, fr: translations[titleBase] });
+                }
+            },
+
+            setLanguage(lang) {
+                this.currentLang = lang === 'fr' ? 'fr' : 'en';
+                localStorage.setItem('preferred_language', this.currentLang);
+                document.documentElement.lang = this.currentLang;
+
+                this.textNodes.forEach(({ node, en, fr, leading, trailing }) => {
+                    node.nodeValue = `${leading}${this.currentLang === 'fr' ? fr : en}${trailing}`;
+                });
+
+                this.placeholders.forEach(({ el, en, fr }) => {
+                    el.setAttribute('placeholder', this.currentLang === 'fr' ? fr : en);
+                });
+
+                if (this.titles[0]) {
+                    document.title = this.currentLang === 'fr' ? this.titles[0].fr : this.titles[0].en;
+                }
+
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
+                });
+            }
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+
+    </script><script>
+        // Gallery Images Array
+        const galleryImages = [
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1769647795/HangBarNYE_k69lgr.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185566/unnamed_kn0c7o.webp",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185813/514784393_17985437336824543_3293680289249778558_n_wrw5s6.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185896/504353455_17985437411824543_4879830470796959571_n_syurq8.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185896/504353455_17985437411824543_4879830470796959571_n_syurq8.jpg",
+            "https://res.cloudinary.com/dg79ri9bl/image/upload/v1771186039/481778608_17972112833824543_2187971896455543792_n_imqtko.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[index];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            }
+        });
+
+        // Generate reference number in format MH-CTC-2025-XX123XX123X1
+        function generateReferenceNumber() {
+            const prefix = 'MH-CTC-2025-';
+            
+            // Generate random alphanumeric string: XX123XX123X1
+            let randomPart = '';
+            
+            // Pattern: XX123XX123X1 (2 letters, 3 numbers, 2 letters, 3 numbers, 1 letter, 1 number)
+            const pattern = [
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 2 },
+                { type: 'number', count: 3 },
+                { type: 'letter', count: 1 },
+                { type: 'number', count: 1 }
+            ];
+            
+            pattern.forEach(segment => {
+                for (let i = 0; i < segment.count; i++) {
+                    if (segment.type === 'letter') {
+                        // Random letter A-Z
+                        randomPart += String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                    } else {
+                        // Random number 0-9
+                        randomPart += Math.floor(Math.random() * 10).toString();
+                    }
+                }
+            });
+            
+            return prefix + randomPart;
+        }
+
+        // Validate form fields
+        function validateForm() {
+            const form = document.getElementById('guestListForm');
+            const requiredFields = form.querySelectorAll('[data-required="true"]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'rgba(255,255,255,0.2)';
+                }
+            });
+
+            return isValid;
+        }
+
+        // Submit form function
+        async function submitForm() {
+            const form = document.getElementById('guestListForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Validate form first
+            if (!validateForm()) {
+                // Shake animation for visual feedback
+                form.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    form.style.animation = '';
+                }, 500);
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.classList.add('submitting');
+            
+            try {
+                // Generate reference number first
+                const refNumber = generateReferenceNumber();
+                
+                // Collect all form data
+                const formData = new FormData(form);
+                
+                // Add reference number to form data
+                formData.append('inquiryReference', refNumber);
+                formData.append('ticketNumber', refNumber);
+                formData.append('referenceId', refNumber);
+                formData.append('venue', 'Hang Bar');
+                
+                // Submit to Formspree
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success - show success message
+                    document.getElementById('inquiryReferenceId').textContent = refNumber;
+                    document.getElementById('confirmEmail').textContent = formData.get('email');
+                    
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                document.getElementById('errorMessage').classList.add('active');
+                submitBtn.innerHTML = 'Submit Request';
+                submitBtn.classList.remove('submitting');
+            }
+        }
+
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load
+        window.scrollTo(0, 0);
+
+        // Loader and Hero Animation Trigger
+        let loaderHidden = false;
+
+        function hideLoader() {
+            if (loaderHidden) return;
+            loaderHidden = true;
+            const loader = document.getElementById('loader');
+            if (!loader) return;
+
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+            }, 800);
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(hideLoader, 700);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(hideLoader, 1800);
+        });
+
+        setTimeout(hideLoader, 3000);
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+
+        // Extra-safe loader fallback
+        document.addEventListener('readystatechange', () => {
+            if (document.readyState === 'interactive' || document.readyState === 'complete') {
+                setTimeout(hideLoader, 150);
+            }
+        });
+
+        window.addEventListener('pageshow', () => {
+            setTimeout(hideLoader, 150);
+        });
+
+        // Mobile Menu listeners with null checks
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Site-wide base styles (shared across pages) */
+body {
+  background-color: #0B0F19;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-serif { font-family: 'Cormorant Garamond', serif; }
+
+.tao-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.tao-subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Hero entrance animations */
+.hero-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(10px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.6s; }
+.delay-3 { transition-delay: 1s; }
+.delay-4 { transition-delay: 1.4s; }
+.delay-5 { transition-delay: 1.8s; }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

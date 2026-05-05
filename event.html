@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- SEO -->
+    <meta name="description" content="Private events curated by Montreal Hospitality — corporate gatherings, celebrations, and bespoke productions in Montreal&#x27;s most exclusive venues.">
+    <link rel="canonical" href="https://montrealhospitality.com/event">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Montreal Hospitality">
+    <meta property="og:title" content="Private Events | Montreal Hospitality">
+    <meta property="og:description" content="Private events curated by Montreal Hospitality — corporate gatherings, celebrations, and bespoke productions in Montreal&#x27;s most exclusive venues.">
+    <meta property="og:url" content="https://montrealhospitality.com/event">
+    <meta property="og:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Private Events | Montreal Hospitality">
+    <meta name="twitter:description" content="Private events curated by Montreal Hospitality — corporate gatherings, celebrations, and bespoke productions in Montreal&#x27;s most exclusive venues.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png">
+
+    <!-- Google Analytics 4 — TODO: replace G-XXXXXXXXXX with your real measurement ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Compiled Tailwind + site CSS -->
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/js/site.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Events | Montreal Hospitality</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .tao-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .tao-subheading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .hero-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            filter: blur(10px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.6s; }
+        .delay-3 { transition-delay: 1s; }
+        .delay-4 { transition-delay: 1.4s; }
+        .delay-5 { transition-delay: 1.8s; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .stagger-children.active > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+
+        .nav-scrolled {
+            background-color: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+
+        .link-hover {
+            position: relative;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C5A059;
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        .btn-hover {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+
+        .card-lift {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #C5A059, #D6B88A, #C5A059);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #0B0F19;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .line-reveal {
+            width: 0;
+            height: 1px;
+            background: #C5A059;
+            margin: 0 auto;
+            transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .line-reveal.visible {
+            width: 60px;
+        }
+
+        .form-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding: 1rem 0;
+            color: white;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: #C5A059;
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .form-label {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            color: rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .form-input:focus ~ .form-label,
+        .form-input:not(:placeholder-shown) ~ .form-label {
+            top: -0.5rem;
+            font-size: 0.75rem;
+            color: #C5A059;
+        }
+
+        .event-type-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .event-type-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11,15,25,0.95) 0%, rgba(11,15,25,0.4) 50%, transparent 100%);
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+
+        .event-type-card:hover::before {
+            background: linear-gradient(to top, rgba(11,15,25,0.98) 0%, rgba(11,15,25,0.6) 100%);
+        }
+
+        .event-type-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+        
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .lang-btn:hover {
+            color: #C5A059;
+        }
+        
+        .lang-btn.active {
+            border-color: #C5A059;
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+        
+        .lang-divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile Language Switcher */
+        .mobile-lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+    </style>
+<base target="_self">
+<base target="_blank">
+</head>
+<body class="antialiased selection:bg-mh-gold selection:text-mh-navy">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-24 mb-6 animate-pulse object-contain mx-auto">
+            <div class="w-32 h-[1px] bg-mh-gray mx-auto overflow-hidden">
+                <div class="w-full h-full bg-mh-gold" style="animation: shimmer 1.5s infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-8 lg:px-16 flex justify-between items-center text-white uppercase text-[11px] tracking-[0.2em] font-medium">
+        <button id="mobile-menu-btn" class="lg:hidden text-mh-gold z-50 hover:rotate-90 transition-transform duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <a href="index.html" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none z-50 group">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                 alt="Montreal Hospitality" 
+                 class="h-12 object-contain">
+        </a>
+
+        <div class="hidden lg:flex items-center gap-12">
+            <a href="index.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_home">Home</a>
+            <a href="venues.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_venues">Venues</a>
+            <a href="sports.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_sports">Sports</a>
+            <a href="service.html" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_services">Services</a>
+            <a href="event.html" class="link-hover text-mh-gold transition-colors" data-i18n="nav_events">Events</a>
+            <a href="index.html#careers" class="link-hover hover:text-mh-gold transition-colors" data-i18n="nav_careers">Careers</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-8">
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+                <div class="lang-divider"></div>
+                <button class="lang-btn" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+            </div>
+            
+            <a href="https://www.instagram.com/montrealhospitality/?hl=en" class="hover:text-mh-gold transition-colors hover:scale-110 transform duration-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="contact.html" class="btn-hover border border-white/30 px-6 py-2 hover:border-mh-gold hover:text-mh-gold transition-all" data-i18n="nav_contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-mh-navy z-40 transform -translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 lg:hidden">
+        <a href="index.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_home">Home</a>
+        <a href="venues.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_venues">Venues</a>
+        <a href="sports.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_sports">Sports</a>
+        <a href="service.html" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_services">Services</a>
+        <a href="event.html" class="text-2xl font-serif text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_events">Events</a>
+        <a href="index.html#careers" class="text-2xl font-serif text-white hover:text-mh-gold mobile-link transform hover:translate-x-2 transition-transform" data-i18n="nav_careers">Careers</a>
+        
+        <!-- Mobile Language Switcher -->
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active text-lg" data-lang="en" onclick="translator.setLanguage('en')">EN</button>
+            <div class="lang-divider h-6"></div>
+            <button class="lang-btn text-lg" data-lang="fr" onclick="translator.setLanguage('fr')">FR</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771188906/486177011_9100358673405688_4492232532381174185_n_dhtu40.jpg" 
+                 class="w-full h-full object-cover opacity-40 scale-105" alt="Private Event">
+            <div class="absolute inset-0 bg-gradient-to-b from-mh-navy/40 via-mh-navy/20 to-mh-navy"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
+            <div class="line-reveal hero-animate delay-1 mb-8"></div>
+            <p class="tao-subheading text-mh-gold mb-6 hero-animate delay-2 tracking-[0.3em] text-xs md:text-sm" data-i18n="hero_subtitle">
+                Exclusive Celebrations
+            </p>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl tao-heading text-white mb-2 leading-[0.95] overflow-hidden">
+                <span class="block hero-animate delay-3" data-i18n="hero_title_1">
+                    Private
+                </span>
+            </h1>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl tao-heading text-white mb-8 leading-[0.95] overflow-hidden">
+                <span class="block hero-animate delay-4 italic gradient-text" data-i18n="hero_title_2">
+                    Events
+                </span>
+            </h1>
+            <div class="hero-animate delay-5 mt-12">
+                <a href="inquire.html" class="btn-hover inline-block border border-white/40 text-white px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-white hover:text-mh-navy transition-all duration-300" data-i18n="hero_cta">
+                    Start Planning
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce text-mh-gold/50 opacity-0 scroll-indicator">
+            <i class="fa-solid fa-chevron-down text-sm"></i>
+        </div>
+
+        <style>
+            .scroll-indicator {
+                animation: bounce 2s infinite, fadeIn 1s ease forwards;
+                animation-delay: 2.5s;
+            }
+            @keyframes fadeIn {
+                to { opacity: 1; }
+            }
+            @keyframes bounce {
+                0%, 100% { transform: translateX(-50%) translateY(0); }
+                50% { transform: translateX(-50%) translateY(-10px); }
+            }
+        </style>
+    </header>
+
+    <!-- Intro Statement -->
+    <section class="py-32 bg-mh-navy text-center px-6">
+        <div class="max-w-4xl mx-auto reveal">
+            <p class="tao-heading text-3xl md:text-5xl text-white/90 leading-tight font-light" data-i18n="intro_text">
+                From intimate gatherings to grand celebrations, we transform moments into memories that last a lifetime.
+            </p>
+        </div>
+    </section>
+
+    <!-- Event Types Grid -->
+    <section class="py-32 bg-mh-dark">
+        <div class="max-w-[95%] mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="events_subtitle">Occasions</span>
+                <h2 class="text-5xl md:text-7xl tao-heading text-white" data-i18n="events_title">Celebrate With Us</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+                <!-- Corporate Events -->
+                <a href="inquire.html" class="event-type-card group h-[500px] relative card-lift reveal block cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Corporate Event">
+                    <div class="event-type-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="event_corp_label">Business</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="event_corp_title">Corporate Events</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="event_corp_desc">
+                            Product launches, annual meetings, and team celebrations in sophisticated settings.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="btn_learn_more">Learn More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Weddings -->
+                <a href="inquire.html" class="event-type-card group h-[500px] relative card-lift reveal block cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Wedding">
+                    <div class="event-type-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="event_wedding_label">Love</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="event_wedding_title">Weddings</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="event_wedding_desc">
+                            From rehearsal dinners to reception celebrations, say "I do" in style.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="btn_learn_more">Learn More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Birthdays -->
+                <a href="inquire.html" class="event-type-card group h-[500px] relative card-lift reveal block cursor-pointer">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187334/472669416_1164183108474516_8361871520283663140_n_pvp1ei.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Birthday Celebration">
+                    <div class="event-type-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="event_birthday_label">Milestones</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="event_birthday_title">Birthdays</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="event_birthday_desc">
+                            Milestone celebrations and intimate gatherings tailored to your vision.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="btn_learn_more">Learn More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Holiday Parties -->
+                <a href="inquire.html" class="event-type-card group h-[500px] relative card-lift reveal block cursor-pointer">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771188826/480991033_1046412707703562_2885587253063915814_n_avaxyx.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Holiday Party">
+                    <div class="event-type-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="event_holiday_label">Seasonal</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="event_holiday_title">Holiday Parties</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="event_holiday_desc">
+                            Festive celebrations with custom décor, seasonal menus, and signature cocktails.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="btn_learn_more">Learn More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Fashion & Media -->
+                <a href="inquire.html" class="event-type-card group h-[500px] relative card-lift reveal block cursor-pointer">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771184816/2022-06-28_hfian3.webp" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Fashion Event">
+                    <div class="event-type-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="event_fashion_label">Industry</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="event_fashion_title">Fashion & Media</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="event_fashion_desc">
+                            Runway shows, product launches, and press events with full production support.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="btn_learn_more">Learn More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Private Dining -->
+                <a href="inquire.html" class="event-type-card group h-[500px] relative card-lift reveal block cursor-pointer">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771185606/unnamed-1_op8hnt.jpg" 
+                         class="absolute inset-0 w-full h-full object-cover img-zoom" alt="Private Dining">
+                    <div class="event-type-content absolute bottom-0 left-0 p-8 w-full">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-2 block" data-i18n="event_dining_label">Intimate</span>
+                        <h3 class="text-3xl tao-heading text-white mb-3" data-i18n="event_dining_title">Private Dining</h3>
+                        <p class="text-white/70 text-sm font-light mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500" data-i18n="event_dining_desc">
+                            Chef's table experiences and intimate dinners for discerning guests.
+                        </p>
+                        <div class="flex items-center gap-2 text-mh-gold text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <span data-i18n="btn_learn_more">Learn More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Venues for Events -->
+    <section class="py-32 bg-mh-navy relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-mh-gold/5 rounded-full blur-3xl floating"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="venues_subtitle">Spaces</span>
+                <h2 class="text-5xl md:text-7xl tao-heading text-white mb-6" data-i18n="venues_title">Event Venues</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg" data-i18n="venues_desc">
+                    Exclusive access to our portfolio of venues, each offering unique atmospheres for your celebration.
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Venue 1: Full Buyout -->
+                <div class="group grid md:grid-cols-2 gap-8 items-center reveal">
+                    <div class="img-zoom-container h-[400px] overflow-hidden rounded-sm">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1771187403/474477935_1174908544068639_344546843469723679_n_ly1sky.jpg" 
+                             class="img-zoom w-full h-full object-cover" alt="Full Venue Buyout">
+                    </div>
+                    <div class="p-8">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-4 block" data-i18n="buyout_label">Exclusive</span>
+                        <h3 class="text-4xl tao-heading text-white mb-4" data-i18n="buyout_title">Full Venue Buyout</h3>
+                        <p class="text-gray-400 font-light leading-relaxed mb-6" data-i18n="buyout_desc">
+                            Take complete control of Yoko Luna, Hang Bar, or Bord'Elle for an unforgettable private experience. 
+                            Complete privacy with dedicated staff, custom menus, and personalized décor.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="buyout_feat_1">Up to 500 guests</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="buyout_feat_2">Custom lighting & AV</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="buyout_feat_3">Dedicated event manager</span>
+                            </li>
+                        </ul>
+                        <a href="inquire.html" class="btn-hover inline-flex items-center gap-3 border border-mh-gold text-mh-gold px-8 py-3 text-xs tracking-[0.25em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all duration-300" data-i18n="btn_inquire_now">
+                            Inquire Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Venue 2: Private Rooms -->
+                <div class="group grid md:grid-cols-2 gap-8 items-center reveal">
+                    <div class="order-2 md:order-1 p-8">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-4 block" data-i18n="rooms_label">Intimate</span>
+                        <h3 class="text-4xl tao-heading text-white mb-4" data-i18n="rooms_title">Private Rooms</h3>
+                        <p class="text-gray-400 font-light leading-relaxed mb-6" data-i18n="rooms_desc">
+                            Semi-private spaces within our venues perfect for smaller gatherings, corporate dinners, 
+                            or VIP sections. Each space maintains the venue's atmosphere while offering exclusivity.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="rooms_feat_1">20-80 guests</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="rooms_feat_2">Private bar service</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="rooms_feat_3">Customized menus</span>
+                            </li>
+                        </ul>
+                        <a href="inquire.html" class="btn-hover inline-flex items-center gap-3 border border-mh-gold text-mh-gold px-8 py-3 text-xs tracking-[0.25em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all duration-300" data-i18n="btn_inquire_now">
+                            Inquire Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2 img-zoom-container h-[400px] overflow-hidden rounded-sm">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1770663487/After_dinner_it_s_straight_to_the_dance_floor_Tonight_zack.cola_marcel.wynn_bring_you_2_oouas3.jpg" 
+                             class="img-zoom w-full h-full object-cover" alt="Private Room">
+                    </div>
+                </div>
+
+                <!-- Venue 3: Rooftop -->
+                <div class="group grid md:grid-cols-2 gap-8 items-center reveal">
+                    <div class="img-zoom-container h-[400px] overflow-hidden rounded-sm">
+                        <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769638377/473706203_18053071472498519_2657822319212069239_n_vf5i6r.jpg" 
+                             class="img-zoom w-full h-full object-cover" alt="Rooftop Events">
+                    </div>
+                    <div class="p-8">
+                        <span class="tao-subheading text-mh-gold text-[10px] mb-4 block" data-i18n="rooftop_label">Outdoor</span>
+                        <h3 class="text-4xl tao-heading text-white mb-4" data-i18n="rooftop_title">Rooftop Celebrations</h3>
+                        <p class="text-gray-400 font-light leading-relaxed mb-6" data-i18n="rooftop_desc">
+                            Host under the stars at Yoko Luna's panoramic rooftop. Perfect for summer soirées, 
+                            cocktail receptions, and sunset ceremonies with breathtaking city views.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="rooftop_feat_1">Seasonal availability</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="rooftop_feat_2">Weather contingency plans</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-check text-mh-gold"></i>
+                                <span data-i18n="rooftop_feat_3">Panoramic city views</span>
+                            </li>
+                        </ul>
+                        <a href="inquire.html" class="btn-hover inline-flex items-center gap-3 border border-mh-gold text-mh-gold px-8 py-3 text-xs tracking-[0.25em] uppercase hover:bg-mh-gold hover:text-mh-navy transition-all duration-300" data-i18n="btn_inquire_now">
+                            Inquire Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Amenities -->
+    <section class="py-32 bg-mh-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="services_subtitle">Full Service</span>
+                <h2 class="text-5xl md:text-7xl tao-heading text-white mb-6" data-i18n="services_title">Event Services</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+                <!-- Catering -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-utensils text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_catering_title">Catering</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_catering_desc">
+                        Custom menus crafted by our executive chefs. From passed canapés to multi-course dinners.
+                    </p>
+                </div>
+
+                <!-- Bar Service -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-martini-glass-citrus text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_bar_title">Mixology</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_bar_desc">
+                        Signature cocktails and premium open bars. Custom drink menus for your event theme.
+                    </p>
+                </div>
+
+                <!-- Production -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-lightbulb text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_prod_title">Production</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_prod_desc">
+                        Lighting, sound, and AV equipment. DJ booths, stages, and presentation capabilities.
+                    </p>
+                </div>
+
+                <!-- Décor -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-wand-magic-sparkles text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_decor_title">Décor</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_decor_desc">
+                        Floral arrangements, linens, and custom installations. Transform any space to match your vision.
+                    </p>
+                </div>
+
+                <!-- Photography -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-camera text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_photo_title">Photography</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_photo_desc">
+                        Professional event photography and videography packages to capture every moment.
+                    </p>
+                </div>
+
+                <!-- Entertainment -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-music text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_ent_title">Entertainment</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_ent_desc">
+                        DJ services, live bands, performers, and specialty acts to elevate your celebration.
+                    </p>
+                </div>
+
+                <!-- Transportation -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-car text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_trans_title">Transport</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_trans_desc">
+                        Luxury vehicle coordination for VIP arrivals and guest shuttles between venues.
+                    </p>
+                </div>
+
+                <!-- Security -->
+                <div class="group p-8 border border-white/10 hover:border-mh-gold/50 transition-all duration-500 reveal">
+                    <div class="w-16 h-16 rounded-full bg-mh-gold/10 flex items-center justify-center mb-6 group-hover:bg-mh-gold/20 transition-colors">
+                        <i class="fa-solid fa-shield-halved text-mh-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl tao-heading text-white mb-3" data-i18n="service_sec_title">Security</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed" data-i18n="service_sec_desc">
+                        Professional security staff and guest list management for exclusive events.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 bg-mh-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #C5A059 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="tao-subheading text-mh-gold text-[11px] block mb-4" data-i18n="testimonials_subtitle">Testimonials</span>
+                <h2 class="text-5xl md:text-6xl tao-heading text-white" data-i18n="testimonials_title">Client Stories</h2>
+            </div>
+
+            <div class="relative reveal">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide active text-center">
+                    <div class="mb-8">
+                        <i class="fa-solid fa-quote-left text-mh-gold/30 text-4xl"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-serif text-white/90 leading-relaxed mb-8 font-light italic" data-i18n="testimonial_1_text">
+                        "Montreal Hospitality transformed our product launch into an unforgettable experience. 
+                        The attention to detail and seamless execution exceeded all expectations."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" 
+                             class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div class="text-left">
+                            <p class="text-white font-medium" data-i18n="testimonial_1_name">Marcus Chen</p>
+                            <p class="text-mh-gold text-xs uppercase tracking-widest" data-i18n="testimonial_1_role">CEO, TechVenture Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide text-center">
+                    <div class="mb-8">
+                        <i class="fa-solid fa-quote-left text-mh-gold/30 text-4xl"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-serif text-white/90 leading-relaxed mb-8 font-light italic" data-i18n="testimonial_2_text">
+                        "Our wedding at Yoko Luna was absolutely magical. The team handled everything 
+                        from décor to dining, allowing us to enjoy every moment of our special day."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" 
+                             class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div class="text-left">
+                            <p class="text-white font-medium" data-i18n="testimonial_2_name">Sarah & David</p>
+                            <p class="text-mh-gold text-xs uppercase tracking-widest" data-i18n="testimonial_2_role">Wedding Clients</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide text-center">
+                    <div class="mb-8">
+                        <i class="fa-solid fa-quote-left text-mh-gold/30 text-4xl"></i>
+                    </div>
+                    <p class="text-2xl md:text-3xl font-serif text-white/90 leading-relaxed mb-8 font-light italic" data-i18n="testimonial_3_text">
+                        "The corporate holiday party they organized for our 200 employees was spectacular. 
+                        From the custom cocktails to the live entertainment, everything was perfect."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop" 
+                             class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div class="text-left">
+                            <p class="text-white font-medium" data-i18n="testimonial_3_name">Jennifer Walsh</p>
+                            <p class="text-mh-gold text-xs uppercase tracking-widest" data-i18n="testimonial_3_role">HR Director, Finance Group</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="flex justify-center gap-3 mt-12">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-mh-gold transition-all" data-index="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white/30 hover:bg-mh-gold/50 transition-all" data-index="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white/30 hover:bg-mh-gold/50 transition-all" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-mh-gold text-mh-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+            <h2 class="text-4xl md:text-5xl font-serif mb-6" data-i18n="cta_title">Ready to Create Something Unforgettable?</h2>
+            <p class="text-mh-navy/80 mb-8 text-lg font-light" data-i18n="cta_desc">
+                Let's discuss how we can bring your vision to life.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="tel:514-378-0154" class="btn-hover inline-flex items-center justify-center gap-3 bg-mh-navy text-mh-gold px-10 py-4 text-xs tracking-[0.25em] uppercase font-bold hover:bg-black transition-colors">
+                    <i class="fa-solid fa-phone"></i> <span data-i18n="cta_call">Call Us</span>
+                </a>
+                <a href="mailto:info@montrealhospitality.com" class="btn-hover inline-flex items-center justify-center gap-3 border-2 border-mh-navy text-mh-navy px-10 py-4 text-xs tracking-[0.25em] uppercase font-bold hover:bg-mh-navy hover:text-mh-gold transition-colors">
+                    <i class="fa-solid fa-envelope"></i> <span data-i18n="cta_email">Email Events Team</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="https://res.cloudinary.com/dg79ri9bl/image/upload/v1769636896/montrealhospitality_qrg2bg.png" 
+                         alt="Montreal Hospitality" 
+                         class="h-16 mb-8 object-contain">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light" data-i18n="footer_tagline">
+                        Redefining the art of the night in Montreal.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_explore">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="venues.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_venues">Venues</a></li>
+                        <li><a href="sports.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_sports">Sports</a></li>
+                        <li><a href="service.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_services">Service</a></li>
+                        <li><a href="event.html" class="hover:text-mh-gold transition-colors hover:translate-x-1 inline-block transform" data-i18n="nav_events">Events</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_contact">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-light">
+                        <li><a href="mailto:info@montrealhospitality.com" class="hover:text-mh-gold transition-colors">info@montrealhospitality.com</a></li>
+                        <li>514-378-0154</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="tao-subheading text-white text-[11px] mb-8 tracking-[0.2em]" data-i18n="footer_follow">Follow</h4>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/montrealhospitality/?hl=en" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-mh-gold transition-colors hover:scale-110 transform"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2024 Montreal Hospitality Group</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_privacy">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_terms">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Scroll to top immediately on load
+        window.scrollTo(0, 0);
+
+        // Loader and Hero Animation Trigger
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+
+                    const heroElements = document.querySelectorAll('.hero-animate');
+                    heroElements.forEach(el => {
+                        el.classList.add('visible');
+                    });
+
+                    const line = document.querySelector('.line-reveal');
+                    if (line) line.classList.add('visible');
+
+                }, 800);
+            }, 1200);
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const staggerContainers = document.querySelectorAll('.stagger-children');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+
+            staggerContainers.forEach((container) => {
+                const elementTop = container.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    container.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-x-full');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Testimonial Slider
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                dots[i].classList.remove('bg-mh-gold');
+                dots[i].classList.add('bg-white/30');
+            });
+
+            slides[index].classList.add('active');
+            dots[index].classList.remove('bg-white/30');
+            dots[index].classList.add('bg-mh-gold');
+            currentSlide = index;
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Auto-advance testimonials
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 6000);
+
+        // Translation System
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_venues: "Venues",
+                nav_sports: "Sports",
+                nav_services: "Services",
+                nav_events: "Events",
+                nav_careers: "Careers",
+                nav_contact: "Contact",
+                hero_subtitle: "Exclusive Celebrations",
+                hero_title_1: "Private",
+                hero_title_2: "Events",
+                hero_cta: "Start Planning",
+                intro_text: "From intimate gatherings to grand celebrations, we transform moments into memories that last a lifetime.",
+                events_subtitle: "Occasions",
+                events_title: "Celebrate With Us",
+                event_corp_label: "Business",
+                event_corp_title: "Corporate Events",
+                event_corp_desc: "Product launches, annual meetings, and team celebrations in sophisticated settings.",
+                event_wedding_label: "Love",
+                event_wedding_title: "Weddings",
+                event_wedding_desc: "From rehearsal dinners to reception celebrations, say \"I do\" in style.",
+                event_birthday_label: "Milestones",
+                event_birthday_title: "Birthdays",
+                event_birthday_desc: "Milestone celebrations and intimate gatherings tailored to your vision.",
+                event_holiday_label: "Seasonal",
+                event_holiday_title: "Holiday Parties",
+                event_holiday_desc: "Festive celebrations with custom décor, seasonal menus, and signature cocktails.",
+                event_fashion_label: "Industry",
+                event_fashion_title: "Fashion & Media",
+                event_fashion_desc: "Runway shows, product launches, and press events with full production support.",
+                event_dining_label: "Intimate",
+                event_dining_title: "Private Dining",
+                event_dining_desc: "Chef's table experiences and intimate dinners for discerning guests.",
+                btn_learn_more: "Learn More",
+                venues_subtitle: "Spaces",
+                venues_title: "Event Venues",
+                venues_desc: "Exclusive access to our portfolio of venues, each offering unique atmospheres for your celebration.",
+                buyout_label: "Exclusive",
+                buyout_title: "Full Venue Buyout",
+                buyout_desc: "Take complete control of Yoko Luna, Hang Bar, or Bord'Elle for an unforgettable private experience. Complete privacy with dedicated staff, custom menus, and personalized décor.",
+                buyout_feat_1: "Up to 500 guests",
+                buyout_feat_2: "Custom lighting & AV",
+                buyout_feat_3: "Dedicated event manager",
+                btn_inquire_now: "Inquire Now",
+                rooms_label: "Intimate",
+                rooms_title: "Private Rooms",
+                rooms_desc: "Semi-private spaces within our venues perfect for smaller gatherings, corporate dinners, or VIP sections. Each space maintains the venue's atmosphere while offering exclusivity.",
+                rooms_feat_1: "20-80 guests",
+                rooms_feat_2: "Private bar service",
+                rooms_feat_3: "Customized menus",
+                rooftop_label: "Outdoor",
+                rooftop_title: "Rooftop Celebrations",
+                rooftop_desc: "Host under the stars at Yoko Luna's panoramic rooftop. Perfect for summer soirées, cocktail receptions, and sunset ceremonies with breathtaking city views.",
+                rooftop_feat_1: "Seasonal availability",
+                rooftop_feat_2: "Weather contingency plans",
+                rooftop_feat_3: "Panoramic city views",
+                services_subtitle: "Full Service",
+                services_title: "Event Services",
+                service_catering_title: "Catering",
+                service_catering_desc: "Custom menus crafted by our executive chefs. From passed canapés to multi-course dinners.",
+                service_bar_title: "Mixology",
+                service_bar_desc: "Signature cocktails and premium open bars. Custom drink menus for your event theme.",
+                service_prod_title: "Production",
+                service_prod_desc: "Lighting, sound, and AV equipment. DJ booths, stages, and presentation capabilities.",
+                service_decor_title: "Décor",
+                service_decor_desc: "Floral arrangements, linens, and custom installations. Transform any space to match your vision.",
+                service_photo_title: "Photography",
+                service_photo_desc: "Professional event photography and videography packages to capture every moment.",
+                service_ent_title: "Entertainment",
+                service_ent_desc: "DJ services, live bands, performers, and specialty acts to elevate your celebration.",
+                service_trans_title: "Transport",
+                service_trans_desc: "Luxury vehicle coordination for VIP arrivals and guest shuttles between venues.",
+                service_sec_title: "Security",
+                service_sec_desc: "Professional security staff and guest list management for exclusive events.",
+                testimonials_subtitle: "Testimonials",
+                testimonials_title: "Client Stories",
+                testimonial_1_text: "Montreal Hospitality transformed our product launch into an unforgettable experience. The attention to detail and seamless execution exceeded all expectations.",
+                testimonial_1_name: "Marcus Chen",
+                testimonial_1_role: "CEO, TechVenture Inc.",
+                testimonial_2_text: "Our wedding at Yoko Luna was absolutely magical. The team handled everything from décor to dining, allowing us to enjoy every moment of our special day.",
+                testimonial_2_name: "Sarah & David",
+                testimonial_2_role: "Wedding Clients",
+                testimonial_3_text: "The corporate holiday party they organized for our 200 employees was spectacular. From the custom cocktails to the live entertainment, everything was perfect.",
+                testimonial_3_name: "Jennifer Walsh",
+                testimonial_3_role: "HR Director, Finance Group",
+                cta_title: "Ready to Create Something Unforgettable?",
+                cta_desc: "Let's discuss how we can bring your vision to life.",
+                cta_call: "Call Us",
+                cta_email: "Email Events Team",
+                footer_tagline: "Redefining the art of the night in Montreal.",
+                footer_explore: "Explore",
+                footer_contact: "Contact",
+                footer_follow: "Follow",
+                footer_privacy: "Privacy",
+                footer_terms: "Terms"
+            },
+            fr: {
+                nav_home: "Accueil",
+                nav_venues: "Lieux",
+                nav_sports: "Sports",
+                nav_services: "Services",
+                nav_events: "Événements",
+                nav_careers: "Carrières",
+                nav_contact: "Contact",
+                hero_subtitle: "Célébrations Exclusives",
+                hero_title_1: "Événements",
+                hero_title_2: "Privés",
+                hero_cta: "Commencer la Planification",
+                intro_text: "Des rassemblements intimes aux grandes célébrations, nous transformons les moments en souvenirs qui durent toute une vie.",
+                events_subtitle: "Occasions",
+                events_title: "Célébrez Avec Nous",
+                event_corp_label: "Affaires",
+                event_corp_title: "Événements Corporatifs",
+                event_corp_desc: "Lancements de produits, réunions annuelles et célébrations d'équipe dans des cadres sophistiqués.",
+                event_wedding_label: "Amour",
+                event_wedding_title: "Mariages",
+                event_wedding_desc: "Des dîners de répétition aux réceptions, dites \"oui\" avec style.",
+                event_birthday_label: "Jalons",
+                event_birthday_title: "Anniversaires",
+                event_birthday_desc: "Célébrations de jalons et rassemblements intimes adaptés à votre vision.",
+                event_holiday_label: "Saisonnier",
+                event_holiday_title: "Fêtes de Fin d'Année",
+                event_holiday_desc: "Célébrations festives avec décor sur mesure, menus saisonniers et cocktails signature.",
+                event_fashion_label: "Industrie",
+                event_fashion_title: "Mode & Média",
+                event_fashion_desc: "Défilés, lancements de produits et événements presse avec support de production complet.",
+                event_dining_label: "Intime",
+                event_dining_title: "Dîners Privés",
+                event_dining_desc: "Expériences table du chef et dîners intimes pour hôtes exigeants.",
+                btn_learn_more: "En Savoir Plus",
+                venues_subtitle: "Espaces",
+                venues_title: "Lieux d'Événements",
+                venues_desc: "Accès exclusif à notre portfolio de lieux, chacun offrant des atmosphères uniques pour votre célébration.",
+                buyout_label: "Exclusif",
+                buyout_title: "Achat Complet du Lieu",
+                buyout_desc: "Prenez le contrôle complet de Yoko Luna, Hang Bar ou Bord'Elle pour une expérience privée inoubliable. Intimité totale avec personnel dédié, menus personnalisés et décor sur mesure.",
+                buyout_feat_1: "Jusqu'à 500 invités",
+                buyout_feat_2: "Éclairage & AV personnalisés",
+                buyout_feat_3: "Gestionnaire d'événement dédié",
+                btn_inquire_now: "Demander des Informations",
+                rooms_label: "Intime",
+                rooms_title: "Salles Privées",
+                rooms_desc: "Espaces semi-privés dans nos lieux parfaits pour de plus petits rassemblements, dîners corporatifs ou sections VIP. Chaque espace conserve l'atmosphère du lieu tout en offrant l'exclusivité.",
+                rooms_feat_1: "20-80 invités",
+                rooms_feat_2: "Service de bar privé",
+                rooms_feat_3: "Menus personnalisés",
+                rooftop_label: "Extérieur",
+                rooftop_title: "Célébrations sur le Toit",
+                rooftop_desc: "Recevez sous les étoiles sur le toit panoramique de Yoko Luna. Parfait pour des soirées d'été, des réceptions cocktail et des cérémonies au coucher du soleil avec des vues à couper le souffle.",
+                rooftop_feat_1: "Disponibilité saisonnière",
+                rooftop_feat_2: "Plans d'urgence météo",
+                rooftop_feat_3: "Vues panoramiques sur la ville",
+                services_subtitle: "Service Complet",
+                services_title: "Services d'Événement",
+                service_catering_title: "Traiteur",
+                service_catering_desc: "Menus personnalisés créés par nos chefs exécutifs. Des canapés passés aux dîners de plusieurs services.",
+                service_bar_title: "Mixologie",
+                service_bar_desc: "Cocktails signature et bars ouverts premium. Menus de boissons personnalisés pour le thème de votre événement.",
+                service_prod_title: "Production",
+                service_prod_desc: "Éclairage, son et équipement AV. Cabines DJ, scènes et capacités de présentation.",
+                service_decor_title: "Décor",
+                service_decor_desc: "Arrangements floraux, linge de table et installations personnalisées. Transformez n'importe quel espace pour correspondre à votre vision.",
+                service_photo_title: "Photographie",
+                service_photo_desc: "Forfaits de photographie et vidéographie d'événement professionnels pour capturer chaque moment.",
+                service_ent_title: "Divertissement",
+                service_ent_desc: "Services DJ, groupes live, artistes et numéros spéciaux pour élever votre célébration.",
+                service_trans_title: "Transport",
+                service_trans_desc: "Coordination de véhicules de luxe pour les arrivées VIP et navettes entre les lieux.",
+                service_sec_title: "Sécurité",
+                service_sec_desc: "Personnel de sécurité professionnel et gestion de liste d'invités pour événements exclusifs.",
+                testimonials_subtitle: "Témoignages",
+                testimonials_title: "Histoires de Clients",
+                testimonial_1_text: "Montreal Hospitality a transformé notre lancement de produit en une expérience inoubliable. L'attention aux détails et l'exécution impeccable ont dépassé toutes les attentes.",
+                testimonial_1_name: "Marcus Chen",
+                testimonial_1_role: "PDG, TechVenture Inc.",
+                testimonial_2_text: "Notre mariage à Yoko Luna était absolument magique. L'équipe a géré tout du décor au dîner, nous permettant de profiter de chaque moment de notre journée spéciale.",
+                testimonial_2_name: "Sarah & David",
+                testimonial_2_role: "Clients Mariage",
+                testimonial_3_text: "La fête de fin d'année corporative qu'ils ont organisée pour nos 200 employés était spectaculaire. Des cocktails personnalisés au divertissement live, tout était parfait.",
+                testimonial_3_name: "Jennifer Walsh",
+                testimonial_3_role: "Directrice RH, Finance Group",
+                cta_title: "Prêt à Créer Quelque Chose d'Inoubliable?",
+                cta_desc: "Discutons de la façon dont nous pouvons donner vie à votre vision.",
+                cta_call: "Appelez-Nous",
+                cta_email: "Contacter l'Équipe Événements",
+                footer_tagline: "Redéfinir l'art de la nuit à Montréal.",
+                footer_explore: "Explorer",
+                footer_contact: "Contact",
+                footer_follow: "Suivre",
+                footer_privacy: "Confidentialité",
+                footer_terms: "Conditions"
+            }
+        };
+
+        const translator = {
+            currentLang: 'en',
+            
+            init() {
+                const savedLang = localStorage.getItem('preferred_language');
+                const browserLang = navigator.language.split('-')[0];
+                
+                if (savedLang && translations[savedLang]) {
+                    this.currentLang = savedLang;
+                } else if (translations[browserLang]) {
+                    this.currentLang = browserLang;
+                }
+                
+                this.updateUI();
+                this.translatePage();
+            },
+            
+            setLanguage(lang) {
+                if (translations[lang]) {
+                    this.currentLang = lang;
+                    localStorage.setItem('preferred_language', lang);
+                    this.updateUI();
+                    this.translatePage();
+                    document.documentElement.lang = lang;
+                }
+            },
+            
+            updateUI() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    if (btn.dataset.lang === this.currentLang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            },
+            
+            translatePage() {
+                const texts = translations[this.currentLang];
+                
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.dataset.i18n;
+                    if (texts[key]) {
+                        element.textContent = texts[key];
+                    }
+                });
+            }
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => translator.init());
+        } else {
+            translator.init();
+        }
+    </script>
+</body>
+</html>
